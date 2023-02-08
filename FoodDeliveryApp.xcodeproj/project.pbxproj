@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F96C2993DC2000FCF89D /* AppDelegate.swift */; };
 		1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F96E2993DC2000FCF89D /* SceneDelegate.swift */; };
-		1047F9712993DC2000FCF89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9702993DC2000FCF89D /* ViewController.swift */; };
 		1047F9742993DC2000FCF89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1047F9722993DC2000FCF89D /* Main.storyboard */; };
 		1047F9762993DC2100FCF89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1047F9752993DC2100FCF89D /* Assets.xcassets */; };
 		1047F9792993DC2100FCF89D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1047F9772993DC2100FCF89D /* LaunchScreen.storyboard */; };
+		1047F9872993DC6800FCF89D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9862993DC6800FCF89D /* RegisterViewController.swift */; };
+		1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F98A2993DE2D00FCF89D /* RegisterPresenter.swift */; };
+		1047F98D2993DE3D00FCF89D /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F98C2993DE3D00FCF89D /* RegisterInteractor.swift */; };
+		1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F98E2993DE5800FCF89D /* RegisterRouter.swift */; };
+		1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9902993DE6700FCF89D /* RegisterProtocols.swift */; };
+		1047F9982993E33000FCF89D /* IAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9972993E33000FCF89D /* IAuthService.swift */; };
+		1047F99A2993E4C700FCF89D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1047F9992993E4C700FCF89D /* GoogleService-Info.plist */; };
+		1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99C2993E54D00FCF89D /* FirebaseAuth */; };
+		1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99E2993E54D00FCF89D /* FirebaseDatabase */; };
+		1047F9A32993E88600FCF89D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9A22993E88600FCF89D /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1047F96C2993DC2000FCF89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1047F96E2993DC2000FCF89D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1047F9702993DC2000FCF89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1047F9732993DC2000FCF89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1047F9752993DC2100FCF89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1047F9782993DC2100FCF89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1047F97A2993DC2100FCF89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1047F9862993DC6800FCF89D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1047F98A2993DE2D00FCF89D /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		1047F98C2993DE3D00FCF89D /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		1047F98E2993DE5800FCF89D /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		1047F9902993DE6700FCF89D /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
+		1047F9972993E33000FCF89D /* IAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthService.swift; sourceTree = "<group>"; };
+		1047F9992993E4C700FCF89D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1047F9A22993E88600FCF89D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */,
+				1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,86 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				1047F9952993E32000FCF89D /* services */,
+				1047F9802993DC3A00FCF89D /* register-module */,
 				1047F96C2993DC2000FCF89D /* AppDelegate.swift */,
 				1047F96E2993DC2000FCF89D /* SceneDelegate.swift */,
-				1047F9702993DC2000FCF89D /* ViewController.swift */,
 				1047F9722993DC2000FCF89D /* Main.storyboard */,
 				1047F9752993DC2100FCF89D /* Assets.xcassets */,
 				1047F9772993DC2100FCF89D /* LaunchScreen.storyboard */,
 				1047F97A2993DC2100FCF89D /* Info.plist */,
+				1047F9992993E4C700FCF89D /* GoogleService-Info.plist */,
 			);
 			path = FoodDeliveryApp;
+			sourceTree = "<group>";
+		};
+		1047F9802993DC3A00FCF89D /* register-module */ = {
+			isa = PBXGroup;
+			children = (
+				1047F9852993DC5900FCF89D /* protocols */,
+				1047F9842993DC5500FCF89D /* router */,
+				1047F9832993DC4D00FCF89D /* interactor */,
+				1047F9822993DC4800FCF89D /* presenter */,
+				1047F9812993DC4300FCF89D /* view */,
+			);
+			path = "register-module";
+			sourceTree = "<group>";
+		};
+		1047F9812993DC4300FCF89D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1047F9862993DC6800FCF89D /* RegisterViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1047F9822993DC4800FCF89D /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1047F98A2993DE2D00FCF89D /* RegisterPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		1047F9832993DC4D00FCF89D /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1047F98C2993DE3D00FCF89D /* RegisterInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		1047F9842993DC5500FCF89D /* router */ = {
+			isa = PBXGroup;
+			children = (
+				1047F98E2993DE5800FCF89D /* RegisterRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		1047F9852993DC5900FCF89D /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1047F9902993DE6700FCF89D /* RegisterProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		1047F9952993E32000FCF89D /* services */ = {
+			isa = PBXGroup;
+			children = (
+				1047F9962993E32500FCF89D /* auth */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		1047F9962993E32500FCF89D /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				1047F9972993E33000FCF89D /* IAuthService.swift */,
+				1047F9A22993E88600FCF89D /* AuthService.swift */,
+			);
+			path = auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +172,10 @@
 			dependencies = (
 			);
 			name = FoodDeliveryApp;
+			packageProductDependencies = (
+				1047F99C2993E54D00FCF89D /* FirebaseAuth */,
+				1047F99E2993E54D00FCF89D /* FirebaseDatabase */,
+			);
 			productName = FoodDeliveryApp;
 			productReference = 1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 1047F9602993DC2000FCF89D;
+			packageReferences = (
+				1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 1047F96A2993DC2000FCF89D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1047F9792993DC2100FCF89D /* LaunchScreen.storyboard in Resources */,
+				1047F99A2993E4C700FCF89D /* GoogleService-Info.plist in Resources */,
 				1047F9762993DC2100FCF89D /* Assets.xcassets in Resources */,
 				1047F9742993DC2000FCF89D /* Main.storyboard in Resources */,
 			);
@@ -138,9 +235,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1047F9712993DC2000FCF89D /* ViewController.swift in Sources */,
+				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
+				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
 				1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */,
+				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,
+				1047F98D2993DE3D00FCF89D /* RegisterInteractor.swift in Sources */,
+				1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */,
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
+				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
+				1047F9872993DC6800FCF89D /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +461,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1047F99C2993E54D00FCF89D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1047F99E2993E54D00FCF89D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1047F9612993DC2000FCF89D /* Project object */;
 }
