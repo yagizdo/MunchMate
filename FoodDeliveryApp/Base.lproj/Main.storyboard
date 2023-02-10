@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uuc-s4-w2C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0qJ-1s-qmX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,19 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeVec" translatesAutoresizingMaskIntoConstraints="NO" id="G8g-hD-RnQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="O14-LU-shk"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Götür App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-da-gg9">
-                                <rect key="frame" x="116.5" y="308" width="181.5" height="48"/>
+                                <rect key="frame" x="116.5" y="327" width="181.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-5B-327">
-                                <rect key="frame" x="32" y="396" width="350" height="55"/>
+                                <rect key="frame" x="32" y="415" width="350" height="55"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-2c-Ppi">
                                         <rect key="frame" x="50" y="10" width="300" height="35"/>
@@ -68,7 +69,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-de-Eag">
-                                <rect key="frame" x="32" y="476" width="350" height="55"/>
+                                <rect key="frame" x="32" y="495" width="350" height="55"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-YC-OcM">
                                         <rect key="frame" x="50" y="15" width="221.5" height="24"/>
@@ -106,25 +107,25 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvW-pa-3IG">
-                                <rect key="frame" x="197.5" y="581" width="19.5" height="24"/>
+                                <rect key="frame" x="197.5" y="600" width="19.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="───" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrl-MP-2yi">
-                                <rect key="frame" x="32" y="566" width="151" height="60"/>
+                                <rect key="frame" x="32" y="585" width="151" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="───" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TQ-Ih-fhj">
-                                <rect key="frame" x="231" y="566" width="151" height="60"/>
+                                <rect key="frame" x="231" y="585" width="151" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-F9-53o">
-                                <rect key="frame" x="32" y="666" width="350" height="55"/>
+                                <rect key="frame" x="32" y="685" width="350" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Flh-m0-RoK"/>
                                 </constraints>
@@ -148,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-si-XxH">
-                                <rect key="frame" x="70" y="741" width="274" height="60"/>
+                                <rect key="frame" x="70" y="760" width="274" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-U3-fWf">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
@@ -193,15 +194,17 @@
                             <constraint firstItem="ZVb-da-gg9" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="max-Bt-38p"/>
                             <constraint firstItem="PvW-pa-3IG" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="50" id="nCU-bp-Bb7"/>
                             <constraint firstItem="M1I-de-Eag" firstAttribute="top" secondItem="Isx-5B-327" secondAttribute="bottom" constant="25" id="o4m-0o-nGy"/>
-                            <constraint firstItem="G8g-hD-RnQ" firstAttribute="top" secondItem="osA-qm-PcM" secondAttribute="top" constant="40" id="pgg-9O-ih4"/>
+                            <constraint firstItem="G8g-hD-RnQ" firstAttribute="top" secondItem="osA-qm-PcM" secondAttribute="top" constant="15" id="pgg-9O-ih4"/>
                             <constraint firstItem="ZVb-da-gg9" firstAttribute="top" secondItem="G8g-hD-RnQ" secondAttribute="bottom" constant="20" id="rjI-JN-sov"/>
                             <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="M1I-de-Eag" secondAttribute="trailing" constant="32" id="tlf-dt-Z2z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dck-EV-TLF"/>
                     <connections>
                         <outlet property="appleLogoImageView" destination="kAh-MY-fFq" id="gqn-IM-xVc"/>
                         <outlet property="googleLogoImageView" destination="YWh-hw-lwk" id="Hzr-QZ-eE9"/>
                         <outlet property="welcomeImageView" destination="G8g-hD-RnQ" id="DBE-DX-lga"/>
+                        <segue destination="dV6-vM-cwh" kind="show" identifier="toRegister" id="lf0-cJ-A18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG7-j6-Hc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -216,7 +219,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-607.24637681159425" y="-31.473214285714285"/>
+            <point key="canvasLocation" x="302.89855072463769" y="-31.473214285714285"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="5b6-Qj-GXB">
@@ -226,16 +229,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="auI-UN-b7V"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9UJ-7c-4RQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="-31"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="-31.473214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G0H-YQ-PGY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0qJ-1s-qmX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bzx-fF-UFR">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <imageReference key="backIndicatorImage" image="arrow.backward" catalog="system" symbolScale="medium"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uuc-s4-w2C" kind="relationship" relationship="rootViewController" id="Piz-1z-2T4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQ5-yf-Otx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.24637681159425" y="-31.473214285714285"/>
         </scene>
     </scenes>
     <resources>
         <image name="appleLogo" width="1667" height="2048"/>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="google.png" width="18" height="18"/>
         <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
         <namedColor name="activeOrangeColor">

@@ -36,7 +36,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func buttonSignUp(_ sender: Any) {
-        print("Sign up")
+        performSegue(withIdentifier: "toRegister", sender: nil)
     }
     
 }
