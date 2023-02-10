@@ -36,8 +36,8 @@
                                     <stackView opaque="NO" contentMode="center" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-2c-Ppi">
                                         <rect key="frame" x="50" y="10" width="300" height="35"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-hw-lwk">
-                                                <rect key="frame" x="0.0" y="8.5" width="25" height="18"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-hw-lwk">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="35"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="GZA-g4-M7l"/>
@@ -221,17 +221,33 @@
             </objects>
             <point key="canvasLocation" x="302.89855072463769" y="-31.473214285714285"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
             <objects>
                 <viewController id="dV6-vM-cwh" customClass="RegisterViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqx-jv-iNf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="femaleProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-E5-0Px">
+                                <rect key="frame" x="0.0" y="107" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pZw-2E-2qc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="auI-UN-b7V"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Xf9-E5-0Px" secondAttribute="trailing" id="DXk-HJ-fij"/>
+                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="top" secondItem="auI-UN-b7V" secondAttribute="top" constant="15" id="qkl-Ih-g5l"/>
+                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" id="vqH-yL-c4J"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9UJ-7c-4RQ"/>
+                    <navigationItem key="navigationItem" title="Create New Account" id="9UJ-7c-4RQ"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="Xf9-E5-0Px" id="UbZ-Hi-nUb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,6 +261,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bzx-fF-UFR">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="activeOrangeColor"/>
+                        <color key="barTintColor" name="activeOrangeColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <imageReference key="backIndicatorImage" image="arrow.backward" catalog="system" symbolScale="medium"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -260,7 +282,8 @@
     <resources>
         <image name="appleLogo" width="1667" height="2048"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
-        <image name="google.png" width="18" height="18"/>
+        <image name="femaleProfile" width="532" height="532"/>
+        <image name="googleLogo" width="2048" height="2048"/>
         <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
         <namedColor name="activeOrangeColor">
             <color red="0.95294117647058818" green="0.59999999999999998" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
