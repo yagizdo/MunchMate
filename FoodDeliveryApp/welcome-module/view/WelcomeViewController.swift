@@ -24,11 +24,19 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func buttonSignInWithGoogle(_ sender: Any) {
-        print("test ayol")
+        print("Google")
     }
     
     @IBAction func buttonSignInWithApple(_ sender: Any) {
-        print("yan gele")
+        print("Apple")
+    }
+    
+    @IBAction func buttonSignInWithEmail(_ sender: Any) {
+        print("Email")
+    }
+    
+    @IBAction func buttonSignUp(_ sender: Any) {
+        print("Sign up")
     }
     
 }

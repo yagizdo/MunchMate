@@ -136,6 +136,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonSignInWithEmail:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="XnY-Ph-QqS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-zN-8Rk">
                                 <rect key="frame" x="107" y="764" width="0.0" height="0.0"/>
@@ -158,6 +161,9 @@
                                         <color key="tintColor" name="activeOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
+                                        <connections>
+                                            <action selector="buttonSignUp:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="GFU-k2-zQ3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
