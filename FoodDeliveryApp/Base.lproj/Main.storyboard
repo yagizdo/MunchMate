@@ -230,23 +230,114 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="femaleProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-E5-0Px">
-                                <rect key="frame" x="0.0" y="107" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="pZw-2E-2qc"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCd-xT-CX8">
+                                <rect key="frame" x="32" y="387" width="350" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q8P-6L-FxF"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vu0-Be-7Ls">
+                                <rect key="frame" x="32" y="461" width="350" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yXM-tT-zJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DD-AA-Fja">
+                                <rect key="frame" x="32" y="535" width="350" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9W7-rc-6GP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5CE-R7-AXD">
+                                <rect key="frame" x="32" y="609" width="350" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UEc-In-16N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-oO-ONR">
+                                <rect key="frame" x="32" y="707" width="350" height="50"/>
+                                <color key="backgroundColor" name="activeOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MQ7-3g-dzf"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="auI-UN-b7V"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6DD-AA-Fja" firstAttribute="top" secondItem="vu0-Be-7Ls" secondAttribute="bottom" constant="24" id="2Df-N3-vhP"/>
+                            <constraint firstItem="qCd-xT-CX8" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="6hI-hk-WrS"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Bie-oO-ONR" secondAttribute="trailing" constant="32" id="6vc-bB-haT"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="qCd-xT-CX8" secondAttribute="trailing" constant="32" id="7FH-fO-x3f"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="5CE-R7-AXD" secondAttribute="trailing" constant="32" id="AE2-GQ-kdz"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Xf9-E5-0Px" secondAttribute="trailing" id="DXk-HJ-fij"/>
-                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="top" secondItem="auI-UN-b7V" secondAttribute="top" constant="15" id="qkl-Ih-g5l"/>
+                            <constraint firstItem="6DD-AA-Fja" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="Kyy-Nu-3w5"/>
+                            <constraint firstItem="vu0-Be-7Ls" firstAttribute="top" secondItem="qCd-xT-CX8" secondAttribute="bottom" constant="24" id="Mnm-OB-Pfr"/>
+                            <constraint firstItem="5CE-R7-AXD" firstAttribute="top" secondItem="6DD-AA-Fja" secondAttribute="bottom" constant="24" id="SMG-1K-EHZ"/>
+                            <constraint firstItem="Bie-oO-ONR" firstAttribute="top" secondItem="5CE-R7-AXD" secondAttribute="bottom" constant="48" id="Ssd-8N-odH"/>
+                            <constraint firstItem="qCd-xT-CX8" firstAttribute="top" secondItem="Xf9-E5-0Px" secondAttribute="bottom" constant="55" id="U8L-1u-P9n"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="6DD-AA-Fja" secondAttribute="trailing" constant="32" id="XSu-ZU-GYC"/>
+                            <constraint firstItem="5CE-R7-AXD" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="lLA-9F-hTd"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="vu0-Be-7Ls" secondAttribute="trailing" constant="32" id="lYB-qP-7Te"/>
+                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="top" secondItem="auI-UN-b7V" secondAttribute="top" constant="40" id="qkl-Ih-g5l"/>
                             <constraint firstItem="Xf9-E5-0Px" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" id="vqH-yL-c4J"/>
+                            <constraint firstItem="Bie-oO-ONR" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="wau-cT-p2c"/>
+                            <constraint firstItem="vu0-Be-7Ls" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="xIt-Qb-oVH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Account" id="9UJ-7c-4RQ"/>
                     <connections>
                         <outlet property="profileImageView" destination="Xf9-E5-0Px" id="UbZ-Hi-nUb"/>
+                        <outlet property="userEmailTF" destination="vu0-Be-7Ls" id="iZH-7A-lVp"/>
+                        <outlet property="userNameTF" destination="qCd-xT-CX8" id="GEY-LM-Kcw"/>
+                        <outlet property="userPasswordConfirmTF" destination="5CE-R7-AXD" id="gNe-NI-p84"/>
+                        <outlet property="userPasswordTF" destination="6DD-AA-Fja" id="iBq-M5-9PG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

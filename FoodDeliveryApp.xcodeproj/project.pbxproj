@@ -28,6 +28,7 @@
 		10D04DC52996659800DF75BA /* WelcomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC42996659800DF75BA /* WelcomeProtocols.swift */; };
 		10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC62996666D00DF75BA /* WelcomeViewController.swift */; };
 		10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D04DC929966C0100DF75BA /* GoogleSignIn */; };
+		10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		10D04DC12996656F00DF75BA /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		10D04DC42996659800DF75BA /* WelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProtocols.swift; sourceTree = "<group>"; };
 		10D04DC62996666D00DF75BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				10D04DCB2996E9C200DF75BA /* extensions */,
 				10D04DB82996652100DF75BA /* welcome-module */,
 				1047F9952993E32000FCF89D /* services */,
 				1047F9802993DC3A00FCF89D /* register-module */,
@@ -221,6 +224,14 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		10D04DCB2996E9C200DF75BA /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +317,7 @@
 				10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */,
 				10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */,
 				10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */,
+				10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */,
 				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
 				1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */,
 				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,

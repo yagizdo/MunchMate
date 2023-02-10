@@ -8,6 +8,16 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    // Profile image view
+    @IBOutlet weak var profileImageView: UIImageView!
+
+    @IBOutlet weak var userNameTF: UITextField!
+    
+    @IBOutlet weak var userEmailTF: UITextField!
+    
+    @IBOutlet weak var userPasswordTF: UITextField!
+    
+    @IBOutlet weak var userPasswordConfirmTF: UITextField!
     
     // Profile Image List
     var profileImages = [UIImage(named: "maleProfile"),UIImage(named: "femaleProfile"),UIImage(named: "maleProfile2"),UIImage(named: "femaleProfile2")]
@@ -15,9 +25,6 @@ class RegisterViewController: UIViewController {
     // Selected Profile Image Index
     var selectedProfileIndex = 0
     
-    // Profile image view
-    @IBOutlet weak var profileImageView: UIImageView!
-
     // Image Buttons
     private let leftArrowButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -40,6 +47,10 @@ class RegisterViewController: UIViewController {
         return button
     }()
     
+    func setTextfieldsLeftPadding(textfield:UITextField) {
+        textfield.setLeftPadding(10)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,11 +63,17 @@ class RegisterViewController: UIViewController {
         // Right Button
         view.addSubview(rightArrowButton)
         rightArrowButton.addTarget(self, action: #selector(buttonRightArrowClick), for: .touchUpInside)
+        
+        // Set Textfields Left padding
+        setTextfieldsLeftPadding(textfield: userNameTF)
+        setTextfieldsLeftPadding(textfield: userEmailTF)
+        setTextfieldsLeftPadding(textfield: userPasswordTF)
+        setTextfieldsLeftPadding(textfield: userPasswordConfirmTF)
     }
     
     override func viewDidLayoutSubviews() {
-        leftArrowButton.frame = CGRect(x: 20, y: 180, width: 60, height: 60)
-        rightArrowButton.frame = CGRect(x: 340, y: 180, width: 60, height: 60)
+        leftArrowButton.frame = CGRect(x: 20, y: 205, width: 60, height: 60)
+        rightArrowButton.frame = CGRect(x: 340, y: 205, width: 60, height: 60)
     }
     
     // Left button click method
