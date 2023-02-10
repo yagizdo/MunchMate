@@ -33,19 +33,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-5B-327">
                                 <rect key="frame" x="32" y="415" width="350" height="55"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="center" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-2c-Ppi">
-                                        <rect key="frame" x="50" y="10" width="300" height="35"/>
+                                    <stackView opaque="NO" contentMode="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-2c-Ppi">
+                                        <rect key="frame" x="69" y="15.5" width="212" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-hw-lwk">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="GZA-g4-M7l"/>
+                                                    <constraint firstAttribute="width" constant="24" id="GZA-g4-M7l"/>
+                                                    <constraint firstAttribute="height" constant="24" id="w25-r0-loF"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyn-zl-gLu">
-                                                <rect key="frame" x="40" y="5.5" width="260" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <rect key="frame" x="39" y="0.0" width="173" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -54,15 +55,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="bOd-2c-Ppi" secondAttribute="bottom" constant="10" id="7kr-Gz-lZJ"/>
                                     <constraint firstAttribute="width" constant="350" id="DMg-Bz-vsO"/>
-                                    <constraint firstItem="bOd-2c-Ppi" firstAttribute="top" secondItem="Isx-5B-327" secondAttribute="top" constant="10" id="Wv8-Zg-pUt"/>
-                                    <constraint firstItem="bOd-2c-Ppi" firstAttribute="leading" secondItem="Isx-5B-327" secondAttribute="leading" constant="50" id="XHt-ov-RRd"/>
-                                    <constraint firstAttribute="trailing" secondItem="bOd-2c-Ppi" secondAttribute="trailing" id="bHQ-AN-rdT"/>
+                                    <constraint firstItem="bOd-2c-Ppi" firstAttribute="centerY" secondItem="Isx-5B-327" secondAttribute="centerY" id="Iwx-52-QHo"/>
+                                    <constraint firstItem="bOd-2c-Ppi" firstAttribute="centerX" secondItem="Isx-5B-327" secondAttribute="centerX" id="Vto-YF-jEs"/>
                                     <constraint firstAttribute="height" constant="55" id="mZ2-rS-ykT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="DiU-A1-DFo" appends="YES" id="yN8-P1-qdV"/>
@@ -71,21 +70,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-de-Eag">
                                 <rect key="frame" x="32" y="495" width="350" height="55"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="center" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-YC-OcM">
-                                        <rect key="frame" x="50" y="15" width="221.5" height="24"/>
+                                    <stackView opaque="NO" contentMode="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-YC-OcM">
+                                        <rect key="frame" x="70" y="15.5" width="210" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-MY-fFq">
-                                                <rect key="frame" x="0.0" y="3" width="25" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="18" id="QcZ-aA-2dn"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="jGu-oy-Hg4"/>
-                                                    <constraint firstAttribute="width" constant="25" id="s0M-ft-uSa"/>
+                                                    <constraint firstAttribute="height" constant="24" id="QcZ-aA-2dn"/>
+                                                    <constraint firstAttribute="width" constant="24" id="s0M-ft-uSa"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hab-T1-hjB">
-                                                <rect key="frame" x="40" y="0.0" width="181.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Apple  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hab-T1-hjB">
+                                                <rect key="frame" x="39" y="0.0" width="171" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -94,13 +92,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="8pi-YC-OcM" firstAttribute="leading" secondItem="M1I-de-Eag" secondAttribute="leading" constant="50" id="2HB-Ne-PPw"/>
                                     <constraint firstAttribute="height" constant="55" id="CN9-6q-azS"/>
-                                    <constraint firstItem="8pi-YC-OcM" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="top" constant="15" id="eY6-QF-HFf"/>
+                                    <constraint firstItem="8pi-YC-OcM" firstAttribute="centerX" secondItem="M1I-de-Eag" secondAttribute="centerX" id="CxU-cS-DuM"/>
                                     <constraint firstAttribute="width" constant="350" id="ifP-jh-k9h"/>
+                                    <constraint firstItem="8pi-YC-OcM" firstAttribute="centerY" secondItem="M1I-de-Eag" secondAttribute="centerY" id="yoH-aZ-Qbz"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="jys-5a-sfq" appends="YES" id="9Fu-2A-Yyi"/>
@@ -132,10 +130,11 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign in With Email">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="activeOrangeColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSignInWithEmail:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="XnY-Ph-QqS"/>
@@ -148,20 +147,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-si-XxH">
-                                <rect key="frame" x="70" y="760" width="274" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-si-XxH">
+                                <rect key="frame" x="82" y="760" width="250.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-U3-fWf">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uok-Nd-9nU">
-                                        <rect key="frame" x="167" y="0.0" width="107" height="60"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="83" height="60"/>
                                         <color key="tintColor" name="activeOrangeColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign up">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="buttonSignUp:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="GFU-k2-zQ3"/>
                                         </connections>
@@ -177,7 +178,6 @@
                         <constraints>
                             <constraint firstItem="qrl-MP-2yi" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="35" id="11D-bK-FTg"/>
                             <constraint firstItem="Isx-5B-327" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="7gb-J1-ssQ"/>
-                            <constraint firstItem="h6q-si-XxH" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="70" id="8oT-Fh-0Ec"/>
                             <constraint firstItem="h6q-si-XxH" firstAttribute="top" secondItem="gnS-F9-53o" secondAttribute="bottom" constant="20" id="AX3-35-hwx"/>
                             <constraint firstAttribute="trailing" secondItem="0TQ-Ih-fhj" secondAttribute="trailing" constant="32" id="ESF-Vw-CRL"/>
                             <constraint firstItem="gnS-F9-53o" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="32" id="RtV-wg-lsL"/>
@@ -187,10 +187,10 @@
                             <constraint firstItem="G8g-hD-RnQ" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" id="TKJ-OF-KLn"/>
                             <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="G8g-hD-RnQ" secondAttribute="trailing" id="WxO-Nm-ggy"/>
                             <constraint firstItem="M1I-de-Eag" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="32" id="aJ6-HE-AVP"/>
+                            <constraint firstItem="h6q-si-XxH" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="ash-vp-2u2"/>
                             <constraint firstItem="gnS-F9-53o" firstAttribute="top" secondItem="qrl-MP-2yi" secondAttribute="bottom" constant="40" id="dNc-r8-9B6"/>
                             <constraint firstItem="0TQ-Ih-fhj" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="35" id="ds2-zX-rsz"/>
                             <constraint firstItem="qrl-MP-2yi" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="32" id="iEr-JI-JfE"/>
-                            <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="h6q-si-XxH" secondAttribute="trailing" constant="70" id="lee-Ba-Ays"/>
                             <constraint firstItem="ZVb-da-gg9" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="max-Bt-38p"/>
                             <constraint firstItem="PvW-pa-3IG" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="50" id="nCU-bp-Bb7"/>
                             <constraint firstItem="M1I-de-Eag" firstAttribute="top" secondItem="Isx-5B-327" secondAttribute="bottom" constant="25" id="o4m-0o-nGy"/>
@@ -300,7 +300,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Account">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -371,7 +373,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appleLogo" width="1667" height="2048"/>
+        <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="femaleProfile" width="532" height="532"/>
         <image name="googleLogo" width="2048" height="2048"/>
