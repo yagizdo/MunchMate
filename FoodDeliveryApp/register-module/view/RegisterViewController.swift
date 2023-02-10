@@ -76,10 +76,16 @@ class RegisterViewController: UIViewController {
             if selectedProfileIndex < profileImages.count - 1 {
                 selectedProfileIndex += 1
                 profileImageView.image = profileImages[selectedProfileIndex]
+            } else {
+                selectedProfileIndex = 0
+                profileImageView.image = profileImages[selectedProfileIndex]
             }
         } else {
             if selectedProfileIndex > 0 {
                 selectedProfileIndex -= 1
+                profileImageView.image = profileImages[selectedProfileIndex]
+            } else {
+                selectedProfileIndex = profileImages.count - 1
                 profileImageView.image = profileImages[selectedProfileIndex]
             }
         }
