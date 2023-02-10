@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dV6-vM-cwh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uuc-s4-w2C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,6 +8,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="hdZ-QV-yjD">
+            <objects>
+                <viewController id="Uuc-s4-w2C" customClass="WelcomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0KY-nw-5AT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeVec" translatesAutoresizingMaskIntoConstraints="NO" id="G8g-hD-RnQ">
+                                <rect key="frame" x="0.0" y="68" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="O14-LU-shk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's you in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-da-gg9">
+                                <rect key="frame" x="107.5" y="288" width="199" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="osA-qm-PcM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G8g-hD-RnQ" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" id="TKJ-OF-KLn"/>
+                            <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="G8g-hD-RnQ" secondAttribute="trailing" id="WxO-Nm-ggy"/>
+                            <constraint firstItem="ZVb-da-gg9" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="max-Bt-38p"/>
+                            <constraint firstItem="G8g-hD-RnQ" firstAttribute="top" secondItem="osA-qm-PcM" secondAttribute="top" constant="20" id="pgg-9O-ih4"/>
+                            <constraint firstItem="ZVb-da-gg9" firstAttribute="top" secondItem="G8g-hD-RnQ" secondAttribute="bottom" constant="20" id="rjI-JN-sov"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeImageView" destination="G8g-hD-RnQ" id="DBE-DX-lga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aG7-j6-Hc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.24637681159425" y="-31.473214285714285"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="5b6-Qj-GXB">
             <objects>
@@ -25,6 +64,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

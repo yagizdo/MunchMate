@@ -22,6 +22,12 @@
 		1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99C2993E54D00FCF89D /* FirebaseAuth */; };
 		1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99E2993E54D00FCF89D /* FirebaseDatabase */; };
 		1047F9A32993E88600FCF89D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9A22993E88600FCF89D /* AuthService.swift */; };
+		10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */; };
+		10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */; };
+		10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC12996656F00DF75BA /* WelcomeRouter.swift */; };
+		10D04DC52996659800DF75BA /* WelcomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC42996659800DF75BA /* WelcomeProtocols.swift */; };
+		10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC62996666D00DF75BA /* WelcomeViewController.swift */; };
+		10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D04DC929966C0100DF75BA /* GoogleSignIn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,11 @@
 		1047F9972993E33000FCF89D /* IAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthService.swift; sourceTree = "<group>"; };
 		1047F9992993E4C700FCF89D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1047F9A22993E88600FCF89D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		10D04DC12996656F00DF75BA /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		10D04DC42996659800DF75BA /* WelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProtocols.swift; sourceTree = "<group>"; };
+		10D04DC62996666D00DF75BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +60,7 @@
 			files = (
 				1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */,
 				1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */,
+				10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +86,7 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				10D04DB82996652100DF75BA /* welcome-module */,
 				1047F9952993E32000FCF89D /* services */,
 				1047F9802993DC3A00FCF89D /* register-module */,
 				1047F96C2993DC2000FCF89D /* AppDelegate.swift */,
@@ -156,6 +169,58 @@
 			path = auth;
 			sourceTree = "<group>";
 		};
+		10D04DB82996652100DF75BA /* welcome-module */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DC32996657A00DF75BA /* protocols */,
+				10D04DC02996656100DF75BA /* router */,
+				10D04DBD2996654A00DF75BA /* interactor */,
+				10D04DBA2996653200DF75BA /* presenter */,
+				10D04DB92996652D00DF75BA /* view */,
+			);
+			path = "welcome-module";
+			sourceTree = "<group>";
+		};
+		10D04DB92996652D00DF75BA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DC62996666D00DF75BA /* WelcomeViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		10D04DBA2996653200DF75BA /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		10D04DBD2996654A00DF75BA /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		10D04DC02996656100DF75BA /* router */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DC12996656F00DF75BA /* WelcomeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		10D04DC32996657A00DF75BA /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				10D04DC42996659800DF75BA /* WelcomeProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +240,7 @@
 			packageProductDependencies = (
 				1047F99C2993E54D00FCF89D /* FirebaseAuth */,
 				1047F99E2993E54D00FCF89D /* FirebaseDatabase */,
+				10D04DC929966C0100DF75BA /* GoogleSignIn */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = 1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */;
@@ -206,6 +272,7 @@
 			mainGroup = 1047F9602993DC2000FCF89D;
 			packageReferences = (
 				1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 1047F96A2993DC2000FCF89D /* Products */;
 			projectDirPath = "";
@@ -236,6 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
+				10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */,
+				10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */,
+				10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */,
 				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
 				1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */,
 				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,
@@ -244,6 +314,8 @@
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
 				1047F9872993DC6800FCF89D /* RegisterViewController.swift in Sources */,
+				10D04DC52996659800DF75BA /* WelcomeProtocols.swift in Sources */,
+				10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +543,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -483,6 +563,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		10D04DC929966C0100DF75BA /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
