@@ -409,73 +409,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-oO-ONR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4d-wB-vcx">
                                 <rect key="frame" x="32" y="708" width="350" height="60"/>
                                 <color key="backgroundColor" name="activeOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="MQ7-3g-dzf"/>
+                                    <constraint firstAttribute="height" constant="60" id="bgS-Nj-mF3"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Account">
-                                    <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="N5x-PY-BfZ">
-                                <rect key="frame" x="70" y="792" width="274" height="33.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLx-4w-u3i">
-                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="33.5"/>
-                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-y9-a1l">
-                                        <rect key="frame" x="196.5" y="0.0" width="77.5" height="33.5"/>
-                                        <color key="tintColor" name="activeOrangeColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sign in">
-                                            <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="buttonSignUp:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="acx-ZL-uy5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="auI-UN-b7V"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="6DD-AA-Fja" firstAttribute="top" secondItem="vu0-Be-7Ls" secondAttribute="bottom" constant="24" id="2Df-N3-vhP"/>
                             <constraint firstItem="qCd-xT-CX8" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="6hI-hk-WrS"/>
-                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Bie-oO-ONR" secondAttribute="trailing" constant="32" id="6vc-bB-haT"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="qCd-xT-CX8" secondAttribute="trailing" constant="32" id="7FH-fO-x3f"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="5CE-R7-AXD" secondAttribute="trailing" constant="32" id="AE2-GQ-kdz"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Xf9-E5-0Px" secondAttribute="trailing" id="DXk-HJ-fij"/>
+                            <constraint firstItem="C4d-wB-vcx" firstAttribute="top" secondItem="5CE-R7-AXD" secondAttribute="bottom" constant="48" id="EMD-kp-VVi"/>
                             <constraint firstItem="6DD-AA-Fja" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="Kyy-Nu-3w5"/>
                             <constraint firstItem="vu0-Be-7Ls" firstAttribute="top" secondItem="qCd-xT-CX8" secondAttribute="bottom" constant="24" id="Mnm-OB-Pfr"/>
                             <constraint firstItem="5CE-R7-AXD" firstAttribute="top" secondItem="6DD-AA-Fja" secondAttribute="bottom" constant="24" id="SMG-1K-EHZ"/>
-                            <constraint firstItem="Bie-oO-ONR" firstAttribute="top" secondItem="5CE-R7-AXD" secondAttribute="bottom" constant="48" id="Ssd-8N-odH"/>
                             <constraint firstItem="qCd-xT-CX8" firstAttribute="top" secondItem="Xf9-E5-0Px" secondAttribute="bottom" constant="32" id="U8L-1u-P9n"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="6DD-AA-Fja" secondAttribute="trailing" constant="32" id="XSu-ZU-GYC"/>
-                            <constraint firstItem="N5x-PY-BfZ" firstAttribute="centerX" secondItem="cqx-jv-iNf" secondAttribute="centerX" id="aBw-zB-yjr"/>
-                            <constraint firstItem="N5x-PY-BfZ" firstAttribute="top" secondItem="Bie-oO-ONR" secondAttribute="bottom" constant="24" id="hPv-Ch-rnB"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="C4d-wB-vcx" secondAttribute="trailing" constant="32" id="ajR-32-WAB"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="bottom" secondItem="C4d-wB-vcx" secondAttribute="bottom" constant="94" id="gR9-3l-mNO"/>
                             <constraint firstItem="5CE-R7-AXD" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="lLA-9F-hTd"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="vu0-Be-7Ls" secondAttribute="trailing" constant="32" id="lYB-qP-7Te"/>
                             <constraint firstItem="Xf9-E5-0Px" firstAttribute="top" secondItem="auI-UN-b7V" secondAttribute="top" constant="24" id="qkl-Ih-g5l"/>
+                            <constraint firstItem="C4d-wB-vcx" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="rSH-sQ-zyo"/>
                             <constraint firstItem="Xf9-E5-0Px" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" id="vqH-yL-c4J"/>
-                            <constraint firstItem="Bie-oO-ONR" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="wau-cT-p2c"/>
                             <constraint firstItem="vu0-Be-7Ls" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="xIt-Qb-oVH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Account" id="9UJ-7c-4RQ"/>
                     <connections>
+                        <outlet property="passwordConfirmBottomConstraint" destination="EMD-kp-VVi" id="Vxc-LP-W9o"/>
                         <outlet property="profileImageView" destination="Xf9-E5-0Px" id="UbZ-Hi-nUb"/>
                         <outlet property="userEmailTF" destination="vu0-Be-7Ls" id="iZH-7A-lVp"/>
                         <outlet property="userNameTF" destination="qCd-xT-CX8" id="GEY-LM-Kcw"/>

@@ -19,6 +19,9 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var userPasswordConfirmTF: UITextField!
     
+    @IBOutlet weak var passwordConfirmBottomConstraint: NSLayoutConstraint!
+    
+    
     // Profile Image List
     var profileImages = [UIImage(named: "maleProfile"),UIImage(named: "femaleProfile"),UIImage(named: "maleProfile2"),UIImage(named: "femaleProfile2")]
     
@@ -69,12 +72,28 @@ class RegisterViewController: UIViewController {
         setTextfieldsLeftPadding(textfield: userEmailTF)
         setTextfieldsLeftPadding(textfield: userPasswordTF)
         setTextfieldsLeftPadding(textfield: userPasswordConfirmTF)
+        
+        initializeHideKeyboard()
+        // Notifications for when the keyboard opens/closes
+              NotificationCenter.default.addObserver(
+                  self,
+                  selector: #selector(self.keyboardWillShow),
+                  name: UIResponder.keyboardWillShowNotification,
+                  object: nil)
+
+              NotificationCenter.default.addObserver(
+                  self,
+                  selector: #selector(self.keyboardWillHide),
+                  name: UIResponder.keyboardWillHideNotification,
+                  object: nil)
     }
     
     override func viewDidLayoutSubviews() {
         leftArrowButton.frame = CGRect(x: 20, y: 205, width: 60, height: 60)
         rightArrowButton.frame = CGRect(x: 340, y: 205, width: 60, height: 60)
     }
+    
+ 
     
     // Left button click method
     @objc private func buttonRightArrowClick() {
@@ -107,4 +126,74 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func buttonCreateAccountOnClick(_ sender: Any) {
+    }
 }
+
+extension RegisterViewController {
+     func initializeHideKeyboard(){
+        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        
+        //Add this tap gesture recognizer to the parent view
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissMyKeyboard(){
+        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+        //In short- Dismiss the active keyboard.
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+            // Move the view only when the usernameTextField or the passwordTextField are being edited
+            if userPasswordTF.isEditing || userPasswordConfirmTF.isEditing {
+                moveViewWithKeyboard(notification: notification, viewBottomConstraint: self.passwordConfirmBottomConstraint, keyboardWillShow: true)
+                rightArrowButton.isHidden = true
+                leftArrowButton.isHidden = true
+            }
+        }
+        
+        @objc func keyboardWillHide(_ notification: NSNotification) {
+            moveViewWithKeyboard(notification: notification, viewBottomConstraint: self.passwordConfirmBottomConstraint, keyboardWillShow: false)
+            rightArrowButton.isHidden = false
+            leftArrowButton.isHidden = false
+        }
+        
+        func moveViewWithKeyboard(notification: NSNotification, viewBottomConstraint: NSLayoutConstraint, keyboardWillShow: Bool) {
+            
+            // Keyboard's size
+            guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+            let keyboardHeight = keyboardSize.height
+            
+            // Keyboard's animation duration
+            let keyboardDuration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+            
+            // Keyboard's animation curve
+            let keyboardCurve = UIView.AnimationCurve(rawValue: notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! Int)!
+            
+            // Change the constant
+            if keyboardWillShow {
+                let safeAreaExists = (self.view?.window?.safeAreaInsets.bottom != 0) // Check if safe area exists
+                let bottomConstant: CGFloat = 20
+                viewBottomConstraint.constant = keyboardHeight / 1.5 + (safeAreaExists ? 0 : bottomConstant)
+            }else {
+                viewBottomConstraint.constant = 48
+            }
+            
+            // Animate the view the same way the keyboard animates
+            let animator = UIViewPropertyAnimator(duration: keyboardDuration, curve: keyboardCurve) { [weak self] in
+                // Update Constraints
+                self?.view.layoutIfNeeded()
+            }
+            
+            // Perform the animation
+            animator.startAnimation()
+        }
+ 
+ }
+
