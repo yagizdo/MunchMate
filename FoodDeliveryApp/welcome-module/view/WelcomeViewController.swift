@@ -16,6 +16,8 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var appleLogoImageView: UIImageView!
     
+    @IBOutlet weak var btnSignWithEmail: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
