@@ -241,9 +241,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginVector" translatesAutoresizingMaskIntoConstraints="NO" id="XEk-5O-puU">
                                 <rect key="frame" x="0.0" y="116" width="414" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="ocU-14-FQi"/>
-                                </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVe-mK-Eg5">
                                 <rect key="frame" x="32" y="468" width="350" height="60"/>
@@ -312,12 +309,12 @@
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="XEk-5O-puU" firstAttribute="top" secondItem="O3y-Rk-5RO" secondAttribute="top" constant="24" id="0bO-kr-bNo"/>
-                            <constraint firstItem="jSz-MI-XPX" firstAttribute="top" secondItem="xCv-Ws-Gp8" secondAttribute="bottom" constant="24" id="6ou-Gd-gkg"/>
                             <constraint firstItem="NVe-mK-Eg5" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" constant="32" id="7p3-vR-5I3"/>
                             <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="XEk-5O-puU" secondAttribute="trailing" id="DkV-vg-tt9"/>
                             <constraint firstItem="7cd-8W-kzu" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" constant="32" id="HKH-FQ-bq6"/>
                             <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="7cd-8W-kzu" secondAttribute="trailing" constant="32" id="HrU-gj-oZ2"/>
                             <constraint firstItem="NVe-mK-Eg5" firstAttribute="centerX" secondItem="89n-cD-BNC" secondAttribute="centerX" id="Z4i-1x-eJ4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xCv-Ws-Gp8" secondAttribute="bottom" constant="142" id="aRu-4S-I2k"/>
                             <constraint firstItem="xCv-Ws-Gp8" firstAttribute="top" secondItem="7cd-8W-kzu" secondAttribute="bottom" constant="48" id="eDt-FE-F8D"/>
                             <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="xCv-Ws-Gp8" secondAttribute="trailing" constant="32" id="eos-JK-t7z"/>
                             <constraint firstItem="7cd-8W-kzu" firstAttribute="top" secondItem="NVe-mK-Eg5" secondAttribute="bottom" constant="24" id="er8-sZ-oDv"/>
@@ -326,11 +323,13 @@
                             <constraint firstItem="jSz-MI-XPX" firstAttribute="centerX" secondItem="89n-cD-BNC" secondAttribute="centerX" id="rsY-Vg-Dd5"/>
                             <constraint firstItem="xCv-Ws-Gp8" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" constant="32" id="sDr-ds-qL2"/>
                             <constraint firstItem="XEk-5O-puU" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" id="xOO-AI-jz4"/>
+                            <constraint firstItem="jSz-MI-XPX" firstAttribute="top" secondItem="xCv-Ws-Gp8" secondAttribute="bottom" constant="24" id="zNy-Gn-R0R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="cym-Y8-ov5"/>
                     <connections>
                         <outlet property="emailTF" destination="NVe-mK-Eg5" id="tJy-Sm-iyS"/>
+                        <outlet property="loginButtonTopContraint" destination="eDt-FE-F8D" id="qjl-1a-vYW"/>
                         <outlet property="passwordTF" destination="7cd-8W-kzu" id="rhv-os-Wkj"/>
                     </connections>
                 </viewController>
