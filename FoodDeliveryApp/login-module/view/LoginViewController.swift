@@ -16,7 +16,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set Textfields Left padding
+        setTextfieldsLeftPadding(textfield: emailTF)
+        setTextfieldsLeftPadding(textfield: passwordTF)
+    }
+    
+    func setTextfieldsLeftPadding(textfield:UITextField) {
+        textfield.setLeftPadding(10)
     }
     
     @IBAction func buttonLoginOnClick(_ sender: Any) {
