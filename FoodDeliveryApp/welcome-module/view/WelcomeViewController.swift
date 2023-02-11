@@ -34,7 +34,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func buttonSignInWithEmail(_ sender: Any) {
-        print("Email")
+        performSegue(withIdentifier: "toLogin", sender: nil)
     }
     
     @IBAction func buttonSignUp(_ sender: Any) {

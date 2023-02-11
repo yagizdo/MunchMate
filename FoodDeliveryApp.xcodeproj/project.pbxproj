@@ -29,6 +29,11 @@
 		104CAB792997AD90000C5C8B /* Sauce Grotesk Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB722997AD8F000C5C8B /* Sauce Grotesk Medium.ttf */; };
 		104CAB7A2997AD90000C5C8B /* Sauce Grotesk Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB732997AD8F000C5C8B /* Sauce Grotesk Bold.ttf */; };
 		104CAB7B2997AD90000C5C8B /* Sauce Grotesk Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB742997AD8F000C5C8B /* Sauce Grotesk Light.ttf */; };
+		104CAB802997B376000C5C8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB7F2997B376000C5C8B /* LoginViewController.swift */; };
+		104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB822997B3CE000C5C8B /* LoginPresenter.swift */; };
+		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
+		104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB882997B406000C5C8B /* LoginRouter.swift */; };
+		104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB8B2997B420000C5C8B /* LoginProtocols.swift */; };
 		10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */; };
 		10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */; };
 		10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC12996656F00DF75BA /* WelcomeRouter.swift */; };
@@ -61,6 +66,11 @@
 		104CAB722997AD8F000C5C8B /* Sauce Grotesk Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Medium.ttf"; sourceTree = "<group>"; };
 		104CAB732997AD8F000C5C8B /* Sauce Grotesk Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Bold.ttf"; sourceTree = "<group>"; };
 		104CAB742997AD8F000C5C8B /* Sauce Grotesk Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Light.ttf"; sourceTree = "<group>"; };
+		104CAB7F2997B376000C5C8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		104CAB822997B3CE000C5C8B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		104CAB852997B3E7000C5C8B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		104CAB882997B406000C5C8B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		104CAB8B2997B420000C5C8B /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		10D04DC12996656F00DF75BA /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				104CAB7C2997B35C000C5C8B /* login-module */,
 				104CAB6C2997AD38000C5C8B /* utils */,
 				10D04DCB2996E9C200DF75BA /* extensions */,
 				10D04DB82996652100DF75BA /* welcome-module */,
@@ -207,6 +218,58 @@
 				104CAB712997AD8F000C5C8B /* Sauce Grotesk SemiBold.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		104CAB7C2997B35C000C5C8B /* login-module */ = {
+			isa = PBXGroup;
+			children = (
+				104CAB8A2997B412000C5C8B /* protocols */,
+				104CAB872997B3FC000C5C8B /* router */,
+				104CAB842997B3D9000C5C8B /* interactor */,
+				104CAB812997B3C2000C5C8B /* presenter */,
+				104CAB7D2997B363000C5C8B /* view */,
+			);
+			path = "login-module";
+			sourceTree = "<group>";
+		};
+		104CAB7D2997B363000C5C8B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				104CAB7F2997B376000C5C8B /* LoginViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		104CAB812997B3C2000C5C8B /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				104CAB822997B3CE000C5C8B /* LoginPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		104CAB842997B3D9000C5C8B /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				104CAB852997B3E7000C5C8B /* LoginInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		104CAB872997B3FC000C5C8B /* router */ = {
+			isa = PBXGroup;
+			children = (
+				104CAB882997B406000C5C8B /* LoginRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		104CAB8A2997B412000C5C8B /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				104CAB8B2997B420000C5C8B /* LoginProtocols.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		10D04DB82996652100DF75BA /* welcome-module */ = {
@@ -358,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
+				104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */,
 				10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */,
 				10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */,
 				10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */,
@@ -365,10 +429,14 @@
 				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
 				1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */,
 				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,
+				104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */,
 				1047F98D2993DE3D00FCF89D /* RegisterInteractor.swift in Sources */,
+				104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */,
 				1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */,
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
+				104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */,
+				104CAB802997B376000C5C8B /* LoginViewController.swift in Sources */,
 				1047F9872993DC6800FCF89D /* RegisterViewController.swift in Sources */,
 				10D04DC52996659800DF75BA /* WelcomeProtocols.swift in Sources */,
 				10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */,

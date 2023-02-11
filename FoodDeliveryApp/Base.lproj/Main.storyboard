@@ -214,6 +214,7 @@
                         <outlet property="googleLogoImageView" destination="YWh-hw-lwk" id="Hzr-QZ-eE9"/>
                         <outlet property="welcomeImageView" destination="G8g-hD-RnQ" id="DBE-DX-lga"/>
                         <segue destination="dV6-vM-cwh" kind="show" identifier="toRegister" id="lf0-cJ-A18"/>
+                        <segue destination="GaJ-Uo-eGZ" kind="show" identifier="toLogin" id="fmq-2a-shE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG7-j6-Hc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,6 +230,90 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="302.89855072463769" y="-31.473214285714285"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="bzx-ni-7uf">
+            <objects>
+                <viewController id="GaJ-Uo-eGZ" customClass="LoginViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="89n-cD-BNC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginVector" translatesAutoresizingMaskIntoConstraints="NO" id="XEk-5O-puU">
+                                <rect key="frame" x="0.0" y="107" width="414" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="ocU-14-FQi"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVe-mK-Eg5">
+                                <rect key="frame" x="32" y="512" width="350" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="haC-Yq-DoE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cd-8W-kzu">
+                                <rect key="frame" x="32" y="596" width="350" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="XHa-iG-sA3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCv-Ws-Gp8">
+                                <rect key="frame" x="32" y="704" width="350" height="60"/>
+                                <color key="backgroundColor" name="activeOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ml8-JD-dR8"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonLoginOnClick:" destination="GaJ-Uo-eGZ" eventType="touchUpInside" id="s9b-Jr-QMk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O3y-Rk-5RO"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XEk-5O-puU" firstAttribute="top" secondItem="O3y-Rk-5RO" secondAttribute="top" constant="15" id="0bO-kr-bNo"/>
+                            <constraint firstItem="NVe-mK-Eg5" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" constant="32" id="7p3-vR-5I3"/>
+                            <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="XEk-5O-puU" secondAttribute="trailing" id="DkV-vg-tt9"/>
+                            <constraint firstItem="7cd-8W-kzu" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" constant="32" id="HKH-FQ-bq6"/>
+                            <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="7cd-8W-kzu" secondAttribute="trailing" constant="32" id="HrU-gj-oZ2"/>
+                            <constraint firstItem="NVe-mK-Eg5" firstAttribute="centerX" secondItem="89n-cD-BNC" secondAttribute="centerX" id="Z4i-1x-eJ4"/>
+                            <constraint firstItem="xCv-Ws-Gp8" firstAttribute="top" secondItem="7cd-8W-kzu" secondAttribute="bottom" constant="48" id="eDt-FE-F8D"/>
+                            <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="xCv-Ws-Gp8" secondAttribute="trailing" constant="32" id="eos-JK-t7z"/>
+                            <constraint firstItem="7cd-8W-kzu" firstAttribute="top" secondItem="NVe-mK-Eg5" secondAttribute="bottom" constant="24" id="er8-sZ-oDv"/>
+                            <constraint firstItem="O3y-Rk-5RO" firstAttribute="trailing" secondItem="NVe-mK-Eg5" secondAttribute="trailing" constant="32" id="qwt-ri-bUK"/>
+                            <constraint firstItem="NVe-mK-Eg5" firstAttribute="top" secondItem="XEk-5O-puU" secondAttribute="bottom" constant="55" id="rPH-VV-EB4"/>
+                            <constraint firstItem="xCv-Ws-Gp8" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" constant="32" id="sDr-ds-qL2"/>
+                            <constraint firstItem="XEk-5O-puU" firstAttribute="leading" secondItem="O3y-Rk-5RO" secondAttribute="leading" id="xOO-AI-jz4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="cym-Y8-ov5"/>
+                    <connections>
+                        <outlet property="emailTF" destination="NVe-mK-Eg5" id="tJy-Sm-iyS"/>
+                        <outlet property="passwordTF" destination="7cd-8W-kzu" id="rhv-os-Wkj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1E-27-YlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="299"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
@@ -353,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="-31.473214285714285"/>
+            <point key="canvasLocation" x="1054" y="-357"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G0H-YQ-PGY">
@@ -386,9 +471,10 @@
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="femaleProfile" width="532" height="532"/>
         <image name="googleLogo" width="2048" height="2048"/>
+        <image name="loginVector" width="500" height="500"/>
         <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
         <namedColor name="activeOrangeColor">
-            <color red="0.95300000905990601" green="0.60000002384185791" blue="0.29399999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95294117647058818" green="0.59999999999999998" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.98400002717971802" green="0.9649999737739563" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
