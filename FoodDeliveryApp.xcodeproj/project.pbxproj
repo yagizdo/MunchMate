@@ -34,6 +34,11 @@
 		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
 		104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB882997B406000C5C8B /* LoginRouter.swift */; };
 		104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB8B2997B420000C5C8B /* LoginProtocols.swift */; };
+		10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADE929991562001F7811 /* HomePresenter.swift */; };
+		10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADEC29991574001F7811 /* HomeInteractor.swift */; };
+		10B8ADF129991593001F7811 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF029991593001F7811 /* HomeRouter.swift */; };
+		10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF3299915AB001F7811 /* HomeProtocols.swift */; };
+		10B8ADF6299915B5001F7811 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF5299915B5001F7811 /* HomeViewController.swift */; };
 		10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */; };
 		10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */; };
 		10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC12996656F00DF75BA /* WelcomeRouter.swift */; };
@@ -71,6 +76,11 @@
 		104CAB852997B3E7000C5C8B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		104CAB882997B406000C5C8B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		104CAB8B2997B420000C5C8B /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		10B8ADE929991562001F7811 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		10B8ADEC29991574001F7811 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		10B8ADF029991593001F7811 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		10B8ADF3299915AB001F7811 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		10B8ADF5299915B5001F7811 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		10D04DC12996656F00DF75BA /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
@@ -112,6 +122,7 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				10B8ADE629991546001F7811 /* home-module */,
 				104CAB7C2997B35C000C5C8B /* login-module */,
 				104CAB6C2997AD38000C5C8B /* utils */,
 				10D04DCB2996E9C200DF75BA /* extensions */,
@@ -272,6 +283,58 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		10B8ADE629991546001F7811 /* home-module */ = {
+			isa = PBXGroup;
+			children = (
+				10B8ADF22999159E001F7811 /* protocols */,
+				10B8ADEE29991586001F7811 /* router */,
+				10B8ADEB2999156A001F7811 /* interactor */,
+				10B8ADE829991559001F7811 /* presenter */,
+				10B8ADE729991552001F7811 /* view */,
+			);
+			path = "home-module";
+			sourceTree = "<group>";
+		};
+		10B8ADE729991552001F7811 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				10B8ADF5299915B5001F7811 /* HomeViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		10B8ADE829991559001F7811 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				10B8ADE929991562001F7811 /* HomePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		10B8ADEB2999156A001F7811 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				10B8ADEC29991574001F7811 /* HomeInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		10B8ADEE29991586001F7811 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				10B8ADF029991593001F7811 /* HomeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		10B8ADF22999159E001F7811 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				10B8ADF3299915AB001F7811 /* HomeProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		10D04DB82996652100DF75BA /* welcome-module */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,8 +483,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B8ADF6299915B5001F7811 /* HomeViewController.swift in Sources */,
+				10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */,
+				10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */,
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
 				104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */,
+				10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */,
 				10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */,
 				10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */,
 				10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */,
@@ -429,6 +496,7 @@
 				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
 				1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */,
 				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,
+				10B8ADF129991593001F7811 /* HomeRouter.swift in Sources */,
 				104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */,
 				1047F98D2993DE3D00FCF89D /* RegisterInteractor.swift in Sources */,
 				104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */,

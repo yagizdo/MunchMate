@@ -21,6 +21,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var passwordConfirmBottomConstraint: NSLayoutConstraint!
     
+    var registerPresenterDelegate:ViewToPresenterRegisterProtocol?
     
     // Profile Image List
     var profileImages = [UIImage(named: "maleProfile"),UIImage(named: "femaleProfile"),UIImage(named: "maleProfile2"),UIImage(named: "femaleProfile2")]
@@ -86,6 +87,8 @@ class RegisterViewController: UIViewController {
                   selector: #selector(self.keyboardWillHide),
                   name: UIResponder.keyboardWillHideNotification,
                   object: nil)
+        
+        RegisterRouter.createModule(ref: self)
     }
     
     override func viewDidLayoutSubviews() {
@@ -129,6 +132,14 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func buttonCreateAccountOnClick(_ sender: Any) {
+        if userPasswordTF.text == userPasswordConfirmTF.text {
+            if let userName = userNameTF.text, let userMail = userEmailTF.text, let userPassword = userPasswordTF
+                .text {
+                registerPresenterDelegate?.register(userEmail: userMail, userPassword: userPassword,userName: userName)
+            }
+        } else {
+            print("Passwords do not match")
+        }
     }
 }
 
@@ -194,6 +205,5 @@ extension RegisterViewController {
             // Perform the animation
             animator.startAnimation()
         }
- 
  }
 

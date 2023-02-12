@@ -7,6 +7,10 @@
 
 import Foundation
 
-class RegisterPresenter {
+class RegisterPresenter : ViewToPresenterRegisterProtocol {
+    var interactor: PresenterToInteractorRegisterProtocol?
     
+    func register(userEmail: String, userPassword: String,userName:String) {
+        interactor?.register(userEmail: userEmail, userPassword: userPassword,userName: userName)
+    }
 }

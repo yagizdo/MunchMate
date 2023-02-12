@@ -11,12 +11,13 @@ protocol ViewToPresenterRegisterProtocol {
     
     var interactor:PresenterToInteractorRegisterProtocol? {get set}
     
-    func register(userEmail:String,userPassword:String)
+    
+    func register(userEmail:String,userPassword:String,userName:String)
     
 }
 
 protocol PresenterToInteractorRegisterProtocol {
-    func register(userEmail:String,userPassword:String)
+    func register(userEmail:String,userPassword:String,userName:String)
 }
 
 

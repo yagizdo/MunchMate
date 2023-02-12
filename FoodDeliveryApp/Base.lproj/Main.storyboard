@@ -234,7 +234,7 @@
         <!--Login-->
         <scene sceneID="bzx-ni-7uf">
             <objects>
-                <viewController id="GaJ-Uo-eGZ" customClass="LoginViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="GaJ-Uo-eGZ" customClass="LoginViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="89n-cD-BNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,11 +331,40 @@
                         <outlet property="emailTF" destination="NVe-mK-Eg5" id="tJy-Sm-iyS"/>
                         <outlet property="loginButtonTopContraint" destination="eDt-FE-F8D" id="qjl-1a-vYW"/>
                         <outlet property="passwordTF" destination="7cd-8W-kzu" id="rhv-os-Wkj"/>
+                        <segue destination="rk4-By-FdI" kind="show" identifier="toHomeFromLogin" id="DTS-Se-SAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1E-27-YlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1054" y="299"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="uD2-Jd-IvY">
+            <objects>
+                <viewController storyboardIdentifier="homeView" id="rk4-By-FdI" customClass="HomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0FP-EF-8uH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiV-WV-MpR">
+                                <rect key="frame" x="162.5" y="92" width="89" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ZE-8j-bCp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eiV-WV-MpR" firstAttribute="top" secondItem="7ZE-8j-bCp" secondAttribute="top" id="HAo-pW-19M"/>
+                            <constraint firstItem="eiV-WV-MpR" firstAttribute="centerX" secondItem="0FP-EF-8uH" secondAttribute="centerX" id="vWi-lF-q7c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gmQ-nH-9qQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iy3-pn-V0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975" y="25"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
@@ -419,6 +448,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonCreateAccountOnClick:" destination="dV6-vM-cwh" eventType="touchUpInside" id="Nhd-sF-vTb"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="Otb-KM-M0R">
                                 <rect key="frame" x="77" y="784" width="260.5" height="33.5"/>
@@ -477,6 +509,7 @@
                         <outlet property="userNameTF" destination="qCd-xT-CX8" id="GEY-LM-Kcw"/>
                         <outlet property="userPasswordConfirmTF" destination="5CE-R7-AXD" id="gNe-NI-p84"/>
                         <outlet property="userPasswordTF" destination="6DD-AA-Fja" id="iBq-M5-9PG"/>
+                        <segue destination="rk4-By-FdI" kind="show" identifier="toHomeFromRegister" id="pd2-c5-Xxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -509,6 +542,9 @@
             <point key="canvasLocation" x="-607.24637681159425" y="-31.473214285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pd2-c5-Xxb"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>

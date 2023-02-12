@@ -7,6 +7,13 @@
 
 import Foundation
 
-class RegisterRouter {
-    
+class RegisterRouter : PresenterToRouterRegisterProtocol {
+    static func createModule(ref: RegisterViewController) {
+        
+        // View
+        ref.registerPresenterDelegate = RegisterPresenter()
+        
+        // Presenter
+        ref.registerPresenterDelegate?.interactor = RegisterInteractor()
+    }
 }

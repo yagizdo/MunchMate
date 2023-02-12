@@ -7,11 +7,19 @@
 
 import Foundation
 import Firebase
+import UIKit
 
 class AuthService : IAuthService {
     
     // Auth Object
     let auth:Auth
+    
+    // Current User
+    var currentUser: User? {
+        get {
+            return getCurrentUser()
+        }
+    }
     
     // State change handler
     let stateChangeHandler:AuthStateDidChangeListenerHandle
@@ -25,6 +33,12 @@ class AuthService : IAuthService {
         })
     }
     
+    func changeDefaultView() {
+        let board = UIStoryboard(name: "Main", bundle: nil)
+        let home = board.instantiateViewController(withIdentifier: "homeView") as! HomeViewController
+        UIApplication.shared.keyWindow?.rootViewController = home
+    }
+    
     
     func getCurrentUser() -> User? {
         if let currUser = auth.currentUser {
@@ -33,13 +47,29 @@ class AuthService : IAuthService {
         return nil
     }
     
-    func register(userEmail: String, userPassword: String) {
-        auth.createUser(withEmail: userEmail, password: userPassword) {
-            authResult, error in
+    func register(userEmail: String, userPassword: String,userName:String) {
+        
+            auth.createUser(withEmail: userEmail, password: userPassword) {
+                authResult, error in
+                if error != nil {
+                    print(error?.localizedDescription as Any)
+                } else {
+                    self.setUserName(userName: userName)
+                    self.changeDefaultView()
+                    print("Login successful ")
+                }
+            }
+    }
+    
+    func setUserName(userName:String) {
+        let changeRequest = currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = userName
+        changeRequest?.commitChanges() {
+          error in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription as Any)
             } else {
-                print("Login successful ")
+                print("Name changed succesfuly")
             }
         }
     }
@@ -56,4 +86,5 @@ class AuthService : IAuthService {
             print(error.localizedDescription)
         }
     }
+    
 }

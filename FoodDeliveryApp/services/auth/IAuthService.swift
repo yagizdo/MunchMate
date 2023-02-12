@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 protocol IAuthService {
-    func register(userEmail:String,userPassword:String)
+    func register(userEmail:String,userPassword:String,userName:String)
     func getCurrentUser()->User?
     func dispose()
     func logout()

@@ -8,6 +8,16 @@
 import Foundation
 
 
-class RegisterInteractor {
+class RegisterInteractor : PresenterToInteractorRegisterProtocol {
     
+    var authService:AuthService?
+ 
+    
+    init() {
+        authService = AuthService()
+        
+    }
+    func register(userEmail: String, userPassword: String, userName: String) {
+        authService?.register(userEmail: userEmail, userPassword: userPassword,userName:userName)
+    }
 }
