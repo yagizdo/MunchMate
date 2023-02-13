@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ViewToPresenterRegisterProtocol {
-    
+    var view: PresenterToViewRegisterProtocol? {get set}
     var interactor:PresenterToInteractorRegisterProtocol? {get set}
     
     
@@ -17,9 +17,18 @@ protocol ViewToPresenterRegisterProtocol {
 }
 
 protocol PresenterToInteractorRegisterProtocol {
+    var presenter : InteractorToPresenterRegisterProtocol? {get set}
+    
     func register(userEmail:String,userPassword:String,userName:String)
 }
 
+protocol InteractorToPresenterRegisterProtocol {
+    func showError(error:Error)
+}
+
+protocol PresenterToViewRegisterProtocol {
+    func showError(error:Error)
+}
 
 // Router Protocol
 protocol PresenterToRouterRegisterProtocol {

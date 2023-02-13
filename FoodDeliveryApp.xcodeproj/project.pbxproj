@@ -47,6 +47,8 @@
 		10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D04DC929966C0100DF75BA /* GoogleSignIn */; };
 		10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */; };
 		10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */; };
+		10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */ = {isa = PBXBuildFile; productRef = 10DE35AE299ACE4100AEF2D6 /* SnackBar */; };
+		10DE35B1299AF47100AEF2D6 /* SnackbarStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,7 @@
 		10D04DC62996666D00DF75BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_extensions.swift; sourceTree = "<group>"; };
 		10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */,
+				10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */,
 				1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */,
 				10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */,
 			);
@@ -216,6 +220,7 @@
 			children = (
 				104CAB6D2997AD7E000C5C8B /* fonts */,
 				10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */,
+				10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				1047F99C2993E54D00FCF89D /* FirebaseAuth */,
 				1047F99E2993E54D00FCF89D /* FirebaseDatabase */,
 				10D04DC929966C0100DF75BA /* GoogleSignIn */,
+				10DE35AE299ACE4100AEF2D6 /* SnackBar */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = 1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */;
@@ -450,6 +456,7 @@
 			packageReferences = (
 				1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				10DE35AD299ACE4100AEF2D6 /* XCRemoteSwiftPackageReference "SnackBar" */,
 			);
 			productRefGroup = 1047F96A2993DC2000FCF89D /* Products */;
 			projectDirPath = "";
@@ -489,6 +496,7 @@
 				10B8ADF6299915B5001F7811 /* HomeViewController.swift in Sources */,
 				10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */,
 				10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */,
+				10DE35B1299AF47100AEF2D6 /* SnackbarStyles.swift in Sources */,
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
 				104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */,
 				10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */,
@@ -747,6 +755,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		10DE35AD299ACE4100AEF2D6 /* XCRemoteSwiftPackageReference "SnackBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmedAlmasri/SnackBar.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -764,6 +780,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		10DE35AE299ACE4100AEF2D6 /* SnackBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10DE35AD299ACE4100AEF2D6 /* XCRemoteSwiftPackageReference "SnackBar" */;
+			productName = SnackBar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

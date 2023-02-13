@@ -132,13 +132,17 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func buttonCreateAccountOnClick(_ sender: Any) {
-        if userPasswordTF.text == userPasswordConfirmTF.text {
-            if let userName = userNameTF.text, let userMail = userEmailTF.text, let userPassword = userPasswordTF
-                .text {
-                registerPresenterDelegate?.register(userEmail: userMail, userPassword: userPassword,userName: userName)
+        if let userName = userNameTF.text, let userMail = userEmailTF.text, let userPassword = userPasswordTF
+            .text {
+            if userName.isEmpty || userMail.isEmpty {
+                AlertManager.showAuthErrorSnackBar(vc: self, message: "Please fill all fields")
+            } else {
+                if userPasswordTF.text == userPasswordConfirmTF.text {
+                    registerPresenterDelegate?.register(userEmail: userMail, userPassword: userPassword,userName: userName)
+                } else {
+                    AlertManager.showAuthErrorSnackBar(vc: self, message: "Passwords do not match")
+                }
             }
-        } else {
-            print("Passwords do not match")
         }
     }
 }
@@ -206,4 +210,10 @@ extension RegisterViewController {
             animator.startAnimation()
         }
  }
+
+extension RegisterViewController : PresenterToViewRegisterProtocol {
+    func showError(error: Error) {
+        AlertManager.showAuthErrorSnackBar(vc: self, message: error.localizedDescription)
+    }
+}
 

@@ -47,19 +47,25 @@ class AuthService : IAuthService {
         return nil
     }
     
-    func register(userEmail: String, userPassword: String,userName:String) {
-        
-            auth.createUser(withEmail: userEmail, password: userPassword) {
-                authResult, error in
-                if error != nil {
-                    print(error?.localizedDescription as Any)
-                } else {
-                    self.setUserName(userName: userName)
-                    self.changeDefaultView()
-                    print("Login successful ")
-                }
+    func register(userEmail: String, userPassword: String, userName: String, onFailure: @escaping (Error) -> Void) {
+        auth.createUser(withEmail: userEmail, password: userPassword) {
+            authResult, error in
+            if error != nil {
+                
+                onFailure(error!)
+                print(error?.localizedDescription as Any)
+            } else {
+                self.setUserName(userName: userName)
+                self.changeDefaultView()
+                print("Login successful ")
             }
+        }
     }
+    
+    
+    
+    
+    
     
     func setUserName(userName:String) {
         let changeRequest = currentUser?.createProfileChangeRequest()

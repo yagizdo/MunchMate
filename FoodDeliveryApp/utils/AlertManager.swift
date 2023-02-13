@@ -8,7 +8,8 @@
 import UIKit
 
 class AlertManager {
-    private static func showBasicAlert(vc : UIViewController, title:String, message:String?) {
+    
+   static func showBasicAlert(vc : UIViewController, title:String, message:String?) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel)
@@ -16,12 +17,15 @@ class AlertManager {
             vc.present(alert, animated: true)
         }
     }
-}
-
-
-// MARK: - Validation Alerts
-extension AlertManager {
-    public static func showInvalidEmailAlert(vc: UIViewController) {
-        self.showBasicAlert(vc: vc, title: "Invalid Email", message: "Please write a valid Email")
+    
+    
+    static func showSuccessSnackBar(vc : UIViewController, message:String) {
+        SuccessSnackBar.make(in: vc.view, message: message, duration: .lengthShort).show()
+    }
+    
+    static func showAuthErrorSnackBar(vc : UIViewController, message:String) {
+        AuthErrorSnackbar.make(in: vc.view, message: message, duration: .lengthShort).show()
     }
 }
+
+
