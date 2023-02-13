@@ -52,9 +52,7 @@ class AuthService : IAuthService {
         auth.createUser(withEmail: userEmail, password: userPassword) {
             authResult, error in
             if error != nil {
-                
                 onFailure(error!)
-                print(error?.localizedDescription as Any)
             } else {
                 self.setUserName(userName: userName) {
                     error in
@@ -65,16 +63,9 @@ class AuthService : IAuthService {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.changeDefaultView()
                  }
-                
-                print("Login successful ")
             }
         }
     }
-    
-    
-    
-    
-    
     
     func setUserName(userName:String,onFailure: @escaping (Error) -> Void) {
         let changeRequest = currentUser?.createProfileChangeRequest()
@@ -83,8 +74,6 @@ class AuthService : IAuthService {
           error in
             if error != nil {
                 onFailure(error!)
-            } else {
-                print("Name changed succesfuly")
             }
         }
     }
