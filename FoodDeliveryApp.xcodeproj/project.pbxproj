@@ -46,6 +46,7 @@
 		10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC62996666D00DF75BA /* WelcomeViewController.swift */; };
 		10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D04DC929966C0100DF75BA /* GoogleSignIn */; };
 		10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */; };
+		10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		10D04DC42996659800DF75BA /* WelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProtocols.swift; sourceTree = "<group>"; };
 		10D04DC62996666D00DF75BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_extensions.swift; sourceTree = "<group>"; };
+		10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				104CAB6D2997AD7E000C5C8B /* fonts */,
+				10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				1047F98D2993DE3D00FCF89D /* RegisterInteractor.swift in Sources */,
 				104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */,
 				1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */,
+				10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */,
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
 				104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */,
