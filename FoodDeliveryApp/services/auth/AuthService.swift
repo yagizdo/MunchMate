@@ -47,7 +47,8 @@ class AuthService : IAuthService {
         return nil
     }
     
-    func register(userEmail: String, userPassword: String, userName: String, onFailure: @escaping (Error) -> Void) {
+    
+    func register(userEmail: String, userPassword: String, userName: String, onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void) {
         auth.createUser(withEmail: userEmail, password: userPassword) {
             authResult, error in
             if error != nil {
@@ -55,8 +56,16 @@ class AuthService : IAuthService {
                 onFailure(error!)
                 print(error?.localizedDescription as Any)
             } else {
-                self.setUserName(userName: userName)
-                self.changeDefaultView()
+                self.setUserName(userName: userName) {
+                    error in
+                    onFailure(error)
+                }
+                onSuccess(true)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.changeDefaultView()
+                 }
+                
                 print("Login successful ")
             }
         }
@@ -67,13 +76,13 @@ class AuthService : IAuthService {
     
     
     
-    func setUserName(userName:String) {
+    func setUserName(userName:String,onFailure: @escaping (Error) -> Void) {
         let changeRequest = currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = userName
         changeRequest?.commitChanges() {
           error in
             if error != nil {
-                print(error?.localizedDescription as Any)
+                onFailure(error!)
             } else {
                 print("Name changed succesfuly")
             }

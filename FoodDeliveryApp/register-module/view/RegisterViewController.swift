@@ -215,5 +215,9 @@ extension RegisterViewController : PresenterToViewRegisterProtocol {
     func showError(error: Error) {
         AlertManager.showAuthErrorSnackBar(vc: self, message: error.localizedDescription)
     }
+    
+    func showSuccess() {
+        AlertManager.showSuccessSnackBar(vc: self, message: "Login successful, you are being redirected")
+    }
 }
 

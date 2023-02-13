@@ -20,9 +20,14 @@ class RegisterInteractor : PresenterToInteractorRegisterProtocol {
     }
     func register(userEmail: String, userPassword: String, userName: String) {
         authService?.register(userEmail: userEmail, userPassword: userPassword,userName:userName) {
+            isSuccess in
+            if isSuccess {
+                self.presenter?.showSuccess()
+            }
+            
+        } onFailure: {
             error in
             self.presenter?.showError(error: error)
-            print("Interactor error : \(error.localizedDescription)")
         }
     }
 }

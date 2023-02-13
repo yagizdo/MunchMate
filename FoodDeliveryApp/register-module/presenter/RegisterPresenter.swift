@@ -20,4 +20,8 @@ extension RegisterPresenter : InteractorToPresenterRegisterProtocol {
     func showError(error: Error) {
         view?.showError(error: error)
     }
+    
+    func showSuccess() {
+        view?.showSuccess()
+    }
 }

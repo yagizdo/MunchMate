@@ -24,10 +24,12 @@ protocol PresenterToInteractorRegisterProtocol {
 
 protocol InteractorToPresenterRegisterProtocol {
     func showError(error:Error)
+    func showSuccess()
 }
 
 protocol PresenterToViewRegisterProtocol {
     func showError(error:Error)
+    func showSuccess()
 }
 
 // Router Protocol
