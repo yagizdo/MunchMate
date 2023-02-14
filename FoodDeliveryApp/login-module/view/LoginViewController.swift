@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -14,6 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     @IBOutlet weak var loginButtonTopContraint: NSLayoutConstraint!
+    
+    var loginPresenterDelegate : ViewToPresenterLoginProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +40,9 @@ class LoginViewController: UIViewController {
                   selector: #selector(self.keyboardWillHide),
                   name: UIResponder.keyboardWillHideNotification,
                   object: nil)
+        
+        // Create Module
+        LoginRouter.createModule(ref: self)
     }
     
     func setTextfieldsLeftPadding(textfield:UITextField) {
@@ -43,6 +50,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func buttonLoginOnClick(_ sender: Any) {
+        if let userMail = emailTF.text, let userPassword = passwordTF
+            .text {
+            if userPassword.isEmpty || userMail.isEmpty {
+                AlertManager.showAuthErrorSnackBar(vc: self, message: "Please fill all fields")
+            } else {
+                loginPresenterDelegate?.loginWithEmailAndPassword(userEmail: userMail, userPassword: userPassword)
+            }
+        }
     }
     
 }
@@ -107,4 +122,15 @@ extension LoginViewController {
         }
  
  }
+
+extension LoginViewController : PresenterToViewLoginProtocol {
+    func showError(error: Error) {
+        let errCode = AuthErrorCode(_nsError: error as NSError)
+        AlertManager.showAuthErrorSnackBar(vc: self, message: errCode.generateErrorMessage)
+    }
+    
+    func showSuccess() {
+        AlertManager.showSuccessSnackBar(vc: self, message: "Login successful, you are being redirected")
+    }
+}
 

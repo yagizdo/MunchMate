@@ -8,7 +8,22 @@
 import Foundation
 
 class LoginInteractor : PresenterToInteractorLoginProtocol {
+    
+    var authService:AuthService?
+
+    var presenter: InteractorToPresenterLoginProtocol?
+    
+    init() {
+        authService = AuthService.sharedInstance
+    }
+    
     func loginWithEmailAndPassword(userEmail: String, userPassword: String) {
-        
+        authService?.login(userEmail: userEmail, userPassword: userPassword, onSuccess: { isSuccess in
+            if isSuccess {
+                self.presenter?.showSuccess()
+            }
+        }, onFailure: { error in
+            self.presenter?.showError(error: error)
+        })
     }
 }

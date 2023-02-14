@@ -66,6 +66,21 @@ class AuthService : IAuthService {
         }
     }
     
+    func login(userEmail: String, userPassword: String, onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void) {
+        auth.signIn(withEmail: userEmail, password: userPassword) {
+            authResult, error in
+            if error != nil {
+                onFailure(error!)
+            } else {
+                onSuccess(true)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.changeDefaultView()
+                 }
+            }
+        }
+    }
+    
     func setUserName(userName:String,onFailure: @escaping (Error) -> Void) {
         let changeRequest = currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = userName

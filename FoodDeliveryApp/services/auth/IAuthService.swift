@@ -10,6 +10,7 @@ import Firebase
 
 protocol IAuthService {
     func register(userEmail:String,userPassword:String,userName:String,onSuccess: @escaping (Bool) -> Void,onFailure: @escaping (Error) -> Void)
+    func login(userEmail:String,userPassword:String,onSuccess: @escaping (Bool) -> Void,onFailure: @escaping (Error) -> Void)
     func getCurrentUser()->User?
     func dispose()
     func logout()

@@ -281,6 +281,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonLoginOnClick:" destination="GaJ-Uo-eGZ" eventType="touchUpInside" id="QaE-0d-btv"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="jSz-MI-XPX">
                                 <rect key="frame" x="77" y="744" width="260.5" height="33.5"/>
@@ -543,7 +546,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pd2-c5-Xxb"/>
+        <segue reference="DTS-Se-SAx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
