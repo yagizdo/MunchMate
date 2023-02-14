@@ -34,6 +34,7 @@
 		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
 		104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB882997B406000C5C8B /* LoginRouter.swift */; };
 		104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB8B2997B420000C5C8B /* LoginProtocols.swift */; };
+		107BBB80299BAEC100568913 /* AuthExceptionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */; };
 		10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADE929991562001F7811 /* HomePresenter.swift */; };
 		10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADEC29991574001F7811 /* HomeInteractor.swift */; };
 		10B8ADF129991593001F7811 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF029991593001F7811 /* HomeRouter.swift */; };
@@ -79,6 +80,7 @@
 		104CAB852997B3E7000C5C8B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		104CAB882997B406000C5C8B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		104CAB8B2997B420000C5C8B /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExceptionsHandler.swift; sourceTree = "<group>"; };
 		10B8ADE929991562001F7811 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10B8ADEC29991574001F7811 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		10B8ADF029991593001F7811 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				1047F9972993E33000FCF89D /* IAuthService.swift */,
 				1047F9A22993E88600FCF89D /* AuthService.swift */,
+				107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */,
 			);
 			path = auth;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,
 				10B8ADF129991593001F7811 /* HomeRouter.swift in Sources */,
 				104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */,
+				107BBB80299BAEC100568913 /* AuthExceptionsHandler.swift in Sources */,
 				1047F98D2993DE3D00FCF89D /* RegisterInteractor.swift in Sources */,
 				104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */,
 				1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */,

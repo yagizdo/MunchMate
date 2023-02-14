@@ -521,7 +521,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0qJ-1s-qmX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bzx-fF-UFR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorTransitionMaskImage="arrow.backward" catalog="system" id="Bzx-fF-UFR">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="activeOrangeColor"/>

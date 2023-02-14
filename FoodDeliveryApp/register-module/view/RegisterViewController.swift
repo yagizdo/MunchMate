@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     // Profile image view
@@ -213,7 +214,8 @@ extension RegisterViewController {
 
 extension RegisterViewController : PresenterToViewRegisterProtocol {
     func showError(error: Error) {
-        AlertManager.showAuthErrorSnackBar(vc: self, message: error.localizedDescription)
+        let errCode = AuthErrorCode(_nsError: error as NSError)
+        AlertManager.showAuthErrorSnackBar(vc: self, message: errCode.generateErrorMessage)
     }
     
     func showSuccess() {
