@@ -11,6 +11,8 @@ import UIKit
 
 class AuthService : IAuthService {
     
+    static let sharedInstance = AuthService() // Singleton instance
+    
     // Auth Object
     let auth:Auth
     
@@ -24,14 +26,11 @@ class AuthService : IAuthService {
     // State change handler
     let stateChangeHandler:AuthStateDidChangeListenerHandle
     
-    
-    init() {
-        auth = Auth.auth()
-        stateChangeHandler = auth.addStateDidChangeListener({
-            auth,user in
-            
-        })
-    }
+    // Private init() to prevent instantiation from outside
+       private init() {
+           auth = Auth.auth()
+           stateChangeHandler = auth.addStateDidChangeListener { auth, user in }
+       }
     
     func changeDefaultView() {
         let board = UIStoryboard(name: "Main", bundle: nil)

@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let authService = AuthService()
+    let authService = AuthService.sharedInstance
     
     func checkCurrentUser() {
         let currentUser = authService.currentUser
