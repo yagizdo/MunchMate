@@ -11,7 +11,7 @@ import UIKit
 
 class AuthService : IAuthService {
     
-    static let sharedInstance = AuthService() // Singleton instance
+    static let shared = AuthService() // Singleton instance
     
     // Auth Object
     let auth:Auth

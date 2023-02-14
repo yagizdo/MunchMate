@@ -14,7 +14,7 @@ class LoginInteractor : PresenterToInteractorLoginProtocol {
     var presenter: InteractorToPresenterLoginProtocol?
     
     init() {
-        authService = AuthService.sharedInstance
+        authService = AuthService.shared
     }
     
     func loginWithEmailAndPassword(userEmail: String, userPassword: String) {

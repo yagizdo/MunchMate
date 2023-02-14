@@ -15,7 +15,7 @@ class RegisterInteractor : PresenterToInteractorRegisterProtocol {
     var presenter: InteractorToPresenterRegisterProtocol?
     
     init() {
-        authService = AuthService.sharedInstance
+        authService = AuthService.shared
         
     }
     func register(userEmail: String, userPassword: String, userName: String) {
