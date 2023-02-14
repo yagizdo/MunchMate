@@ -21,7 +21,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="hdZ-QV-yjD">
             <objects>
-                <viewController id="Uuc-s4-w2C" customClass="WelcomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" id="Uuc-s4-w2C" customClass="WelcomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0KY-nw-5AT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,11 +355,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut4-aB-pt2">
+                                <rect key="frame" x="300" y="92" width="114" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout Test"/>
+                                <connections>
+                                    <action selector="logoutTestButton:" destination="rk4-By-FdI" eventType="touchUpInside" id="FZH-ET-L1e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7ZE-8j-bCp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ut4-aB-pt2" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="4Aq-QQ-hFg"/>
                             <constraint firstItem="eiV-WV-MpR" firstAttribute="top" secondItem="7ZE-8j-bCp" secondAttribute="top" id="HAo-pW-19M"/>
+                            <constraint firstItem="Ut4-aB-pt2" firstAttribute="top" secondItem="7ZE-8j-bCp" secondAttribute="top" id="TAa-da-9yx"/>
                             <constraint firstItem="eiV-WV-MpR" firstAttribute="centerX" secondItem="0FP-EF-8uH" secondAttribute="centerX" id="vWi-lF-q7c"/>
                         </constraints>
                     </view>

@@ -17,4 +17,7 @@ class HomeViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 
+    @IBAction func logoutTestButton(_ sender: Any) {
+        AuthService.shared.logout()
+    }
 }
