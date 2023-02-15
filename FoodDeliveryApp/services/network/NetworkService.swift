@@ -22,6 +22,7 @@ class NetworkService : INetworkService {
     
     private init() {}
     
+    // All Foods
     func getAllFoods() {
         AF.request("\(baseURL)/tumYemekleriGetir.php",method: .get).response {
             response in
@@ -51,6 +52,7 @@ class NetworkService : INetworkService {
         }
     }
     
+    // Search Food
     func searchFood(searchText: String) {
         var searchedList = [Yemekler]()
         
@@ -76,6 +78,8 @@ class NetworkService : INetworkService {
         }
     }
     
+    
+    // Foods by Category
     func getFoodsByCategory(categoryName: String) {
         var Categorizedfoods = [Yemekler]()
         
@@ -87,6 +91,27 @@ class NetworkService : INetworkService {
         
         for categorizedFood in Categorizedfoods {
             print("categorizedFood : \(categorizedFood.yemek_adi!) - \(categorizedFood.yemek_kategori!)")
+        }
+    }
+    
+  // Add to Cart
+    func addFoodToCart(userMail: String, food: Yemekler, piece: Int?) {
+        
+        let params = ["yemek_adi":food.yemek_adi!,"yemek_resim_adi":food.yemek_resim_adi!,"yemek_fiyat":Int(food.yemek_fiyat!)!,"yemek_siparis_adet":piece!,"kullanici_adi":userMail] as [String : Any]
+        
+        AF.request("\(baseURL)/sepeteYemekEkle.php",method: .post,parameters: params).response {
+            response in
+            
+            do {
+                if let data = response.data {
+                    let answer = try JSONDecoder().decode(CrudCevap.self, from: data)
+                    print("------Insert------")
+                    print("Success : \(answer.success!)")
+                    print("Message : \(answer.message!)")
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }
