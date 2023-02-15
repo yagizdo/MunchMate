@@ -9,4 +9,5 @@ import Foundation
 
 protocol INetworkService {
     func getAllFoods()
+    func searchFood(searchText:String)
 }

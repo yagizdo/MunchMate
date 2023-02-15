@@ -28,5 +28,30 @@ class NetworkService : INetworkService {
             }
         }
     }
+    
+    func searchFood(searchText: String) {
+        var searchedList = [Yemekler]()
+        
+        AF.request("\(baseURL)/tumYemekleriGetir.php",method: .get).response {
+            response in
+            do {
+                if let data = response.data {
+                    let foodsAnswer = try JSONDecoder().decode(YemeklerCevap.self, from: data)
+                    if let foods = foodsAnswer.yemekler {
+                        for food in foods {
+                            if food.yemek_adi!.lowercased().contains(searchText.lowercased()) {
+                                searchedList.append(food)
+                            }
+                        }
+                    }
+                }
+                for searchedFood in searchedList {
+                    print("Searched Foods : \(searchedFood.yemek_adi!)")
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
