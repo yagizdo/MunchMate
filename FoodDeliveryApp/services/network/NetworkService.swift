@@ -9,7 +9,18 @@ import Foundation
 import Alamofire
 
 class NetworkService : INetworkService {
+    static let shared = NetworkService()
+
     var baseURL = "http://kasimadalan.pe.hu/yemekler"
+    var foodsConstants = ["Izgara Somon","Izgara Tavuk","Köfte","Lazanya","Makarna","Pizza"]
+    var drinksConstants = ["Ayran","Fanta","Kahve","Su"]
+    var desertsConstants = ["Baklava","Kadayıf","Sütlaç","Tiramisu"]
+    
+    var allFoods = [Yemekler]()
+    
+
+    
+    private init() {}
     
     func getAllFoods() {
         AF.request("\(baseURL)/tumYemekleriGetir.php",method: .get).response {
@@ -17,10 +28,21 @@ class NetworkService : INetworkService {
             do {
                 if let data = response.data {
                     let foodsAnswer = try JSONDecoder().decode(YemeklerCevap.self, from: data)
-                    if let foods = foodsAnswer.yemekler {
-                        for food in foods {
-                            print("Food : \(food.yemek_adi!)")
+                    if let incomingFoods = foodsAnswer.yemekler {
+                        for food in incomingFoods {
+                            if self.foodsConstants.contains(food.yemek_adi!) {
+                                food.yemek_kategori = "Food"
+                            } else if self.drinksConstants.contains(food.yemek_adi!) {
+                                food.yemek_kategori = "Drink"
+                            } else if self.desertsConstants.contains(food.yemek_adi!) {
+                                food.yemek_kategori = "Desert"
+                            } else {
+                                food.yemek_kategori = "Others"
+                            }
+                            print("Food : \(food.yemek_adi!) - \(food.yemek_kategori!)")
+                            
                         }
+                        self.allFoods = incomingFoods
                     }
                 }
             } catch {
@@ -37,8 +59,8 @@ class NetworkService : INetworkService {
             do {
                 if let data = response.data {
                     let foodsAnswer = try JSONDecoder().decode(YemeklerCevap.self, from: data)
-                    if let foods = foodsAnswer.yemekler {
-                        for food in foods {
+                    if let incomingFoods = foodsAnswer.yemekler {
+                        for food in incomingFoods {
                             if food.yemek_adi!.lowercased().contains(searchText.lowercased()) {
                                 searchedList.append(food)
                             }
@@ -51,6 +73,20 @@ class NetworkService : INetworkService {
             } catch {
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func getFoodsByCategory(categoryName: String) {
+        var Categorizedfoods = [Yemekler]()
+        
+        for food in self.allFoods {
+            if  food.yemek_kategori!.lowercased().contains(categoryName.lowercased()) {
+                Categorizedfoods.append(food)
+            }
+        }
+        
+        for categorizedFood in Categorizedfoods {
+            print("categorizedFood : \(categorizedFood.yemek_adi!) - \(categorizedFood.yemek_kategori!)")
         }
     }
 }

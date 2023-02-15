@@ -10,4 +10,5 @@ import Foundation
 protocol INetworkService {
     func getAllFoods()
     func searchFood(searchText:String)
+    func getFoodsByCategory(categoryName:String)
 }

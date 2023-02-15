@@ -12,4 +12,5 @@ class Yemekler : Codable {
     var yemek_adi:String?
     var yemek_resim_adi:String?
     var yemek_fiyat:String?
+    var yemek_kategori:String?
 }
