@@ -38,10 +38,10 @@
 		105FBD2A299D4F4F00A85D4A /* INetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD29299D4F4F00A85D4A /* INetworkService.swift */; };
 		105FBD2C299D509800A85D4A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD2B299D509800A85D4A /* NetworkService.swift */; };
 		105FBD2F299D516600A85D4A /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD2E299D516600A85D4A /* YemeklerCevap.swift */; };
-		105FBD31299D518900A85D4A /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD30299D518900A85D4A /* Yemekler.swift */; };
 		105FBD33299D81DB00A85D4A /* CrudCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD32299D81DB00A85D4A /* CrudCevap.swift */; };
 		105FBD35299D85F700A85D4A /* sepetCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD34299D85F700A85D4A /* sepetCevap.swift */; };
 		105FBD39299D867C00A85D4A /* SepetYemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD38299D867C00A85D4A /* SepetYemekler.swift */; };
+		105FBD3B299D8BA600A85D4A /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD3A299D8BA600A85D4A /* Yemekler.swift */; };
 		107BBB80299BAEC100568913 /* AuthExceptionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */; };
 		10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADE929991562001F7811 /* HomePresenter.swift */; };
 		10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADEC29991574001F7811 /* HomeInteractor.swift */; };
@@ -91,10 +91,10 @@
 		105FBD29299D4F4F00A85D4A /* INetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkService.swift; sourceTree = "<group>"; };
 		105FBD2B299D509800A85D4A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		105FBD2E299D516600A85D4A /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
-		105FBD30299D518900A85D4A /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 		105FBD32299D81DB00A85D4A /* CrudCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudCevap.swift; sourceTree = "<group>"; };
 		105FBD34299D85F700A85D4A /* sepetCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sepetCevap.swift; sourceTree = "<group>"; };
 		105FBD38299D867C00A85D4A /* SepetYemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemekler.swift; sourceTree = "<group>"; };
+		105FBD3A299D8BA600A85D4A /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 		107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExceptionsHandler.swift; sourceTree = "<group>"; };
 		10B8ADE929991562001F7811 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10B8ADEC29991574001F7811 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				105FBD2E299D516600A85D4A /* YemeklerCevap.swift */,
-				105FBD30299D518900A85D4A /* Yemekler.swift */,
+				105FBD3A299D8BA600A85D4A /* Yemekler.swift */,
 			);
 			path = yemekler;
 			sourceTree = "<group>";
@@ -561,9 +561,9 @@
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
 				104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */,
 				105FBD39299D867C00A85D4A /* SepetYemekler.swift in Sources */,
-				105FBD31299D518900A85D4A /* Yemekler.swift in Sources */,
 				105FBD2F299D516600A85D4A /* YemeklerCevap.swift in Sources */,
 				10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */,
+				105FBD3B299D8BA600A85D4A /* Yemekler.swift in Sources */,
 				10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */,
 				10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */,
 				105FBD2C299D509800A85D4A /* NetworkService.swift in Sources */,
