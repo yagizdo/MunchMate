@@ -17,7 +17,7 @@ class NetworkService : INetworkService {
     var desertsConstants = ["Baklava","Kadayıf","Sütlaç","Tiramisu"]
     
     var allFoods = [Yemekler]()
-    
+    var cartFoods = [SepetYemekler]()
 
     
     private init() {}
@@ -114,5 +114,26 @@ class NetworkService : INetworkService {
             }
         }
     }
+    
+    // Get Cart Items
+    func getCartItems(userMail: String) {
+        let params = ["kullanici_adi":userMail]
+        
+        AF.request("\(baseURL)/sepettekiYemekleriGetir.php",method: .post,parameters: params).response {
+            response in
+            do {
+                if let data = response.data {
+                    let cartAnswer = try JSONDecoder().decode(SepetCevap.self, from: data)
+                    if let incomingFoods = cartAnswer.sepet_yemekler {
+                        self.cartFoods = incomingFoods
+                    }
+                    for food in self.cartFoods {
+                        print("D : \(food.yemek_adi)")
+                    }
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
-
