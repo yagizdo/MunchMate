@@ -128,8 +128,28 @@ class NetworkService : INetworkService {
                         self.cartFoods = incomingFoods
                     }
                     for food in self.cartFoods {
-                        print("D : \(food.yemek_adi)")
+                        print("D : \(food.yemek_adi!) - \(food.sepet_yemek_id!)")
                     }
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    // Delete food in cart
+    func removeFoodFromCart(food_id: Int, userMail: String) {
+        let params = ["sepet_yemek_id":food_id,"kullanici_adi":userMail] as [String : Any]
+        
+        AF.request("\(baseURL)/sepettenYemekSil.php",method: .post,parameters: params).response {
+            response in
+            
+            do {
+                if let data = response.data {
+                    let answer = try JSONDecoder().decode(CrudCevap.self, from: data)
+                    print("------Insert------")
+                    print("Success : \(answer.success!)")
+                    print("Message : \(answer.message!)")
                 }
             } catch {
                 print(error.localizedDescription)

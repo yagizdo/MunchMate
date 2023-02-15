@@ -13,4 +13,5 @@ protocol INetworkService {
     func getFoodsByCategory(categoryName:String)
     func addFoodToCart(userMail:String, food:Yemekler,piece:Int?)
     func getCartItems(userMail:String)
+    func removeFoodFromCart(food_id:Int,userMail:String)
 }
