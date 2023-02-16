@@ -96,11 +96,13 @@ class AuthService : IAuthService {
         auth.removeStateDidChangeListener(stateChangeHandler)
     }
     
-    func logout() {
+    func logout(onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void) {
         do {
             try auth.signOut()
+            onSuccess(true)
             dispose()
         } catch {
+            onFailure(error)
             print(error.localizedDescription)
         }
     }
