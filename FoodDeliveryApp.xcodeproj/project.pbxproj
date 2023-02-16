@@ -34,6 +34,14 @@
 		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
 		104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB882997B406000C5C8B /* LoginRouter.swift */; };
 		104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB8B2997B420000C5C8B /* LoginProtocols.swift */; };
+		105FBD25299D4EED00A85D4A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 105FBD24299D4EED00A85D4A /* Alamofire */; };
+		105FBD2A299D4F4F00A85D4A /* INetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD29299D4F4F00A85D4A /* INetworkService.swift */; };
+		105FBD2C299D509800A85D4A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD2B299D509800A85D4A /* NetworkService.swift */; };
+		105FBD2F299D516600A85D4A /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD2E299D516600A85D4A /* YemeklerCevap.swift */; };
+		105FBD33299D81DB00A85D4A /* CrudCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD32299D81DB00A85D4A /* CrudCevap.swift */; };
+		105FBD35299D85F700A85D4A /* sepetCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD34299D85F700A85D4A /* sepetCevap.swift */; };
+		105FBD39299D867C00A85D4A /* SepetYemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD38299D867C00A85D4A /* SepetYemekler.swift */; };
+		105FBD3B299D8BA600A85D4A /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD3A299D8BA600A85D4A /* Yemekler.swift */; };
 		107BBB80299BAEC100568913 /* AuthExceptionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */; };
 		10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADE929991562001F7811 /* HomePresenter.swift */; };
 		10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADEC29991574001F7811 /* HomeInteractor.swift */; };
@@ -80,6 +88,13 @@
 		104CAB852997B3E7000C5C8B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		104CAB882997B406000C5C8B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		104CAB8B2997B420000C5C8B /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		105FBD29299D4F4F00A85D4A /* INetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkService.swift; sourceTree = "<group>"; };
+		105FBD2B299D509800A85D4A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		105FBD2E299D516600A85D4A /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
+		105FBD32299D81DB00A85D4A /* CrudCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudCevap.swift; sourceTree = "<group>"; };
+		105FBD34299D85F700A85D4A /* sepetCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sepetCevap.swift; sourceTree = "<group>"; };
+		105FBD38299D867C00A85D4A /* SepetYemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemekler.swift; sourceTree = "<group>"; };
+		105FBD3A299D8BA600A85D4A /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 		107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExceptionsHandler.swift; sourceTree = "<group>"; };
 		10B8ADE929991562001F7811 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10B8ADEC29991574001F7811 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -101,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105FBD25299D4EED00A85D4A /* Alamofire in Frameworks */,
 				1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */,
 				10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */,
 				1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */,
@@ -130,6 +146,7 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				105FBD2D299D512C00A85D4A /* entitiy */,
 				10B8ADE629991546001F7811 /* home-module */,
 				104CAB7C2997B35C000C5C8B /* login-module */,
 				104CAB6C2997AD38000C5C8B /* utils */,
@@ -203,6 +220,7 @@
 		1047F9952993E32000FCF89D /* services */ = {
 			isa = PBXGroup;
 			children = (
+				105FBD26299D4F1E00A85D4A /* network */,
 				1047F9962993E32500FCF89D /* auth */,
 			);
 			path = services;
@@ -292,6 +310,43 @@
 				104CAB8B2997B420000C5C8B /* LoginProtocols.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		105FBD26299D4F1E00A85D4A /* network */ = {
+			isa = PBXGroup;
+			children = (
+				105FBD29299D4F4F00A85D4A /* INetworkService.swift */,
+				105FBD2B299D509800A85D4A /* NetworkService.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		105FBD2D299D512C00A85D4A /* entitiy */ = {
+			isa = PBXGroup;
+			children = (
+				105FBD37299D861300A85D4A /* sepet */,
+				105FBD36299D860B00A85D4A /* yemekler */,
+				105FBD32299D81DB00A85D4A /* CrudCevap.swift */,
+			);
+			path = entitiy;
+			sourceTree = "<group>";
+		};
+		105FBD36299D860B00A85D4A /* yemekler */ = {
+			isa = PBXGroup;
+			children = (
+				105FBD2E299D516600A85D4A /* YemeklerCevap.swift */,
+				105FBD3A299D8BA600A85D4A /* Yemekler.swift */,
+			);
+			path = yemekler;
+			sourceTree = "<group>";
+		};
+		105FBD37299D861300A85D4A /* sepet */ = {
+			isa = PBXGroup;
+			children = (
+				105FBD34299D85F700A85D4A /* sepetCevap.swift */,
+				105FBD38299D867C00A85D4A /* SepetYemekler.swift */,
+			);
+			path = sepet;
 			sourceTree = "<group>";
 		};
 		10B8ADE629991546001F7811 /* home-module */ = {
@@ -427,6 +482,7 @@
 				1047F99E2993E54D00FCF89D /* FirebaseDatabase */,
 				10D04DC929966C0100DF75BA /* GoogleSignIn */,
 				10DE35AE299ACE4100AEF2D6 /* SnackBar */,
+				105FBD24299D4EED00A85D4A /* Alamofire */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = 1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */;
@@ -460,6 +516,7 @@
 				1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				10DE35AD299ACE4100AEF2D6 /* XCRemoteSwiftPackageReference "SnackBar" */,
+				105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1047F96A2993DC2000FCF89D /* Products */;
 			projectDirPath = "";
@@ -497,14 +554,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B8ADF6299915B5001F7811 /* HomeViewController.swift in Sources */,
+				105FBD2A299D4F4F00A85D4A /* INetworkService.swift in Sources */,
 				10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */,
 				10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */,
 				10DE35B1299AF47100AEF2D6 /* SnackbarStyles.swift in Sources */,
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
 				104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */,
+				105FBD39299D867C00A85D4A /* SepetYemekler.swift in Sources */,
+				105FBD2F299D516600A85D4A /* YemeklerCevap.swift in Sources */,
 				10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */,
+				105FBD3B299D8BA600A85D4A /* Yemekler.swift in Sources */,
 				10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */,
 				10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */,
+				105FBD2C299D509800A85D4A /* NetworkService.swift in Sources */,
 				10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */,
 				10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */,
 				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
@@ -521,7 +583,9 @@
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
 				104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */,
 				104CAB802997B376000C5C8B /* LoginViewController.swift in Sources */,
+				105FBD33299D81DB00A85D4A /* CrudCevap.swift in Sources */,
 				1047F9872993DC6800FCF89D /* RegisterViewController.swift in Sources */,
+				105FBD35299D85F700A85D4A /* sepetCevap.swift in Sources */,
 				10D04DC52996659800DF75BA /* WelcomeProtocols.swift in Sources */,
 				10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */,
 			);
@@ -751,6 +815,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -779,6 +851,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		105FBD24299D4EED00A85D4A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		10D04DC929966C0100DF75BA /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
