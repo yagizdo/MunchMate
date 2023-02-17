@@ -68,7 +68,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="DMg-Bz-vsO"/>
                                     <constraint firstItem="bOd-2c-Ppi" firstAttribute="centerY" secondItem="Isx-5B-327" secondAttribute="centerY" id="Iwx-52-QHo"/>
@@ -105,7 +105,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="CN9-6q-azS"/>
                                     <constraint firstItem="8pi-YC-OcM" firstAttribute="centerX" secondItem="M1I-de-Eag" secondAttribute="centerX" id="CxU-cS-DuM"/>
@@ -146,6 +146,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign in With Email">
                                     <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="activeOrangeColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -251,7 +252,7 @@
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVe-mK-Eg5">
                                 <rect key="frame" x="32" y="468" width="350" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="haC-Yq-DoE"/>
                                 </constraints>
@@ -265,7 +266,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cd-8W-kzu">
                                 <rect key="frame" x="32" y="552" width="350" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="XHa-iG-sA3"/>
                                 </constraints>
@@ -359,7 +360,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgL-nj-22j">
                                 <rect key="frame" x="0.0" y="92" width="414" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="femaleProfile2" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-LY-7jP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lazybonesAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-LY-7jP">
                                         <rect key="frame" x="24" y="25" width="50" height="50"/>
                                         <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
@@ -532,16 +533,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="femaleProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-E5-0Px">
-                                <rect key="frame" x="0.0" y="116" width="414" height="200"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCd-xT-CX8">
                                 <rect key="frame" x="32" y="348" width="350" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Q8P-6L-FxF"/>
                                 </constraints>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="blackColor"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -552,10 +550,11 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vu0-Be-7Ls">
                                 <rect key="frame" x="32" y="432" width="350" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yXM-tT-zJY"/>
                                 </constraints>
+                                <color key="textColor" name="blackColor"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -566,7 +565,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DD-AA-Fja">
                                 <rect key="frame" x="32" y="516" width="350" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9W7-rc-6GP"/>
                                 </constraints>
@@ -580,7 +579,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5CE-R7-AXD">
                                 <rect key="frame" x="32" y="600" width="350" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UEc-In-16N"/>
                                 </constraints>
@@ -600,7 +599,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Account">
+                                    <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -632,6 +633,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lazybonesAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-E5-0Px">
+                                <rect key="frame" x="107" y="108" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TJn-MB-eDb"/>
+                                    <constraint firstAttribute="height" constant="200" id="kYX-w0-UXu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="auI-UN-b7V"/>
                         <color key="backgroundColor" name="backgroundColor"/>
@@ -641,21 +649,20 @@
                             <constraint firstItem="Otb-KM-M0R" firstAttribute="centerX" secondItem="cqx-jv-iNf" secondAttribute="centerX" id="71i-GX-1dm"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="qCd-xT-CX8" secondAttribute="trailing" constant="32" id="7FH-fO-x3f"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="5CE-R7-AXD" secondAttribute="trailing" constant="32" id="AE2-GQ-kdz"/>
-                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Xf9-E5-0Px" secondAttribute="trailing" id="DXk-HJ-fij"/>
                             <constraint firstItem="C4d-wB-vcx" firstAttribute="top" secondItem="5CE-R7-AXD" secondAttribute="bottom" constant="48" id="EMD-kp-VVi"/>
                             <constraint firstItem="6DD-AA-Fja" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="Kyy-Nu-3w5"/>
                             <constraint firstItem="vu0-Be-7Ls" firstAttribute="top" secondItem="qCd-xT-CX8" secondAttribute="bottom" constant="24" id="Mnm-OB-Pfr"/>
                             <constraint firstItem="5CE-R7-AXD" firstAttribute="top" secondItem="6DD-AA-Fja" secondAttribute="bottom" constant="24" id="SMG-1K-EHZ"/>
-                            <constraint firstItem="qCd-xT-CX8" firstAttribute="top" secondItem="Xf9-E5-0Px" secondAttribute="bottom" constant="32" id="U8L-1u-P9n"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="6DD-AA-Fja" secondAttribute="trailing" constant="32" id="XSu-ZU-GYC"/>
+                            <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="Xf9-E5-0Px" secondAttribute="trailing" constant="107" id="XXF-5v-YCG"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="C4d-wB-vcx" secondAttribute="trailing" constant="32" id="ajR-32-WAB"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="bottom" secondItem="C4d-wB-vcx" secondAttribute="bottom" constant="94" id="gR9-3l-mNO"/>
+                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="107" id="jtt-df-6MW"/>
                             <constraint firstItem="5CE-R7-AXD" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="lLA-9F-hTd"/>
                             <constraint firstItem="auI-UN-b7V" firstAttribute="trailing" secondItem="vu0-Be-7Ls" secondAttribute="trailing" constant="32" id="lYB-qP-7Te"/>
                             <constraint firstItem="Otb-KM-M0R" firstAttribute="top" secondItem="C4d-wB-vcx" secondAttribute="bottom" constant="16" id="nTo-cc-tJR"/>
-                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="top" secondItem="auI-UN-b7V" secondAttribute="top" constant="24" id="qkl-Ih-g5l"/>
+                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="top" secondItem="auI-UN-b7V" secondAttribute="top" constant="16" id="rGz-xd-WqX"/>
                             <constraint firstItem="C4d-wB-vcx" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="rSH-sQ-zyo"/>
-                            <constraint firstItem="Xf9-E5-0Px" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" id="vqH-yL-c4J"/>
                             <constraint firstItem="vu0-Be-7Ls" firstAttribute="leading" secondItem="auI-UN-b7V" secondAttribute="leading" constant="32" id="xIt-Qb-oVH"/>
                         </constraints>
                     </view>
@@ -672,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="-357"/>
+            <point key="canvasLocation" x="1053.6231884057972" y="-357.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G0H-YQ-PGY">
@@ -707,9 +714,8 @@
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
-        <image name="femaleProfile" width="532" height="532"/>
-        <image name="femaleProfile2" width="532" height="532"/>
         <image name="googleLogo" width="2048" height="2048"/>
+        <image name="lazybonesAvatar" width="800" height="800"/>
         <image name="loginVector" width="500" height="500"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
@@ -720,14 +726,14 @@
             <color red="0.98400002717971802" green="0.9649999737739563" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blackColor">
-            <color red="0.094117647058823528" green="0.094117647058823528" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="containerBackgroundColor">
             <color red="0.99199998378753662" green="0.89800000190734863" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="whiteColor">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -25,7 +25,7 @@ class RegisterViewController: UIViewController {
     var registerPresenterDelegate:ViewToPresenterRegisterProtocol?
     
     // Profile Image List
-    var profileImages = [UIImage(named: "maleProfile"),UIImage(named: "femaleProfile"),UIImage(named: "maleProfile2"),UIImage(named: "femaleProfile2")]
+    var profileImages = [UIImage(named: "lazybonesAvatar"),UIImage(named: "maleProfile"),UIImage(named: "afromaleAvatar"),UIImage(named: "femaleProfile"),UIImage(named: "maleProfile2"),UIImage(named: "cloudcryingAvatar"),UIImage(named: "femaleProfile2"),UIImage(named: "chaplinAvatar"),UIImage(named: "coffeecupAvatar"),UIImage(named: "hipsterMaleAvatar"),UIImage(named: "marilynAvatar")]
     
     // Selected Profile Image Index
     var selectedProfileIndex = 0
@@ -61,6 +61,15 @@ class RegisterViewController: UIViewController {
 
         // Profile Image View
         profileImageView.image = profileImages[selectedProfileIndex]
+        
+        // We turn the profile picture into a circle.
+        profileImageView.layer.borderWidth = 5
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.borderColor = UIColor(named: "whiteColor")?.cgColor ?? UIColor.white.cgColor
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.clipsToBounds = true
+        
+        
         // Left Button
         view.addSubview(leftArrowButton)
         leftArrowButton.addTarget(self, action: #selector(buttonLeftArrowClick), for: .touchUpInside)
@@ -93,8 +102,8 @@ class RegisterViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        leftArrowButton.frame = CGRect(x: 20, y: 205, width: 60, height: 60)
-        rightArrowButton.frame = CGRect(x: 340, y: 205, width: 60, height: 60)
+        leftArrowButton.frame = CGRect(x: 20, y: 185, width: 60, height: 60)
+        rightArrowButton.frame = CGRect(x: 340, y: 185, width: 60, height: 60)
     }
     
  
