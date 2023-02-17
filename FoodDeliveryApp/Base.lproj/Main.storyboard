@@ -7,9 +7,13 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Sauce Grotesk Bold.ttf">
+            <string>Sauce-Grotesk-Bold</string>
+        </array>
         <array key="Sauce Grotesk Medium.ttf">
             <string>Sauce-Grotesk-Medium</string>
         </array>
@@ -404,10 +408,107 @@
                                     <constraint firstAttribute="width" constant="414" id="y47-NH-0Tw"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vEk-yZ-HPK">
+                                <rect key="frame" x="0.0" y="192" width="414" height="150"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="BGn-9D-nBI"/>
+                                    <constraint firstAttribute="height" constant="150" id="O7w-eJ-QE7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ypM-uJ-n56">
+                                    <size key="itemSize" width="414" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeSliderCell" id="GEp-Pz-Unu" customClass="HomeSliderCollectionViewCell" customModule="FoodDeliveryApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zja-lS-mrF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGm-pn-gLK">
+                                                    <rect key="frame" x="24" y="0.0" width="366" height="150"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Fastest In Delivery Food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf1-GT-Kpc">
+                                                            <rect key="frame" x="24" y="16" width="143" height="57"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="57" id="2Rg-Yq-PN8"/>
+                                                                <constraint firstAttribute="width" constant="143" id="Me8-kD-ODI"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8D-FZ-H2d">
+                                                            <rect key="frame" x="24" y="85" width="95" height="28"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="28" id="SaM-UH-L5g"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="backgroundColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="Order Now">
+                                                                <fontDescription key="titleFontDescription" name="Sauce-Grotesk-ExtraBold" family="Sauce Grotesk" pointSize="13"/>
+                                                                <color key="baseBackgroundColor" name="activeOrangeColor"/>
+                                                            </buttonConfiguration>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="orderNowButton:" destination="GEp-Pz-Unu" eventType="touchUpInside" id="uvM-0z-j2J"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deliverVec" translatesAutoresizingMaskIntoConstraints="NO" id="qWs-aO-DDO">
+                                                            <rect key="frame" x="163" y="8" width="195" height="140"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="195" id="Je3-K9-DsL"/>
+                                                                <constraint firstAttribute="height" constant="140" id="yCg-Id-3uB"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="containerBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="rf1-GT-Kpc" firstAttribute="top" secondItem="iGm-pn-gLK" secondAttribute="top" constant="16" id="6ZZ-Cg-Vd9"/>
+                                                        <constraint firstItem="F8D-FZ-H2d" firstAttribute="leading" secondItem="iGm-pn-gLK" secondAttribute="leading" constant="24" id="CvX-WH-7v9"/>
+                                                        <constraint firstItem="rf1-GT-Kpc" firstAttribute="leading" secondItem="iGm-pn-gLK" secondAttribute="leading" constant="24" id="RdQ-EK-8NS"/>
+                                                        <constraint firstItem="F8D-FZ-H2d" firstAttribute="top" secondItem="rf1-GT-Kpc" secondAttribute="bottom" constant="12" id="WmL-DB-bZD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qWs-aO-DDO" secondAttribute="trailing" constant="8" id="X4o-wv-8Ei"/>
+                                                        <constraint firstItem="qWs-aO-DDO" firstAttribute="top" secondItem="iGm-pn-gLK" secondAttribute="top" constant="8" id="gVW-Dz-wtv"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="iGm-pn-gLK" secondAttribute="trailing" constant="24" id="Pfw-eB-29C"/>
+                                                <constraint firstItem="iGm-pn-gLK" firstAttribute="leading" secondItem="Zja-lS-mrF" secondAttribute="leading" constant="24" id="T8i-gt-RK3"/>
+                                                <constraint firstAttribute="bottom" secondItem="iGm-pn-gLK" secondAttribute="bottom" id="eeg-rb-U0g"/>
+                                                <constraint firstItem="iGm-pn-gLK" firstAttribute="top" secondItem="Zja-lS-mrF" secondAttribute="top" id="q0d-nS-wkk"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="150"/>
+                                        <connections>
+                                            <outlet property="background" destination="iGm-pn-gLK" id="1Es-b1-Y0C"/>
+                                            <outlet property="titleLabel" destination="rf1-GT-Kpc" id="seS-eo-New"/>
+                                            <outlet property="vectorImage" destination="qWs-aO-DDO" id="Qz1-R8-Gzq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7ZE-8j-bCp"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vEk-yZ-HPK" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="4Ih-l4-t9Z"/>
+                            <constraint firstItem="vEk-yZ-HPK" firstAttribute="top" secondItem="BgL-nj-22j" secondAttribute="bottom" id="JyQ-ol-vYe"/>
+                            <constraint firstItem="7ZE-8j-bCp" firstAttribute="trailing" secondItem="vEk-yZ-HPK" secondAttribute="trailing" id="USq-js-udL"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="eaK-eW-zQO"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="h9o-AI-apz"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="top" secondItem="7ZE-8j-bCp" secondAttribute="top" id="j4L-OE-Ksg"/>
@@ -415,6 +516,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gmQ-nH-9qQ"/>
                     <connections>
+                        <outlet property="homeSliderCollectionView" destination="vEk-yZ-HPK" id="NUa-wg-2NK"/>
                         <outlet property="navbarProfileImage" destination="Bv9-LY-7jP" id="g7e-qC-hpN"/>
                     </connections>
                 </viewController>
@@ -509,16 +611,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="Otb-KM-M0R">
-                                <rect key="frame" x="77" y="784" width="260.5" height="33.5"/>
+                                <rect key="frame" x="84" y="784" width="246.5" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-Dx-D6Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="33"/>
                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-e3-J5e">
-                                        <rect key="frame" x="176.5" y="0.0" width="84" height="33.5"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="79" height="33"/>
                                         <color key="tintColor" name="activeOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up">
@@ -604,6 +706,7 @@
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="deliverVec" width="829" height="364.82907104492188"/>
         <image name="femaleProfile" width="532" height="532"/>
         <image name="femaleProfile2" width="532" height="532"/>
         <image name="googleLogo" width="2048" height="2048"/>
@@ -615,6 +718,9 @@
         </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.98400002717971802" green="0.9649999737739563" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="containerBackgroundColor">
+            <color red="0.99199998378753662" green="0.89800000190734863" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -55,6 +55,7 @@
 		10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC62996666D00DF75BA /* WelcomeViewController.swift */; };
 		10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D04DC929966C0100DF75BA /* GoogleSignIn */; };
 		10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */; };
+		10D15DFA299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D15DF9299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift */; };
 		10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */; };
 		10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */ = {isa = PBXBuildFile; productRef = 10DE35AE299ACE4100AEF2D6 /* SnackBar */; };
 		10DE35B1299AF47100AEF2D6 /* SnackbarStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */; };
@@ -107,6 +108,7 @@
 		10D04DC42996659800DF75BA /* WelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProtocols.swift; sourceTree = "<group>"; };
 		10D04DC62996666D00DF75BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_extensions.swift; sourceTree = "<group>"; };
+		10D15DF9299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -352,6 +354,7 @@
 		10B8ADE629991546001F7811 /* home-module */ = {
 			isa = PBXGroup;
 			children = (
+				10D15DF8299FAF5200EF5F7C /* collectionview */,
 				10B8ADF22999159E001F7811 /* protocols */,
 				10B8ADEE29991586001F7811 /* router */,
 				10B8ADEB2999156A001F7811 /* interactor */,
@@ -459,6 +462,14 @@
 				10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		10D15DF8299FAF5200EF5F7C /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				10D15DF9299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift */,
+			);
+			path = collectionview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,6 +580,7 @@
 				105FBD2C299D509800A85D4A /* NetworkService.swift in Sources */,
 				10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */,
 				10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */,
+				10D15DFA299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift in Sources */,
 				1047F9982993E33000FCF89D /* IAuthService.swift in Sources */,
 				1047F96D2993DC2000FCF89D /* AppDelegate.swift in Sources */,
 				1047F9A32993E88600FCF89D /* AuthService.swift in Sources */,
