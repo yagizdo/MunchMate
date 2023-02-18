@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoriesTitleLabel: UILabel!
     
+    var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Deserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         /// Hide Navigation Controller
@@ -50,7 +52,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         if collectionView == homeSliderCollectionView {
             return 2
         } else if collectionView == categoriesCollectionView {
-            return 5
+            return categories.count
         }
         
         return 0
@@ -80,6 +82,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         // Categories
         else if collectionView == categoriesCollectionView {
             let cell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
+            let category = categories[indexPath.row]
             
             if indexPath.row == 0 {
                 cell.background.backgroundColor = UIColor(named: "containerBackgroundColor")!
@@ -102,8 +105,8 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             cell.layer.masksToBounds = false
             
             // Set category icon and title
-            cell.categoryTitle.text = "Foods"
-            cell.categoryIcon.image = UIImage(named: "foodsIcon")
+            cell.categoryTitle.text = category.categoryName
+            cell.categoryIcon.image = UIImage(named: category.categoryIcon ?? "xmark.circle")
             return cell
             
         }

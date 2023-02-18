@@ -32,11 +32,11 @@ class NetworkService : INetworkService {
                     if let incomingFoods = foodsAnswer.yemekler {
                         for food in incomingFoods {
                             if self.foodsConstants.contains(food.yemek_adi!) {
-                                food.yemek_kategori = "Food"
+                                food.yemek_kategori = "Foods"
                             } else if self.drinksConstants.contains(food.yemek_adi!) {
-                                food.yemek_kategori = "Drink"
+                                food.yemek_kategori = "Drinks"
                             } else if self.desertsConstants.contains(food.yemek_adi!) {
-                                food.yemek_kategori = "Desert"
+                                food.yemek_kategori = "Desserts"
                             } else {
                                 food.yemek_kategori = "Others"
                             }

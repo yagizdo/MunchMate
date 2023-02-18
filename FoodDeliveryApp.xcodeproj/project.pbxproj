@@ -43,6 +43,7 @@
 		105FBD39299D867C00A85D4A /* SepetYemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD38299D867C00A85D4A /* SepetYemekler.swift */; };
 		105FBD3B299D8BA600A85D4A /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD3A299D8BA600A85D4A /* Yemekler.swift */; };
 		1061151929A0FFD80020271E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1061151829A0FFD80020271E /* CategoryCollectionViewCell.swift */; };
+		1061151B29A124360020271E /* category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1061151A29A124360020271E /* category.swift */; };
 		107BBB80299BAEC100568913 /* AuthExceptionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */; };
 		10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADE929991562001F7811 /* HomePresenter.swift */; };
 		10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADEC29991574001F7811 /* HomeInteractor.swift */; };
@@ -98,6 +99,7 @@
 		105FBD38299D867C00A85D4A /* SepetYemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemekler.swift; sourceTree = "<group>"; };
 		105FBD3A299D8BA600A85D4A /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 		1061151829A0FFD80020271E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		1061151A29A124360020271E /* category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = category.swift; sourceTree = "<group>"; };
 		107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExceptionsHandler.swift; sourceTree = "<group>"; };
 		10B8ADE929991562001F7811 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10B8ADEC29991574001F7811 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				105FBD37299D861300A85D4A /* sepet */,
 				105FBD36299D860B00A85D4A /* yemekler */,
 				105FBD32299D81DB00A85D4A /* CrudCevap.swift */,
+				1061151A29A124360020271E /* category.swift */,
 			);
 			path = entitiy;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B8ADF6299915B5001F7811 /* HomeViewController.swift in Sources */,
+				1061151B29A124360020271E /* category.swift in Sources */,
 				105FBD2A299D4F4F00A85D4A /* INetworkService.swift in Sources */,
 				10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */,
 				10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */,
