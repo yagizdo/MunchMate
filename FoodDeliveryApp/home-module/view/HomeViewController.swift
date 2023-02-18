@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeSliderCollectionView: UICollectionView!
     
+    @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    
+    @IBOutlet weak var categoriesTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         /// Hide Navigation Controller
@@ -30,30 +34,100 @@ class HomeViewController: UIViewController {
         // Set homeSlider Collection View
         homeSliderCollectionView.delegate = self
         homeSliderCollectionView.dataSource = self
+        
+        // Set Categories Collection View
+        categoriesCollectionView.delegate = self
+        categoriesCollectionView.dataSource = self
+        
     }
+    
 }
+
+
 
 extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        if collectionView == homeSliderCollectionView {
+            return 2
+        } else if collectionView == categoriesCollectionView {
+            return 5
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = homeSliderCollectionView.dequeueReusableCell(withReuseIdentifier: "homeSliderCell", for: indexPath) as! HomeSliderCollectionViewCell
         
-        cell.background.backgroundColor = UIColor(named: "containerBackgroundColor")
-        cell.titleLabel.text = "The Fastest In Delivery Food"
-        cell.titleLabel.spacing = 7
-        cell.vectorImage.image = UIImage(named: "deliverVec")
-        return cell
+        // Home Slider
+        if collectionView == homeSliderCollectionView {
+            let cell = homeSliderCollectionView.dequeueReusableCell(withReuseIdentifier: "homeSliderCell", for: indexPath) as! HomeSliderCollectionViewCell
+            
+            cell.background.backgroundColor = UIColor(named: "containerBackgroundColor")
+            cell.titleLabel.text = "The Fastest In Delivery Food"
+            cell.titleLabel.spacing = 7
+            cell.vectorImage.image = UIImage(named: "deliverVec")
+            return cell
+        }
+        
+        // Categories
+        else if collectionView == categoriesCollectionView {
+            let cell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
+            
+            if indexPath.row == 0 {
+                cell.background.backgroundColor = UIColor(named: "containerBackgroundColor")!
+                
+                
+            } else {
+                cell.background.backgroundColor = UIColor.white
+                
+            }
+            cell.categoryTitle.textColor = UIColor(named: "blackColor")
+            cell.background.layer.borderColor = UIColor(named: "containerBackgroundColor")!.cgColor
+            cell.background.layer.borderWidth = 2
+            // Set Cell shadow
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor(named: "blackColor")!.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            cell.layer.shadowRadius = 5.0
+            cell.layer.shadowOpacity = 0.1
+            cell.layer.masksToBounds = false
+            
+            // Set category icon and title
+            cell.categoryTitle.text = "Foods"
+            cell.categoryIcon.image = UIImage(named: "foodsIcon")
+            return cell
+            
+        }
+        
+        return CategoryCollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        if collectionView == homeSliderCollectionView {
+            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        } else if collectionView == categoriesCollectionView {
+            
+            return CGSize(width: 90, height: 100)
+        }
+        return CGSize()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == homeSliderCollectionView {
+            return 0
+        } else if collectionView == categoriesCollectionView {
+            return 15
+        }
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == categoriesCollectionView {
+            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        }
+        return UIEdgeInsets.zero
+    }
+    
     
 }
