@@ -534,14 +534,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4ih-Af-vhE">
-                                                            <rect key="frame" x="46.5" y="16.5" width="35" height="34"/>
+                                                            <rect key="frame" x="46.5" y="16" width="35" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="mv7-ik-ABQ"/>
                                                                 <constraint firstAttribute="width" constant="35" id="q54-z5-uLT"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiD-RA-1JJ">
-                                                            <rect key="frame" x="39.5" y="67" width="49" height="19.5"/>
+                                                            <rect key="frame" x="39.5" y="59" width="49" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                                             <color key="textColor" name="blackColor"/>
                                                             <nil key="highlightedColor"/>
@@ -550,7 +550,7 @@
                                                     <color key="backgroundColor" name="backgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="4ih-Af-vhE" firstAttribute="top" secondItem="Gkc-o6-ba1" secondAttribute="top" constant="16" id="LhJ-XZ-oIq"/>
-                                                        <constraint firstItem="eiD-RA-1JJ" firstAttribute="top" secondItem="4ih-Af-vhE" secondAttribute="bottom" constant="16" id="cUy-Ld-PPA"/>
+                                                        <constraint firstItem="eiD-RA-1JJ" firstAttribute="top" secondItem="4ih-Af-vhE" secondAttribute="bottom" constant="8" id="cUy-Ld-PPA"/>
                                                         <constraint firstItem="eiD-RA-1JJ" firstAttribute="centerX" secondItem="Gkc-o6-ba1" secondAttribute="centerX" id="qJK-UR-gS4"/>
                                                         <constraint firstItem="4ih-Af-vhE" firstAttribute="centerX" secondItem="Gkc-o6-ba1" secondAttribute="centerX" id="yWs-OH-EpI"/>
                                                     </constraints>

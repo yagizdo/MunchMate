@@ -119,7 +119,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         } else if collectionView == categoriesCollectionView {
             
-            return CGSize(width: 90, height: 100)
+            return CGSize(width: 90, height: 90)
         }
         return CGSize()
     }
