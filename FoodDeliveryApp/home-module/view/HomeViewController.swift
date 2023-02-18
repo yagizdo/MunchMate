@@ -66,6 +66,14 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             cell.titleLabel.text = "The Fastest In Delivery Food"
             cell.titleLabel.spacing = 7
             cell.vectorImage.image = UIImage(named: "deliverVec")
+            // Set Cell shadow
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor(named: "blackColor")!.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            cell.layer.shadowRadius = 5.0
+            cell.layer.shadowOpacity = 0.1
+            cell.layer.masksToBounds = false
             return cell
         }
         
