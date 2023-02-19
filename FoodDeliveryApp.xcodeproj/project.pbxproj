@@ -27,6 +27,7 @@
 		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
 		104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB882997B406000C5C8B /* LoginRouter.swift */; };
 		104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB8B2997B420000C5C8B /* LoginProtocols.swift */; };
+		105CC15B29A2B18D004C8738 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 105CC15A29A2B18D004C8738 /* Kingfisher */; };
 		105FBD25299D4EED00A85D4A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 105FBD24299D4EED00A85D4A /* Alamofire */; };
 		105FBD2A299D4F4F00A85D4A /* INetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD29299D4F4F00A85D4A /* INetworkService.swift */; };
 		105FBD2C299D509800A85D4A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FBD2B299D509800A85D4A /* NetworkService.swift */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105CC15B29A2B18D004C8738 /* Kingfisher in Frameworks */,
 				105FBD25299D4EED00A85D4A /* Alamofire in Frameworks */,
 				1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */,
 				10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */,
@@ -474,6 +476,7 @@
 				10D04DC929966C0100DF75BA /* GoogleSignIn */,
 				10DE35AE299ACE4100AEF2D6 /* SnackBar */,
 				105FBD24299D4EED00A85D4A /* Alamofire */,
+				105CC15A29A2B18D004C8738 /* Kingfisher */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = 1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */;
@@ -508,6 +511,7 @@
 				10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				10DE35AD299ACE4100AEF2D6 /* XCRemoteSwiftPackageReference "SnackBar" */,
 				105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				105CC15929A2B18D004C8738 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1047F96A2993DC2000FCF89D /* Products */;
 			projectDirPath = "";
@@ -803,6 +807,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		105CC15929A2B18D004C8738 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -839,6 +851,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1047F99B2993E54D00FCF89D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		105CC15A29A2B18D004C8738 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105CC15929A2B18D004C8738 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		105FBD24299D4EED00A85D4A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

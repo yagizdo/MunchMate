@@ -599,6 +599,13 @@
                                                                         <action selector="addToCartButton:" destination="7EA-oc-Pxc" eventType="touchUpInside" id="dZe-q1-lVv"/>
                                                                     </connections>
                                                                 </button>
+                                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-fk-BC1">
+                                                                    <rect key="frame" x="44.5" y="4" width="90" height="90"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="90" id="UBS-N8-vBE"/>
+                                                                        <constraint firstAttribute="height" constant="90" id="vdU-AG-AFw"/>
+                                                                    </constraints>
+                                                                </activityIndicatorView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="q7r-LK-aRf" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="8" id="2LO-Y1-2a7"/>
@@ -612,6 +619,8 @@
                                                                 <constraint firstItem="6xW-E2-jQA" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" id="ZRs-DW-orN"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6xW-E2-jQA" secondAttribute="trailing" id="cgw-ax-hL9"/>
                                                                 <constraint firstItem="gun-oF-dQW" firstAttribute="leading" secondItem="ohV-2b-3PZ" secondAttribute="trailing" constant="8.5" id="dDa-68-uAC"/>
+                                                                <constraint firstItem="gLw-fk-BC1" firstAttribute="centerX" secondItem="dTh-b9-DcV" secondAttribute="centerX" id="fdk-b0-ukP"/>
+                                                                <constraint firstItem="gLw-fk-BC1" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="4" id="iJL-9B-Nap"/>
                                                                 <constraint firstItem="q7r-LK-aRf" firstAttribute="top" secondItem="Ud6-iR-5ed" secondAttribute="bottom" constant="8" id="nm1-RX-2DL"/>
                                                                 <constraint firstItem="Ud6-iR-5ed" firstAttribute="top" secondItem="ohV-2b-3PZ" secondAttribute="bottom" constant="4" id="sUO-Ie-Y5x"/>
                                                                 <constraint firstItem="gun-oF-dQW" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="16" id="uhH-Jd-O2K"/>
@@ -625,6 +634,7 @@
                                                         <size key="customSize" width="179" height="187"/>
                                                         <connections>
                                                             <outlet property="foodImage" destination="ohV-2b-3PZ" id="jhb-5R-APH"/>
+                                                            <outlet property="foodImageLoadingIndicator" destination="gLw-fk-BC1" id="IJL-91-Suf"/>
                                                             <outlet property="foodPrice" destination="q7r-LK-aRf" id="6Xu-68-Ngx"/>
                                                             <outlet property="foodTitle" destination="Ud6-iR-5ed" id="JYv-I6-crF"/>
                                                         </connections>

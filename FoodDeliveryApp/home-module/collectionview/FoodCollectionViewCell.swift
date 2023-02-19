@@ -15,6 +15,8 @@ class FoodCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var foodPrice: UILabel!
     
+    @IBOutlet weak var foodImageLoadingIndicator: UIActivityIndicatorView!
+    
     @IBAction func addToCartButton(_ sender: Any) {
     }
 }

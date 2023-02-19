@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     
@@ -158,8 +159,16 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             cell.foodTitle.textColor = UIColor(named: "blackColor")
             cell.contentView.layer.borderColor = UIColor(named: "containerBackgroundColor")!.cgColor
             cell.contentView.layer.borderWidth = 2
-           
+            cell.foodImageLoadingIndicator.hidesWhenStopped = true
+            cell.foodImageLoadingIndicator.startAnimating()
             
+            // Get food image
+            if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
+                DispatchQueue.main.async {
+                    cell.foodImage.kf.setImage(with: url)
+                }
+                cell.foodImageLoadingIndicator.stopAnimating()
+            }
             // Set food title
             cell.foodTitle.text = food.yemek_adi
             return cell
