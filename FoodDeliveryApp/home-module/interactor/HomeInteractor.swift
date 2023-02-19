@@ -23,4 +23,10 @@ class HomeInteractor : PresenterToInteractorHomeProtocol {
             self.homePresenter?.showError(error: error)
         })
     }
+    
+    func getFoodsByCategory(categoryName: String) {
+        networkService?.getFoodsByCategory(categoryName: categoryName, onSuccess: { foods in
+            self.homePresenter?.sendDataToPresenter(foods: foods)
+        })
+    }
 }

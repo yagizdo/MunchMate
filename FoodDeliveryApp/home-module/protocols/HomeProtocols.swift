@@ -13,12 +13,14 @@ protocol ViewToPresenterHomeProtocol {
     var homeView : PresenterToViewHomeProtocol? {get set}
     
     func getAllFoods()
+    func getFoodsByCategory(categoryName:String)
 }
 
 protocol PresenterToInteractorHomeProtocol {
     var homePresenter : InteractorToPresenterHomeProtocol? {get set}
     
     func getAllFoods()
+    func getFoodsByCategory(categoryName:String)
 }
 
 protocol InteractorToPresenterHomeProtocol {

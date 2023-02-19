@@ -14,6 +14,10 @@ class HomePresenter : ViewToPresenterHomeProtocol {
     func getAllFoods() {
         homeInteractor?.getAllFoods()
     }
+    
+    func getFoodsByCategory(categoryName: String) {
+        homeInteractor?.getFoodsByCategory(categoryName: categoryName)
+    }
 }
 
 extension HomePresenter : InteractorToPresenterHomeProtocol {

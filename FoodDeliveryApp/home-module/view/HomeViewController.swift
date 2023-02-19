@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     
     var selectedCategoryIndex = 0
     
-    var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Deserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
+    var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Desserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
     
     var foods = [Yemekler]()
     
@@ -79,8 +79,8 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+128)
     }
-    
 }
+
 
 
 extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -178,8 +178,16 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedCategoryIndex = indexPath.row
-        categoriesCollectionView.reloadData()
+        if collectionView == homeSliderCollectionView {
+            
+        } else if collectionView == categoriesCollectionView {
+            let selectedCategory = categories[indexPath.row]
+            selectedCategoryIndex = indexPath.row
+            homePresenterDelegate?.getFoodsByCategory(categoryName: selectedCategory.categoryName ?? "All")
+            categoriesCollectionView.reloadData()
+        } else if collectionView == foodsCollectionView  {
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

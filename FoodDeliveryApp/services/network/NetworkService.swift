@@ -80,17 +80,22 @@ class NetworkService : INetworkService {
     
     
     // Foods by Category
-    func getFoodsByCategory(categoryName: String) {
-        var Categorizedfoods = [Yemekler]()
-        
-        for food in self.allFoods {
-            if  food.yemek_kategori!.lowercased().contains(categoryName.lowercased()) {
-                Categorizedfoods.append(food)
+    func getFoodsByCategory(categoryName: String, onSuccess: @escaping ([Yemekler]) -> Void) {
+        if categoryName.lowercased() == "all" {
+            getAllFoods { foods in
+                onSuccess(foods)
+            } onFailure: { error in
+                print(error.localizedDescription)
             }
-        }
-        
-        for categorizedFood in Categorizedfoods {
-            print("categorizedFood : \(categorizedFood.yemek_adi!) - \(categorizedFood.yemek_kategori!)")
+        } else {
+            var categorizedfoods = [Yemekler]()
+            
+            for food in self.allFoods {
+                if  food.yemek_kategori!.lowercased().contains(categoryName.lowercased()) {
+                    categorizedfoods.append(food)
+                }
+            }
+            onSuccess(categorizedfoods)
         }
     }
     

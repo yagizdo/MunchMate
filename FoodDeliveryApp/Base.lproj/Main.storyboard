@@ -551,7 +551,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="179" height="187"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ayran" translatesAutoresizingMaskIntoConstraints="NO" id="ohV-2b-3PZ">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ohV-2b-3PZ">
                                                                     <rect key="frame" x="44.5" y="4" width="90" height="90"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="90" id="W61-Ex-iiF"/>
@@ -568,7 +568,6 @@
                                                                     <rect key="frame" x="143" y="6.5" width="28" height="31.5"/>
                                                                     <color key="tintColor" name="blackColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="28" id="0DE-MJ-nhE"/>
                                                                         <constraint firstAttribute="height" constant="28" id="hWU-t0-cPg"/>
                                                                     </constraints>
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -611,12 +610,11 @@
                                                                 <constraint firstAttribute="trailing" secondItem="q7r-LK-aRf" secondAttribute="trailing" constant="16" id="24I-t5-vVQ"/>
                                                                 <constraint firstItem="Ud6-iR-5ed" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="16" id="8bu-MH-brV"/>
                                                                 <constraint firstItem="q7r-LK-aRf" firstAttribute="top" secondItem="ohV-2b-3PZ" secondAttribute="bottom" constant="16" id="Bfo-Ia-m6u"/>
-                                                                <constraint firstItem="ohV-2b-3PZ" firstAttribute="centerX" secondItem="dTh-b9-DcV" secondAttribute="centerX" id="CFB-42-Vvf"/>
                                                                 <constraint firstItem="ohV-2b-3PZ" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="4" id="FhP-UC-iY7"/>
                                                                 <constraint firstItem="ohV-2b-3PZ" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="44.5" id="Khf-x8-TUG"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gun-oF-dQW" secondAttribute="trailing" constant="8" id="RxR-2k-yud"/>
                                                                 <constraint firstAttribute="bottom" secondItem="6xW-E2-jQA" secondAttribute="bottom" id="SaG-S2-404"/>
-                                                                <constraint firstItem="ohV-2b-3PZ" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="44.5" id="TNg-xK-X3H"/>
+                                                                <constraint firstItem="gun-oF-dQW" firstAttribute="leading" secondItem="ohV-2b-3PZ" secondAttribute="trailing" constant="8.5" id="TSl-MS-sMI"/>
                                                                 <constraint firstItem="6xW-E2-jQA" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" id="ZRs-DW-orN"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6xW-E2-jQA" secondAttribute="trailing" id="cgw-ax-hL9"/>
                                                                 <constraint firstItem="gLw-fk-BC1" firstAttribute="centerX" secondItem="dTh-b9-DcV" secondAttribute="centerX" id="fdk-b0-ukP"/>
@@ -914,7 +912,6 @@
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
-        <image name="ayran" width="256" height="256"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
         <image name="googleLogo" width="2048" height="2048"/>
         <image name="heart" catalog="system" width="128" height="107"/>
