@@ -34,8 +34,8 @@ class AuthService : IAuthService {
     
     func changeDefaultView() {
         let board = UIStoryboard(name: "Main", bundle: nil)
-        let home = board.instantiateViewController(withIdentifier: "homeView") as! HomeViewController
-        UIApplication.shared.keyWindow?.rootViewController = home
+        let tabbar = board.instantiateViewController(withIdentifier: "mainTabbar") as! UITabBarController
+        UIApplication.shared.keyWindow?.rootViewController = tabbar
     }
     
     
