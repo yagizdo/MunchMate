@@ -8,7 +8,7 @@
 import Foundation
 
 protocol INetworkService {
-    func getAllFoods()
+    func getAllFoods(onSuccess: @escaping ([Yemekler]) -> Void, onFailure: @escaping (Error) -> Void)
     func searchFood(searchText:String)
     func getFoodsByCategory(categoryName:String)
     func addFoodToCart(userMail:String, food:Yemekler,piece:Int?)

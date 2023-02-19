@@ -7,6 +7,21 @@
 
 import Foundation
 
-class HomePresenter {
+class HomePresenter : ViewToPresenterHomeProtocol {
+    var homeView: PresenterToViewHomeProtocol?
+    var homeInteractor: PresenterToInteractorHomeProtocol?
     
+    func getAllFoods() {
+        homeInteractor?.getAllFoods()
+    }
+}
+
+extension HomePresenter : InteractorToPresenterHomeProtocol {
+    func sendDataToPresenter(foods: [Yemekler]) {
+        homeView?.sendDataToView(foods: foods)
+    }
+    
+    func showError(error: Error) {
+        homeView?.showError(error: error)
+    }
 }

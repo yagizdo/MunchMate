@@ -23,7 +23,7 @@ class NetworkService : INetworkService {
     private init() {}
     
     // All Foods
-    func getAllFoods() {
+    func getAllFoods(onSuccess: @escaping ([Yemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
         AF.request("\(baseURL)/tumYemekleriGetir.php",method: .get).response {
             response in
             do {
@@ -40,13 +40,13 @@ class NetworkService : INetworkService {
                             } else {
                                 food.yemek_kategori = "Others"
                             }
-                            print("Food : \(food.yemek_adi!) - \(food.yemek_kategori!)")
-                            
                         }
+                        onSuccess(incomingFoods)
                         self.allFoods = incomingFoods
                     }
                 }
             } catch {
+                onFailure(error)
                 print(error.localizedDescription)
             }
         }

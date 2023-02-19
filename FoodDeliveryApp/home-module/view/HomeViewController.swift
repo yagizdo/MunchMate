@@ -19,15 +19,19 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     
-    @IBOutlet weak var categoriesTitleLabel: UILabel!
+    //@IBOutlet weak var categoriesTitleLabel: UILabel!
     
     @IBOutlet weak var foodsCollectionView_constraint: NSLayoutConstraint!
+    
+    //@IBOutlet weak var navbarUsernameLbl: UILabel!
     
     var selectedCategoryIndex = 0
     
     var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Deserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
     
     var foods = [Yemekler]()
+    
+    var homePresenterDelegate : ViewToPresenterHomeProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +59,11 @@ class HomeViewController: UIViewController {
         foodsCollectionView.delegate = self
         foodsCollectionView.dataSource = self
         
+        // Create Module
+        HomeRouter.createModule(ref: self)
+        
+        // Get all foods
+        homePresenterDelegate?.getAllFoods()
     }
     
     override func viewDidLayoutSubviews() {
@@ -75,7 +84,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         } else if collectionView == categoriesCollectionView {
             return categories.count
         } else if collectionView == foodsCollectionView  {
-            return 5
+            return foods.count
         }
         
         return 0
@@ -138,7 +147,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         // Food Collection View
         else if collectionView == foodsCollectionView {
             let cell = foodsCollectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodCollectionViewCell
-            //let food = foods[indexPath.row]
+            let food = foods[indexPath.row]
            
             cell.contentView.backgroundColor = UIColor.white
             cell.foodTitle.textColor = UIColor(named: "blackColor")
@@ -147,7 +156,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
            
             
             // Set food title
-            cell.foodTitle.text = "Ayran"
+            cell.foodTitle.text = food.yemek_adi
             return cell
         }
         
@@ -206,4 +215,15 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     
+}
+
+extension HomeViewController : PresenterToViewHomeProtocol {
+    func sendDataToView(foods: [Yemekler]) {
+        self.foods = foods
+        foodsCollectionView.reloadData()
+    }
+    
+    func showError(error: Error) {
+        AlertManager.showErrorSnackBar(vc: self, message: "Something went wrong!")
+    }
 }

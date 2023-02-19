@@ -22,13 +22,6 @@
 		1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99C2993E54D00FCF89D /* FirebaseAuth */; };
 		1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99E2993E54D00FCF89D /* FirebaseDatabase */; };
 		1047F9A32993E88600FCF89D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9A22993E88600FCF89D /* AuthService.swift */; };
-		104CAB752997AD90000C5C8B /* Sauce Grotesk Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB6E2997AD8F000C5C8B /* Sauce Grotesk Black.ttf */; };
-		104CAB762997AD90000C5C8B /* Sauce Grotesk ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB6F2997AD8F000C5C8B /* Sauce Grotesk ExtraBold.ttf */; };
-		104CAB772997AD90000C5C8B /* Sauce Grotesk Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB702997AD8F000C5C8B /* Sauce Grotesk Regular.ttf */; };
-		104CAB782997AD90000C5C8B /* Sauce Grotesk SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB712997AD8F000C5C8B /* Sauce Grotesk SemiBold.ttf */; };
-		104CAB792997AD90000C5C8B /* Sauce Grotesk Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB722997AD8F000C5C8B /* Sauce Grotesk Medium.ttf */; };
-		104CAB7A2997AD90000C5C8B /* Sauce Grotesk Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB732997AD8F000C5C8B /* Sauce Grotesk Bold.ttf */; };
-		104CAB7B2997AD90000C5C8B /* Sauce Grotesk Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104CAB742997AD8F000C5C8B /* Sauce Grotesk Light.ttf */; };
 		104CAB802997B376000C5C8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB7F2997B376000C5C8B /* LoginViewController.swift */; };
 		104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB822997B3CE000C5C8B /* LoginPresenter.swift */; };
 		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
@@ -80,13 +73,6 @@
 		1047F9972993E33000FCF89D /* IAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthService.swift; sourceTree = "<group>"; };
 		1047F9992993E4C700FCF89D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1047F9A22993E88600FCF89D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		104CAB6E2997AD8F000C5C8B /* Sauce Grotesk Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Black.ttf"; sourceTree = "<group>"; };
-		104CAB6F2997AD8F000C5C8B /* Sauce Grotesk ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk ExtraBold.ttf"; sourceTree = "<group>"; };
-		104CAB702997AD8F000C5C8B /* Sauce Grotesk Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Regular.ttf"; sourceTree = "<group>"; };
-		104CAB712997AD8F000C5C8B /* Sauce Grotesk SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk SemiBold.ttf"; sourceTree = "<group>"; };
-		104CAB722997AD8F000C5C8B /* Sauce Grotesk Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Medium.ttf"; sourceTree = "<group>"; };
-		104CAB732997AD8F000C5C8B /* Sauce Grotesk Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Bold.ttf"; sourceTree = "<group>"; };
-		104CAB742997AD8F000C5C8B /* Sauce Grotesk Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sauce Grotesk Light.ttf"; sourceTree = "<group>"; };
 		104CAB7F2997B376000C5C8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		104CAB822997B3CE000C5C8B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		104CAB852997B3E7000C5C8B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -247,25 +233,10 @@
 		104CAB6C2997AD38000C5C8B /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				104CAB6D2997AD7E000C5C8B /* fonts */,
 				10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */,
 				10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */,
 			);
 			path = utils;
-			sourceTree = "<group>";
-		};
-		104CAB6D2997AD7E000C5C8B /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				104CAB6E2997AD8F000C5C8B /* Sauce Grotesk Black.ttf */,
-				104CAB732997AD8F000C5C8B /* Sauce Grotesk Bold.ttf */,
-				104CAB6F2997AD8F000C5C8B /* Sauce Grotesk ExtraBold.ttf */,
-				104CAB742997AD8F000C5C8B /* Sauce Grotesk Light.ttf */,
-				104CAB722997AD8F000C5C8B /* Sauce Grotesk Medium.ttf */,
-				104CAB702997AD8F000C5C8B /* Sauce Grotesk Regular.ttf */,
-				104CAB712997AD8F000C5C8B /* Sauce Grotesk SemiBold.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		104CAB7C2997B35C000C5C8B /* login-module */ = {
@@ -552,17 +523,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104CAB792997AD90000C5C8B /* Sauce Grotesk Medium.ttf in Resources */,
-				104CAB7B2997AD90000C5C8B /* Sauce Grotesk Light.ttf in Resources */,
-				104CAB762997AD90000C5C8B /* Sauce Grotesk ExtraBold.ttf in Resources */,
-				104CAB772997AD90000C5C8B /* Sauce Grotesk Regular.ttf in Resources */,
 				1047F9792993DC2100FCF89D /* LaunchScreen.storyboard in Resources */,
 				1047F99A2993E4C700FCF89D /* GoogleService-Info.plist in Resources */,
-				104CAB7A2997AD90000C5C8B /* Sauce Grotesk Bold.ttf in Resources */,
 				1047F9762993DC2100FCF89D /* Assets.xcassets in Resources */,
-				104CAB782997AD90000C5C8B /* Sauce Grotesk SemiBold.ttf in Resources */,
 				1047F9742993DC2000FCF89D /* Main.storyboard in Resources */,
-				104CAB752997AD90000C5C8B /* Sauce Grotesk Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

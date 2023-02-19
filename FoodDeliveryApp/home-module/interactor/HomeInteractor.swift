@@ -7,6 +7,20 @@
 
 import Foundation
 
-class HomeInteractor {
+class HomeInteractor : PresenterToInteractorHomeProtocol {
+    var homePresenter: InteractorToPresenterHomeProtocol?
     
+    var networkService:NetworkService?
+    
+    init() {
+        networkService = NetworkService.shared
+    }
+    
+    func getAllFoods() {
+        networkService?.getAllFoods(onSuccess: { foods in
+            self.homePresenter?.sendDataToPresenter(foods: foods)
+        }, onFailure: { error in
+            self.homePresenter?.showError(error: error)
+        })
+    }
 }
