@@ -559,13 +559,13 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud6-iR-5ed">
-                                                                    <rect key="frame" x="8" y="98" width="41" height="19"/>
+                                                                    <rect key="frame" x="16" y="110" width="41" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
                                                                     <color key="textColor" name="blackColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gun-oF-dQW">
-                                                                    <rect key="frame" x="143" y="14.5" width="28" height="31.5"/>
+                                                                    <rect key="frame" x="143" y="6.5" width="28" height="31.5"/>
                                                                     <color key="tintColor" name="blackColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="28" id="0DE-MJ-nhE"/>
@@ -573,12 +573,6 @@
                                                                     </constraints>
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-LK-aRf">
-                                                                    <rect key="frame" x="8" y="125" width="33" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="13"/>
-                                                                    <color key="textColor" name="activeOrangeColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xW-E2-jQA">
                                                                     <rect key="frame" x="0.0" y="152" width="179" height="35"/>
                                                                     <constraints>
@@ -606,10 +600,17 @@
                                                                         <constraint firstAttribute="height" constant="90" id="vdU-AG-AFw"/>
                                                                     </constraints>
                                                                 </activityIndicatorView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-LK-aRf">
+                                                                    <rect key="frame" x="122.5" y="110" width="40.5" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="16"/>
+                                                                    <color key="textColor" name="activeOrangeColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="q7r-LK-aRf" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="8" id="2LO-Y1-2a7"/>
-                                                                <constraint firstItem="Ud6-iR-5ed" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="8" id="8bu-MH-brV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="q7r-LK-aRf" secondAttribute="trailing" constant="16" id="24I-t5-vVQ"/>
+                                                                <constraint firstItem="Ud6-iR-5ed" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="16" id="8bu-MH-brV"/>
+                                                                <constraint firstItem="q7r-LK-aRf" firstAttribute="top" secondItem="ohV-2b-3PZ" secondAttribute="bottom" constant="16" id="Bfo-Ia-m6u"/>
                                                                 <constraint firstItem="ohV-2b-3PZ" firstAttribute="centerX" secondItem="dTh-b9-DcV" secondAttribute="centerX" id="CFB-42-Vvf"/>
                                                                 <constraint firstItem="ohV-2b-3PZ" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="4" id="FhP-UC-iY7"/>
                                                                 <constraint firstItem="ohV-2b-3PZ" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="44.5" id="Khf-x8-TUG"/>
@@ -618,12 +619,10 @@
                                                                 <constraint firstItem="ohV-2b-3PZ" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="44.5" id="TNg-xK-X3H"/>
                                                                 <constraint firstItem="6xW-E2-jQA" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" id="ZRs-DW-orN"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6xW-E2-jQA" secondAttribute="trailing" id="cgw-ax-hL9"/>
-                                                                <constraint firstItem="gun-oF-dQW" firstAttribute="leading" secondItem="ohV-2b-3PZ" secondAttribute="trailing" constant="8.5" id="dDa-68-uAC"/>
                                                                 <constraint firstItem="gLw-fk-BC1" firstAttribute="centerX" secondItem="dTh-b9-DcV" secondAttribute="centerX" id="fdk-b0-ukP"/>
                                                                 <constraint firstItem="gLw-fk-BC1" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="4" id="iJL-9B-Nap"/>
-                                                                <constraint firstItem="q7r-LK-aRf" firstAttribute="top" secondItem="Ud6-iR-5ed" secondAttribute="bottom" constant="8" id="nm1-RX-2DL"/>
-                                                                <constraint firstItem="Ud6-iR-5ed" firstAttribute="top" secondItem="ohV-2b-3PZ" secondAttribute="bottom" constant="4" id="sUO-Ie-Y5x"/>
-                                                                <constraint firstItem="gun-oF-dQW" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="16" id="uhH-Jd-O2K"/>
+                                                                <constraint firstItem="Ud6-iR-5ed" firstAttribute="top" secondItem="ohV-2b-3PZ" secondAttribute="bottom" constant="16" id="sUO-Ie-Y5x"/>
+                                                                <constraint firstItem="gun-oF-dQW" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="8" id="uhH-Jd-O2K"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
