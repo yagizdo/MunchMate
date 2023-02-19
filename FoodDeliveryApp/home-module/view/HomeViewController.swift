@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
     
     //@IBOutlet weak var navbarUsernameLbl: UILabel!
     
+    @IBOutlet weak var foodsLoadingIndicator: UIActivityIndicatorView!
+    
     var selectedCategoryIndex = 0
     
     var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Deserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
@@ -61,6 +63,9 @@ class HomeViewController: UIViewController {
         
         // Create Module
         HomeRouter.createModule(ref: self)
+        
+        foodsLoadingIndicator.hidesWhenStopped = true
+        foodsLoadingIndicator.startAnimating()
         
         // Get all foods
         homePresenterDelegate?.getAllFoods()
@@ -221,6 +226,8 @@ extension HomeViewController : PresenterToViewHomeProtocol {
     func sendDataToView(foods: [Yemekler]) {
         self.foods = foods
         foodsCollectionView.reloadData()
+        foodsLoadingIndicator.stopAnimating()
+        
     }
     
     func showError(error: Error) {

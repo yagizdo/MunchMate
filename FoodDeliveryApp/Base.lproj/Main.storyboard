@@ -631,14 +631,23 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-Lk-knf">
+                                                <rect key="frame" x="157" y="500" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="5GM-Ib-Zm8"/>
+                                                    <constraint firstAttribute="height" constant="100" id="8ie-RQ-0WT"/>
+                                                </constraints>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="hc1-Lk-knf" firstAttribute="top" secondItem="vEk-yZ-HPK" secondAttribute="bottom" constant="250" id="5tU-7x-yw7"/>
                                             <constraint firstAttribute="trailing" secondItem="ZRT-yU-0HY" secondAttribute="trailing" id="AfC-lx-5VI"/>
                                             <constraint firstItem="YxA-lJ-oUT" firstAttribute="top" secondItem="ZRT-yU-0HY" secondAttribute="bottom" constant="16" id="Dtz-Qt-mju"/>
                                             <constraint firstItem="ZRT-yU-0HY" firstAttribute="leading" secondItem="RmK-DF-nvH" secondAttribute="leading" id="KGy-SN-vBe"/>
                                             <constraint firstItem="BgL-nj-22j" firstAttribute="top" secondItem="RmK-DF-nvH" secondAttribute="top" id="Uzk-H8-eQQ"/>
                                             <constraint firstItem="YxA-lJ-oUT" firstAttribute="leading" secondItem="RmK-DF-nvH" secondAttribute="leading" id="YP9-wP-Aal"/>
+                                            <constraint firstItem="hc1-Lk-knf" firstAttribute="centerX" secondItem="RmK-DF-nvH" secondAttribute="centerX" id="aPF-A3-G0k"/>
                                             <constraint firstItem="ZRT-yU-0HY" firstAttribute="top" secondItem="axB-x9-NdT" secondAttribute="bottom" constant="16" id="aZg-iO-vrI"/>
                                             <constraint firstAttribute="trailing" secondItem="YxA-lJ-oUT" secondAttribute="trailing" id="bG1-14-AZa"/>
                                             <constraint firstAttribute="bottom" secondItem="YxA-lJ-oUT" secondAttribute="bottom" constant="32" id="c0g-vo-DKH"/>
@@ -679,6 +688,7 @@
                         <outlet property="categoriesCollectionView" destination="ZRT-yU-0HY" id="HDe-y5-pep"/>
                         <outlet property="foodsCollectionView" destination="YxA-lJ-oUT" id="t0E-mO-ar2"/>
                         <outlet property="foodsCollectionView_constraint" destination="wQS-mN-hj6" id="bXt-aj-mJZ"/>
+                        <outlet property="foodsLoadingIndicator" destination="hc1-Lk-knf" id="Ohr-yX-Sl7"/>
                         <outlet property="homeScrollView" destination="0Vh-qk-W16" id="oiK-0R-r6f"/>
                         <outlet property="homeSliderCollectionView" destination="vEk-yZ-HPK" id="NUa-wg-2NK"/>
                         <outlet property="navbarProfileImage" destination="Bv9-LY-7jP" id="g7e-qC-hpN"/>
