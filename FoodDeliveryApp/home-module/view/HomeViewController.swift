@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var homeScrollView: UIScrollView!
+    
     @IBOutlet weak var navbarProfileImage: UIImageView!
     
     @IBOutlet weak var homeSliderCollectionView: UICollectionView!
@@ -18,6 +20,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     
     @IBOutlet weak var categoriesTitleLabel: UILabel!
+    
+    @IBOutlet weak var foodsCollectionView_constraint: NSLayoutConstraint!
     
     var selectedCategoryIndex = 0
     
@@ -50,12 +54,18 @@ class HomeViewController: UIViewController {
         // Set Food Collection View
         foodsCollectionView.delegate = self
         foodsCollectionView.dataSource = self
-        foodsCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
     }
     
+    override func viewDidLayoutSubviews() {
+        self.foodsCollectionView_constraint.constant = self.foodsCollectionView.contentSize.height
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+128)
+    }
+    
 }
-
 
 
 extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -99,16 +109,16 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             
             if indexPath.row == selectedCategoryIndex
             {
-                cell.background.backgroundColor = UIColor(named: "containerBackgroundColor")!
+                cell.contentView.backgroundColor = UIColor(named: "containerBackgroundColor")!
                 
                 
             } else {
-                cell.background.backgroundColor = UIColor.white
+                cell.contentView.backgroundColor = UIColor.white
                 
             }
             cell.categoryTitle.textColor = UIColor(named: "blackColor")
-            cell.background.layer.borderColor = UIColor(named: "containerBackgroundColor")!.cgColor
-            cell.background.layer.borderWidth = 2
+            cell.contentView.layer.borderColor = UIColor(named: "containerBackgroundColor")!.cgColor
+            cell.contentView.layer.borderWidth = 2
             // Set Cell shadow
             cell.layer.cornerRadius = 15.0
             cell.layer.borderWidth = 0.0

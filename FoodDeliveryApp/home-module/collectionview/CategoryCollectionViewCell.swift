@@ -8,7 +8,6 @@
 import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var background: UIView!
     
     @IBOutlet weak var categoryIcon: UIImageView!
     
