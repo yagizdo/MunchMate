@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoriesTitleLabel: UILabel!
     
+    var selectedCategoryIndex = 0
+    
     var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Deserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
     
     override func viewDidLoad() {
@@ -84,7 +86,8 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             let cell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
             let category = categories[indexPath.row]
             
-            if indexPath.row == 0 {
+            if indexPath.row == selectedCategoryIndex
+            {
                 cell.background.backgroundColor = UIColor(named: "containerBackgroundColor")!
                 
                 
@@ -112,6 +115,11 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         }
         
         return CategoryCollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCategoryIndex = indexPath.row
+        categoriesCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
