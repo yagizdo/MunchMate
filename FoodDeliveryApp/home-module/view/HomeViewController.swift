@@ -15,11 +15,15 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
+    @IBOutlet weak var foodsCollectionView: UICollectionView!
+    
     @IBOutlet weak var categoriesTitleLabel: UILabel!
     
     var selectedCategoryIndex = 0
     
     var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Deserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
+    
+    var foods = [Yemekler]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +47,11 @@ class HomeViewController: UIViewController {
         categoriesCollectionView.delegate = self
         categoriesCollectionView.dataSource = self
         
+        // Set Food Collection View
+        foodsCollectionView.delegate = self
+        foodsCollectionView.dataSource = self
+        foodsCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
     }
     
 }
@@ -55,6 +64,8 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             return 2
         } else if collectionView == categoriesCollectionView {
             return categories.count
+        } else if collectionView == foodsCollectionView  {
+            return 5
         }
         
         return 0
@@ -114,6 +125,22 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             
         }
         
+        // Food Collection View
+        else if collectionView == foodsCollectionView {
+            let cell = foodsCollectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodCollectionViewCell
+            //let food = foods[indexPath.row]
+           
+            cell.contentView.backgroundColor = UIColor.white
+            cell.foodTitle.textColor = UIColor(named: "blackColor")
+            cell.contentView.layer.borderColor = UIColor(named: "containerBackgroundColor")!.cgColor
+            cell.contentView.layer.borderWidth = 2
+           
+            
+            // Set food title
+            cell.foodTitle.text = "Ayran"
+            return cell
+        }
+        
         return CategoryCollectionViewCell()
     }
     
@@ -128,6 +155,12 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         } else if collectionView == categoriesCollectionView {
             
             return CGSize(width: 90, height: 90)
+        } else if collectionView == foodsCollectionView  {
+            
+            let screenwidth = UIScreen.main.bounds.width
+            let itemWidth = (screenwidth - 70)/2
+
+            return CGSize(width: itemWidth, height: itemWidth * 1.05)
         }
         return CGSize()
     }
@@ -137,13 +170,27 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             return 0
         } else if collectionView == categoriesCollectionView {
             return 15
+        } else if collectionView == foodsCollectionView  {
+            return 16
         }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == homeSliderCollectionView {
+            return 0
+        } else if collectionView == categoriesCollectionView {
+            return 15
+        }
+        
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if collectionView == categoriesCollectionView {
             return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        } else if collectionView == foodsCollectionView  {
+            return UIEdgeInsets(top: 16, left: 24, bottom: 16, right: 24)
         }
         return UIEdgeInsets.zero
     }

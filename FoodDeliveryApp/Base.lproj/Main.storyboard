@@ -506,7 +506,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-C6-Jq6">
                                 <rect key="frame" x="24" y="366" width="98" height="22"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Medium" family="Sauce Grotesk" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Rp-mg-go6">
@@ -579,6 +579,100 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YxA-lJ-oUT">
+                                <rect key="frame" x="0.0" y="520" width="414" height="352"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dvH-0z-zCI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="7EA-oc-Pxc" customClass="FoodCollectionViewCell" customModule="FoodDeliveryApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="187"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dTh-b9-DcV">
+                                            <rect key="frame" x="0.0" y="0.0" width="179" height="187"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ayran" translatesAutoresizingMaskIntoConstraints="NO" id="ohV-2b-3PZ">
+                                                    <rect key="frame" x="4" y="4" width="171" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="XlZ-Ci-T53"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud6-iR-5ed">
+                                                    <rect key="frame" x="8" y="98" width="46" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
+                                                    <color key="textColor" name="blackColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gun-oF-dQW">
+                                                    <rect key="frame" x="143" y="14.5" width="28" height="31.5"/>
+                                                    <color key="tintColor" name="blackColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="Cdn-FH-WaO"/>
+                                                        <constraint firstAttribute="width" constant="28" id="wws-IA-X0S"/>
+                                                    </constraints>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-LK-aRf">
+                                                    <rect key="frame" x="8" y="125.5" width="38" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="13"/>
+                                                    <color key="textColor" name="activeOrangeColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xW-E2-jQA">
+                                                    <rect key="frame" x="0.0" y="159" width="179" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="MfI-FP-Ghc"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="activeOrangeColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Add to Cart">
+                                                        <fontDescription key="titleFontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="12"/>
+                                                        <color key="baseBackgroundColor" name="activeOrangeColor"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="addToCartButton:" destination="7EA-oc-Pxc" eventType="touchUpInside" id="dZe-q1-lVv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ud6-iR-5ed" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="8" id="4ko-v1-fy1"/>
+                                                <constraint firstItem="ohV-2b-3PZ" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="4" id="Gh3-Tq-Bq0"/>
+                                                <constraint firstItem="6xW-E2-jQA" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" id="Hkh-LK-fFD"/>
+                                                <constraint firstAttribute="trailing" secondItem="6xW-E2-jQA" secondAttribute="trailing" id="JTk-73-9Cz"/>
+                                                <constraint firstItem="q7r-LK-aRf" firstAttribute="top" secondItem="Ud6-iR-5ed" secondAttribute="bottom" constant="8" id="Kds-0F-cKE"/>
+                                                <constraint firstAttribute="trailing" secondItem="gun-oF-dQW" secondAttribute="trailing" constant="8" id="Mlm-oD-Dt2"/>
+                                                <constraint firstItem="ohV-2b-3PZ" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="4" id="QiL-uf-ppe"/>
+                                                <constraint firstAttribute="bottom" secondItem="6xW-E2-jQA" secondAttribute="bottom" id="h1e-St-JOU"/>
+                                                <constraint firstItem="Ud6-iR-5ed" firstAttribute="top" secondItem="ohV-2b-3PZ" secondAttribute="bottom" constant="4" id="huz-Kg-O9M"/>
+                                                <constraint firstAttribute="trailing" secondItem="ohV-2b-3PZ" secondAttribute="trailing" constant="4" id="iqe-kh-Bs8"/>
+                                                <constraint firstItem="gun-oF-dQW" firstAttribute="top" secondItem="dTh-b9-DcV" secondAttribute="top" constant="16" id="qNf-Uq-W8a"/>
+                                                <constraint firstItem="q7r-LK-aRf" firstAttribute="leading" secondItem="dTh-b9-DcV" secondAttribute="leading" constant="8" id="sIz-Ko-m1p"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="179" height="187"/>
+                                        <connections>
+                                            <outlet property="foodImage" destination="ohV-2b-3PZ" id="jhb-5R-APH"/>
+                                            <outlet property="foodPrice" destination="q7r-LK-aRf" id="6Xu-68-Ngx"/>
+                                            <outlet property="foodTitle" destination="Ud6-iR-5ed" id="JYv-I6-crF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7ZE-8j-bCp"/>
                         <color key="backgroundColor" name="backgroundColor"/>
@@ -587,18 +681,23 @@
                             <constraint firstItem="pEO-C6-Jq6" firstAttribute="top" secondItem="vEk-yZ-HPK" secondAttribute="bottom" constant="24" id="4OF-Ix-9m8"/>
                             <constraint firstItem="vEk-yZ-HPK" firstAttribute="top" secondItem="BgL-nj-22j" secondAttribute="bottom" id="JyQ-ol-vYe"/>
                             <constraint firstItem="7ZE-8j-bCp" firstAttribute="trailing" secondItem="vEk-yZ-HPK" secondAttribute="trailing" id="USq-js-udL"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="Xv5-rn-wV0"/>
                             <constraint firstItem="6Rp-mg-go6" firstAttribute="top" secondItem="pEO-C6-Jq6" secondAttribute="bottom" constant="16" id="ZkO-NR-VKE"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="eaK-eW-zQO"/>
                             <constraint firstItem="pEO-C6-Jq6" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" constant="24" id="fM1-N2-95l"/>
+                            <constraint firstAttribute="bottom" secondItem="YxA-lJ-oUT" secondAttribute="bottom" constant="24" id="gZt-e8-jVt"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="h9o-AI-apz"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="top" secondItem="6Rp-mg-go6" secondAttribute="bottom" constant="16" id="hPX-iA-Qw6"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="top" secondItem="7ZE-8j-bCp" secondAttribute="top" id="j4L-OE-Ksg"/>
                             <constraint firstItem="6Rp-mg-go6" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="opW-jm-wqp"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="sDy-gg-2ba"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gmQ-nH-9qQ"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="6Rp-mg-go6" id="kpg-kW-9cs"/>
                         <outlet property="categoriesTitleLabel" destination="pEO-C6-Jq6" id="Qdc-iD-wFT"/>
+                        <outlet property="foodsCollectionView" destination="YxA-lJ-oUT" id="t0E-mO-ar2"/>
                         <outlet property="homeSliderCollectionView" destination="vEk-yZ-HPK" id="NUa-wg-2NK"/>
                         <outlet property="navbarProfileImage" destination="Bv9-LY-7jP" id="g7e-qC-hpN"/>
                     </connections>
@@ -795,9 +894,11 @@
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="ayran" width="256" height="256"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
         <image name="foodsIcon" width="800" height="800"/>
         <image name="googleLogo" width="2048" height="2048"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="lazybonesAvatar" width="800" height="800"/>
         <image name="loginVector" width="500" height="500"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
