@@ -342,14 +342,14 @@
                         <outlet property="emailTF" destination="NVe-mK-Eg5" id="tJy-Sm-iyS"/>
                         <outlet property="loginButtonTopContraint" destination="eDt-FE-F8D" id="qjl-1a-vYW"/>
                         <outlet property="passwordTF" destination="7cd-8W-kzu" id="rhv-os-Wkj"/>
-                        <segue destination="rk4-By-FdI" kind="show" identifier="toHomeFromLogin" id="DTS-Se-SAx"/>
+                        <segue destination="sMs-0Z-cB5" kind="show" identifier="toHomeFromLogin" id="DTS-Se-SAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1E-27-YlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1054" y="299"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Item-->
         <scene sceneID="uD2-Jd-IvY">
             <objects>
                 <viewController storyboardIdentifier="homeView" id="rk4-By-FdI" customClass="HomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -580,7 +580,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YxA-lJ-oUT">
-                                <rect key="frame" x="0.0" y="520" width="414" height="352"/>
+                                <rect key="frame" x="0.0" y="512" width="414" height="301"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dvH-0z-zCI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -679,20 +679,21 @@
                         <constraints>
                             <constraint firstItem="vEk-yZ-HPK" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="4Ih-l4-t9Z"/>
                             <constraint firstItem="pEO-C6-Jq6" firstAttribute="top" secondItem="vEk-yZ-HPK" secondAttribute="bottom" constant="24" id="4OF-Ix-9m8"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="bottom" secondItem="7ZE-8j-bCp" secondAttribute="bottom" id="GAq-KZ-p9w"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="Jkk-xW-Vma"/>
                             <constraint firstItem="vEk-yZ-HPK" firstAttribute="top" secondItem="BgL-nj-22j" secondAttribute="bottom" id="JyQ-ol-vYe"/>
                             <constraint firstItem="7ZE-8j-bCp" firstAttribute="trailing" secondItem="vEk-yZ-HPK" secondAttribute="trailing" id="USq-js-udL"/>
-                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="Xv5-rn-wV0"/>
                             <constraint firstItem="6Rp-mg-go6" firstAttribute="top" secondItem="pEO-C6-Jq6" secondAttribute="bottom" constant="16" id="ZkO-NR-VKE"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="eaK-eW-zQO"/>
                             <constraint firstItem="pEO-C6-Jq6" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" constant="24" id="fM1-N2-95l"/>
-                            <constraint firstAttribute="bottom" secondItem="YxA-lJ-oUT" secondAttribute="bottom" constant="24" id="gZt-e8-jVt"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="h9o-AI-apz"/>
-                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="top" secondItem="6Rp-mg-go6" secondAttribute="bottom" constant="16" id="hPX-iA-Qw6"/>
                             <constraint firstItem="BgL-nj-22j" firstAttribute="top" secondItem="7ZE-8j-bCp" secondAttribute="top" id="j4L-OE-Ksg"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="jvC-5H-jRj"/>
+                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="top" secondItem="6Rp-mg-go6" secondAttribute="bottom" constant="8" id="mEy-ch-f01"/>
                             <constraint firstItem="6Rp-mg-go6" firstAttribute="leading" secondItem="7ZE-8j-bCp" secondAttribute="leading" id="opW-jm-wqp"/>
-                            <constraint firstItem="YxA-lJ-oUT" firstAttribute="trailing" secondItem="7ZE-8j-bCp" secondAttribute="trailing" id="sDy-gg-2ba"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="EcS-cx-KIU"/>
                     <navigationItem key="navigationItem" id="gmQ-nH-9qQ"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="6Rp-mg-go6" id="kpg-kW-9cs"/>
@@ -704,7 +705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iy3-pn-V0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.913043478261" y="24.776785714285712"/>
+            <point key="canvasLocation" x="2884.057971014493" y="24.776785714285712"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
@@ -855,7 +856,7 @@
                         <outlet property="userNameTF" destination="qCd-xT-CX8" id="GEY-LM-Kcw"/>
                         <outlet property="userPasswordConfirmTF" destination="5CE-R7-AXD" id="gNe-NI-p84"/>
                         <outlet property="userPasswordTF" destination="6DD-AA-Fja" id="iBq-M5-9PG"/>
-                        <segue destination="rk4-By-FdI" kind="show" identifier="toHomeFromRegister" id="pd2-c5-Xxb"/>
+                        <segue destination="sMs-0Z-cB5" kind="show" identifier="toHomeFromRegister" id="pd2-c5-Xxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEc-Jd-eEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -887,6 +888,24 @@
             </objects>
             <point key="canvasLocation" x="-607.24637681159425" y="-31.473214285714285"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uL8-0H-DJV">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabbar" automaticallyAdjustsScrollViewInsets="NO" id="sMs-0Z-cB5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9bl-BD-VeV"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ny-aV-vXo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rk4-By-FdI" kind="relationship" relationship="viewControllers" id="flo-3j-lyS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orp-VE-Upr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="24.776785714285712"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pd2-c5-Xxb"/>
@@ -904,7 +923,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
         <namedColor name="activeOrangeColor">
-            <color red="0.95294117647058818" green="0.59999999999999998" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95300000905990601" green="0.60000002384185791" blue="0.29399999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.98400002717971802" green="0.9649999737739563" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

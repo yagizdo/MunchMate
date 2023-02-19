@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if currentUser != nil {
             let board = UIStoryboard(name: "Main", bundle: nil)
-            let home = board.instantiateViewController(withIdentifier: "homeView") as! HomeViewController
+            let home = board.instantiateViewController(withIdentifier: "mainTabbar") as! UITabBarController
             window?.rootViewController = home
         }
     }
