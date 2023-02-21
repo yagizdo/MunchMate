@@ -761,7 +761,7 @@
                                             <action selector="foodStepperOnClick:" destination="Fdi-pV-7hY" eventType="valueChanged" id="VEV-lS-TIY"/>
                                         </connections>
                                     </stepper>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a76-ZZ-SKQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a76-ZZ-SKQ">
                                         <rect key="frame" x="24" y="200" width="90" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="JwX-Gl-wuC"/>
@@ -771,7 +771,7 @@
                                         <color key="textColor" name="blackColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-Zn-dbw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-Zn-dbw">
                                         <rect key="frame" x="300" y="200" width="90" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="ui4-bt-3FC"/>
@@ -782,14 +782,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtV-zJ-tQm">
-                                        <rect key="frame" x="24" y="260" width="27" height="21"/>
-                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="17"/>
+                                        <rect key="frame" x="56" y="263" width="25.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39M-MD-NiF">
-                                        <rect key="frame" x="179" y="260" width="56" height="21"/>
-                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="17"/>
+                                        <rect key="frame" x="180.5" y="260" width="53" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -799,12 +799,12 @@
                                             <constraint firstAttribute="width" constant="90" id="5jN-Ck-e8d"/>
                                             <constraint firstAttribute="height" constant="24" id="T1g-hv-7kW"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="middleTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-Os-Iq4" customClass="TopAlignedLabel" customModule="FoodDeliveryApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="317" width="366" height="100"/>
+                                        <rect key="frame" x="24" y="318.5" width="366" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="LNX-Ws-LzO"/>
                                         </constraints>
@@ -813,13 +813,69 @@
                                         <color key="textColor" name="blackColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcG-WQ-db1">
+                                        <rect key="frame" x="134" y="498.5" width="256" height="48"/>
+                                        <color key="backgroundColor" name="activeOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="7nz-NE-8zp"/>
+                                            <constraint firstAttribute="width" constant="256" id="jmP-ug-VTI"/>
+                                        </constraints>
+                                        <color key="tintColor" name="activeOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add to Cart">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="activeOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Aq-bt-WDr">
+                                        <rect key="frame" x="24" y="498.5" width="80" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0Tf-sL-aXl"/>
+                                            <constraint firstAttribute="height" constant="48" id="bTp-O2-yCP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="20"/>
+                                        <color key="textColor" name="blackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-ya-HVf">
+                                        <rect key="frame" x="24" y="260" width="24" height="24"/>
+                                        <color key="backgroundColor" name="containerBackgroundColor"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="2bL-IR-ntI"/>
+                                            <constraint firstAttribute="width" constant="24" id="fNW-bc-6Xs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jhD-VC-9av">
+                                        <rect key="frame" x="272" y="260" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Qyg-C0-E3I"/>
+                                            <constraint firstAttribute="height" constant="20" id="SLq-yX-fJt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-c3-JbL">
+                                        <rect key="frame" x="148.5" y="260" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Ppb-PD-Xko"/>
+                                            <constraint firstAttribute="width" constant="24" id="lwA-8r-UvK"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="containerBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="6Aq-bt-WDr" firstAttribute="top" secondItem="CKM-Os-Iq4" secondAttribute="bottom" constant="80" id="1eu-3S-MO0"/>
+                                    <constraint firstItem="Pdu-c3-JbL" firstAttribute="top" secondItem="gAO-uZ-GQq" secondAttribute="bottom" constant="78" id="45z-Wm-Tbt"/>
                                     <constraint firstAttribute="trailing" secondItem="SLp-Zn-dbw" secondAttribute="trailing" constant="24" id="97e-ed-Huf"/>
+                                    <constraint firstItem="39M-MD-NiF" firstAttribute="leading" secondItem="Pdu-c3-JbL" secondAttribute="trailing" constant="8" id="BVy-IC-kdZ"/>
                                     <constraint firstAttribute="height" constant="650" id="CtT-8z-EV6"/>
+                                    <constraint firstItem="jhD-VC-9av" firstAttribute="top" secondItem="a76-ZZ-SKQ" secondAttribute="bottom" constant="36" id="EHh-xD-B04"/>
                                     <constraint firstAttribute="trailing" secondItem="euT-tw-acE" secondAttribute="trailing" constant="24" id="EUs-JY-fQI"/>
-                                    <constraint firstItem="CtV-zJ-tQm" firstAttribute="top" secondItem="a76-ZZ-SKQ" secondAttribute="bottom" constant="36" id="GXs-Fn-nP8"/>
+                                    <constraint firstItem="CtV-zJ-tQm" firstAttribute="top" secondItem="a76-ZZ-SKQ" secondAttribute="bottom" constant="39" id="GXs-Fn-nP8"/>
                                     <constraint firstItem="a76-ZZ-SKQ" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="JBP-7Z-hEf"/>
                                     <constraint firstItem="a76-ZZ-SKQ" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="200" id="MD3-wx-MHV"/>
                                     <constraint firstItem="gAO-uZ-GQq" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="150" id="NtM-1g-lXb"/>
@@ -828,13 +884,19 @@
                                     <constraint firstItem="euT-tw-acE" firstAttribute="top" secondItem="SLp-Zn-dbw" secondAttribute="bottom" constant="36" id="QTF-xl-CdN"/>
                                     <constraint firstItem="39M-MD-NiF" firstAttribute="top" secondItem="gAO-uZ-GQq" secondAttribute="bottom" constant="78" id="Szf-mM-dIG"/>
                                     <constraint firstItem="SLp-Zn-dbw" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="200" id="Xwx-sk-MtX"/>
-                                    <constraint firstItem="CtV-zJ-tQm" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="dav-HN-m14"/>
+                                    <constraint firstItem="6Aq-bt-WDr" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="a33-Mf-LVk"/>
                                     <constraint firstItem="39M-MD-NiF" firstAttribute="centerX" secondItem="Llg-gw-kc2" secondAttribute="centerX" id="gwS-fv-GOb"/>
                                     <constraint firstItem="gAO-uZ-GQq" firstAttribute="centerX" secondItem="Llg-gw-kc2" secondAttribute="centerX" id="i0R-Av-ZBh"/>
+                                    <constraint firstItem="CtV-zJ-tQm" firstAttribute="leading" secondItem="cOc-ya-HVf" secondAttribute="trailing" constant="8" id="k4r-UO-uHb"/>
+                                    <constraint firstItem="QcG-WQ-db1" firstAttribute="top" secondItem="CKM-Os-Iq4" secondAttribute="bottom" constant="80" id="mhv-wE-sRl"/>
+                                    <constraint firstAttribute="trailing" secondItem="QcG-WQ-db1" secondAttribute="trailing" constant="24" id="mwh-XW-35d"/>
+                                    <constraint firstItem="cOc-ya-HVf" firstAttribute="top" secondItem="a76-ZZ-SKQ" secondAttribute="bottom" constant="36" id="nul-MU-72k"/>
+                                    <constraint firstItem="euT-tw-acE" firstAttribute="leading" secondItem="jhD-VC-9av" secondAttribute="trailing" constant="8" id="oFv-b5-B3b"/>
                                     <constraint firstItem="CKM-Os-Iq4" firstAttribute="top" secondItem="CtV-zJ-tQm" secondAttribute="bottom" constant="36" id="qhA-Nz-5lI"/>
+                                    <constraint firstItem="cOc-ya-HVf" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="yh4-oc-Cwv"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="afromaleAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="RRs-5T-Ufg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ayran" translatesAutoresizingMaskIntoConstraints="NO" id="RRs-5T-Ufg">
                                 <rect key="frame" x="82" y="172" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="J6u-CG-YUt"/>
@@ -1103,17 +1165,20 @@
         <segue reference="DTS-Se-SAx"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="afromaleAvatar" width="800" height="800"/>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="ayran" width="256" height="256"/>
         <image name="chickenIcon" width="16" height="16"/>
+        <image name="clockIcon" width="24" height="24"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
+        <image name="fireIcon" width="800" height="800"/>
         <image name="googleLogo" width="2048" height="2048"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="lazybonesAvatar" width="800" height="800"/>
         <image name="loginVector" width="500" height="500"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="starIcon" width="24" height="24"/>
         <image name="welcomeVec" width="943.0010986328125" height="795.62945556640625"/>
         <namedColor name="activeOrangeColor">
             <color red="0.95300000905990601" green="0.60000002384185791" blue="0.29399999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1132,6 +1197,9 @@
         </namedColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

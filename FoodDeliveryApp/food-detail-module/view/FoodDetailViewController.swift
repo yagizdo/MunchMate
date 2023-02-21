@@ -80,6 +80,8 @@ class FoodDetailViewController: UIViewController {
         foodStepper.layer.shadowOffset = CGSize(width: 0, height: 0)
         foodStepper.layer.shadowOpacity = 0
         foodStepper.layer.shadowRadius = 0
+        
+        foodDescriptionLabel.spacing = 6
     }
     
     private func setupNavController() {
