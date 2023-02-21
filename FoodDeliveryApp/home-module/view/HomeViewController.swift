@@ -70,6 +70,12 @@ class HomeViewController: UIViewController {
         homePresenterDelegate?.getAllFoods()
     }
     
+    override func viewWillLayoutSubviews() {
+       super.viewWillLayoutSubviews()
+        self.tabBarController?.tabBar.layer.masksToBounds = true
+        self.tabBarController?.tabBar.layer.cornerRadius = 30
+        self.tabBarController?.tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+   }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
