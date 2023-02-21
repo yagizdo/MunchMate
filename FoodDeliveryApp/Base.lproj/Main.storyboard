@@ -561,8 +561,8 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud6-iR-5ed">
-                                                                    <rect key="frame" x="16" y="110" width="46" height="19"/>
-                                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
+                                                                    <rect key="frame" x="16" y="110" width="40" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="14"/>
                                                                     <color key="textColor" name="blackColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -602,8 +602,8 @@
                                                                     </constraints>
                                                                 </activityIndicatorView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-LK-aRf">
-                                                                    <rect key="frame" x="116" y="110" width="47" height="19"/>
-                                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="16"/>
+                                                                    <rect key="frame" x="122" y="110" width="41" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="14"/>
                                                                     <color key="textColor" name="activeOrangeColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
