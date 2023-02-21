@@ -349,7 +349,7 @@
             </objects>
             <point key="canvasLocation" x="1054" y="299"/>
         </scene>
-        <!--Item-->
+        <!--Foods-->
         <scene sceneID="uD2-Jd-IvY">
             <objects>
                 <viewController storyboardIdentifier="homeView" id="rk4-By-FdI" customClass="HomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -689,7 +689,9 @@
                             <constraint firstItem="7ZE-8j-bCp" firstAttribute="trailing" secondItem="0Vh-qk-W16" secondAttribute="trailing" id="h3F-2a-Bfn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="EcS-cx-KIU"/>
+                    <tabBarItem key="tabBarItem" title="Foods" image="chickenIcon" selectedImage="chickenIcon" id="EcS-cx-KIU">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="gmQ-nH-9qQ"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="ZRT-yU-0HY" id="HDe-y5-pep"/>
@@ -895,7 +897,16 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ny-aV-vXo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="backgroundColor"/>
+                        <color key="selectedImageTintColor" name="activeOrangeColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="maskedCorners" value="[.layerMinXMinYCorner,.layerMaxXMinYCorner]"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="rk4-By-FdI" kind="relationship" relationship="viewControllers" id="flo-3j-lyS"/>
@@ -912,6 +923,7 @@
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="chickenIcon" width="16" height="16"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
         <image name="googleLogo" width="2048" height="2048"/>
         <image name="heart" catalog="system" width="128" height="107"/>

@@ -62,6 +62,9 @@ class HomeViewController: UIViewController {
         foodsCollectionView.delegate = self
         foodsCollectionView.dataSource = self
         
+        // Tabbar settings
+        tabbarSettings()
+        
         // Create Module
         HomeRouter.createModule(ref: self)
         
@@ -78,6 +81,22 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+128)
+    }
+    
+    func tabbarSettings() {
+        if #available(iOS 13, *) {
+                   // iOS 13:
+                let appearance = self.tabBarController?.tabBar.standardAppearance
+                    appearance?.configureWithOpaqueBackground()
+                    appearance?.shadowImage = nil
+                    appearance?.shadowColor = nil
+                    appearance?.backgroundColor = UIColor.white
+                self.tabBarController?.tabBar.standardAppearance = appearance!
+               } else {
+                   // iOS 12 and below:
+                   self.tabBarController?.tabBar.shadowImage = UIImage()
+                   self.tabBarController?.tabBar.backgroundImage = UIImage()
+               }
     }
 }
 
