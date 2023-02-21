@@ -256,6 +256,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="haC-Yq-DoE"/>
                                 </constraints>
+                                <color key="textColor" name="blackColor"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -270,6 +271,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="XHa-iG-sA3"/>
                                 </constraints>
+                                <color key="textColor" name="blackColor"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                             </textField>
@@ -475,7 +477,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axB-x9-NdT">
                                                 <rect key="frame" x="24" y="266" width="82.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Medium" family="Sauce Grotesk" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-yU-0HY">
@@ -789,6 +791,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9W7-rc-6GP"/>
                                 </constraints>
+                                <color key="textColor" name="blackColor"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                                 <userDefinedRuntimeAttributes>
@@ -803,6 +806,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UEc-In-16N"/>
                                 </constraints>
+                                <color key="textColor" name="blackColor"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                                 <userDefinedRuntimeAttributes>

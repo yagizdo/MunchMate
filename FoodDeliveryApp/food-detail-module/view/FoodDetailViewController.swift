@@ -12,22 +12,35 @@ class FoodDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        // Add custom swipe gesture recognizer
+                let swipeBackGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeBack(_:)))
+                swipeBackGesture.direction = .right
+                self.view.addGestureRecognizer(swipeBackGesture)
     }
+    
+    @objc func swipeBack(_ gesture: UISwipeGestureRecognizer) {
+          self.navigationController?.popViewController(animated: true)
+      }
     
     @IBAction func backButtonOnclick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupNavController()
-        backButton.layer.cornerRadius = backButton.frame.width / 2
-        backButton.layer.masksToBounds = true
+        super.viewWillAppear(animated)
+            setupNavController()
+            backButton.layer.cornerRadius = backButton.frame.width / 2
+            backButton.layer.masksToBounds = true
     }
     
     private func setupNavController() {
         // Hide Navigation Bar without losing slide-back ability
         navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+    }
+}
+
+extension FoodDetailViewController : UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

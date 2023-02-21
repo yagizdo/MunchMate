@@ -70,19 +70,34 @@ class HomeViewController: UIViewController {
         homePresenterDelegate?.getAllFoods()
     }
     
-    override func viewDidLayoutSubviews() {
-        self.foodsCollectionView_constraint.constant = self.foodsCollectionView.contentSize.height
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+128)
-    }
     
     override func viewWillAppear(_ animated: Bool) {
-        /// Hide Navigation Controller
+        super.viewWillAppear(animated)
+        
+        // Hide Navigation Controller
         self.navigationController?.isNavigationBarHidden = true
+        
         // disable pop gesture
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+            self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+            self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
+        // Set content size of homeScrollView
+        let homeScrollViewContentHeight = UIScreen.main.bounds.height + 128
+        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: homeScrollViewContentHeight)
+        
+        // Set initial height of foodsCollectionView_constraint
+        self.foodsCollectionView_constraint.constant = self.view.bounds.height
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Set final height of foodsCollectionView_constraint
+        let newHeight = self.foodsCollectionView.contentSize.height
+        if self.foodsCollectionView_constraint.constant != newHeight {
+            self.foodsCollectionView_constraint.constant = newHeight
+            self.view.layoutIfNeeded()
+        }
     }
     
     func tabbarSettings() {
