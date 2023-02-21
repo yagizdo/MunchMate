@@ -33,6 +33,11 @@ protocol PresenterToViewHomeProtocol {
     func showError(error:Error)
 }
 
+// Food Detail Protocol for segue
+protocol FoodsViewtoFoodDetailProtocol {
+    func goFoodDetail()
+}
+
 
 // Router Protocol
 protocol PresenterToRouterHomeProtocol {

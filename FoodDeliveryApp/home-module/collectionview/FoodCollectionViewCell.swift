@@ -17,6 +17,9 @@ class FoodCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var foodImageLoadingIndicator: UIActivityIndicatorView!
     
+    var foodsViewtoFoodDetailProtocolDelegate: FoodsViewtoFoodDetailProtocol?
+    
     @IBAction func addToCartButton(_ sender: Any) {
+        foodsViewtoFoodDetailProtocolDelegate?.goFoodDetail()
     }
 }

@@ -349,7 +349,7 @@
             </objects>
             <point key="canvasLocation" x="1054" y="299"/>
         </scene>
-        <!--Foods-->
+        <!--Home View Controller-->
         <scene sceneID="uD2-Jd-IvY">
             <objects>
                 <viewController storyboardIdentifier="homeView" id="rk4-By-FdI" customClass="HomeViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -689,9 +689,6 @@
                             <constraint firstItem="7ZE-8j-bCp" firstAttribute="trailing" secondItem="0Vh-qk-W16" secondAttribute="trailing" id="h3F-2a-Bfn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Foods" image="chickenIcon" selectedImage="chickenIcon" id="EcS-cx-KIU">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" id="gmQ-nH-9qQ"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="ZRT-yU-0HY" id="HDe-y5-pep"/>
@@ -701,11 +698,52 @@
                         <outlet property="homeScrollView" destination="0Vh-qk-W16" id="oiK-0R-r6f"/>
                         <outlet property="homeSliderCollectionView" destination="vEk-yZ-HPK" id="NUa-wg-2NK"/>
                         <outlet property="navbarProfileImage" destination="Bv9-LY-7jP" id="g7e-qC-hpN"/>
+                        <segue destination="Fdi-pV-7hY" kind="show" identifier="foodViewtoFoodDetail" id="mH9-br-ook"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iy3-pn-V0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2884.057971014493" y="24.776785714285712"/>
+            <point key="canvasLocation" x="3794.202898550725" y="24.776785714285712"/>
+        </scene>
+        <!--Food Detail-->
+        <scene sceneID="ruS-pN-hyw">
+            <objects>
+                <viewController id="Fdi-pV-7hY" customClass="FoodDetailViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tJK-fb-XjU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYi-WZ-FVF">
+                                <rect key="frame" x="16" y="108" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jft-sJ-peT"/>
+                                    <constraint firstAttribute="width" constant="50" id="r3G-xh-xXW"/>
+                                </constraints>
+                                <color key="tintColor" name="activeOrangeColor"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonOnclick:" destination="Fdi-pV-7hY" eventType="touchUpInside" id="Ljc-wd-7bs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ANX-yf-xR7"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wYi-WZ-FVF" firstAttribute="leading" secondItem="ANX-yf-xR7" secondAttribute="leading" constant="16" id="fXn-D0-3Pp"/>
+                            <constraint firstItem="wYi-WZ-FVF" firstAttribute="top" secondItem="ANX-yf-xR7" secondAttribute="top" constant="16" id="qzu-q4-xu6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Food Detail" id="eOc-R9-vA2"/>
+                    <connections>
+                        <outlet property="backButton" destination="wYi-WZ-FVF" id="nub-Y8-jMm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="262-5i-NfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4539.130434782609" y="24.776785714285712"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
@@ -905,24 +943,45 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="string" keyPath="maskedCorners" value="[.layerMinXMinYCorner,.layerMaxXMinYCorner]"/>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="rk4-By-FdI" kind="relationship" relationship="viewControllers" id="flo-3j-lyS"/>
+                        <segue destination="QTo-hp-T4W" kind="relationship" relationship="viewControllers" id="flo-3j-lyS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orp-VE-Upr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1973.913043478261" y="24.776785714285712"/>
         </scene>
+        <!--Foods-->
+        <scene sceneID="T0l-O4-hz8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QTo-hp-T4W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Foods" image="chickenIcon" selectedImage="chickenIcon" id="EcS-cx-KIU">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f4o-59-EmX">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rk4-By-FdI" kind="relationship" relationship="rootViewController" id="Kwd-4q-pEh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q37-L2-ocV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2884.057971014493" y="24.776785714285712"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pd2-c5-Xxb"/>
+        <segue reference="DTS-Se-SAx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="chickenIcon" width="16" height="16"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
         <image name="googleLogo" width="2048" height="2048"/>

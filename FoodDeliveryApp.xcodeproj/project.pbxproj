@@ -22,6 +22,11 @@
 		1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99C2993E54D00FCF89D /* FirebaseAuth */; };
 		1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1047F99E2993E54D00FCF89D /* FirebaseDatabase */; };
 		1047F9A32993E88600FCF89D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047F9A22993E88600FCF89D /* AuthService.swift */; };
+		104CA43B29A4D6F80025BD01 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CA43A29A4D6F80025BD01 /* FoodDetailPresenter.swift */; };
+		104CA43D29A4D70B0025BD01 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CA43C29A4D70B0025BD01 /* FoodDetailInteractor.swift */; };
+		104CA43F29A4D7190025BD01 /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CA43E29A4D7190025BD01 /* FoodDetailRouter.swift */; };
+		104CA44329A4D74C0025BD01 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CA44229A4D74C0025BD01 /* FoodDetailProtocols.swift */; };
+		104CA44529A4D7AD0025BD01 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CA44429A4D7AD0025BD01 /* FoodDetailViewController.swift */; };
 		104CAB802997B376000C5C8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB7F2997B376000C5C8B /* LoginViewController.swift */; };
 		104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB822997B3CE000C5C8B /* LoginPresenter.swift */; };
 		104CAB862997B3E7000C5C8B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CAB852997B3E7000C5C8B /* LoginInteractor.swift */; };
@@ -74,6 +79,11 @@
 		1047F9972993E33000FCF89D /* IAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthService.swift; sourceTree = "<group>"; };
 		1047F9992993E4C700FCF89D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1047F9A22993E88600FCF89D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		104CA43A29A4D6F80025BD01 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
+		104CA43C29A4D70B0025BD01 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
+		104CA43E29A4D7190025BD01 /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
+		104CA44229A4D74C0025BD01 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
+		104CA44429A4D7AD0025BD01 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		104CAB7F2997B376000C5C8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		104CAB822997B3CE000C5C8B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		104CAB852997B3E7000C5C8B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -142,6 +152,7 @@
 		1047F96B2993DC2000FCF89D /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				104CA43629A4D6C70025BD01 /* food-detail-module */,
 				105FBD2D299D512C00A85D4A /* entitiy */,
 				10B8ADE629991546001F7811 /* home-module */,
 				104CAB7C2997B35C000C5C8B /* login-module */,
@@ -230,6 +241,58 @@
 				107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */,
 			);
 			path = auth;
+			sourceTree = "<group>";
+		};
+		104CA43629A4D6C70025BD01 /* food-detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				104CA44129A4D73D0025BD01 /* protocols */,
+				104CA44029A4D7260025BD01 /* router */,
+				104CA43929A4D6E30025BD01 /* interactor */,
+				104CA43829A4D6DC0025BD01 /* presenter */,
+				104CA43729A4D6D70025BD01 /* view */,
+			);
+			path = "food-detail-module";
+			sourceTree = "<group>";
+		};
+		104CA43729A4D6D70025BD01 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				104CA44429A4D7AD0025BD01 /* FoodDetailViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		104CA43829A4D6DC0025BD01 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				104CA43A29A4D6F80025BD01 /* FoodDetailPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		104CA43929A4D6E30025BD01 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				104CA43C29A4D70B0025BD01 /* FoodDetailInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		104CA44029A4D7260025BD01 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				104CA43E29A4D7190025BD01 /* FoodDetailRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		104CA44129A4D73D0025BD01 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				104CA44229A4D74C0025BD01 /* FoodDetailProtocols.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		104CAB6C2997AD38000C5C8B /* utils */ = {
@@ -546,10 +609,12 @@
 				105FBD2A299D4F4F00A85D4A /* INetworkService.swift in Sources */,
 				10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */,
 				10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */,
+				104CA44329A4D74C0025BD01 /* FoodDetailProtocols.swift in Sources */,
 				10DE35B1299AF47100AEF2D6 /* SnackbarStyles.swift in Sources */,
 				1047F98B2993DE2D00FCF89D /* RegisterPresenter.swift in Sources */,
 				104CAB8C2997B420000C5C8B /* LoginProtocols.swift in Sources */,
 				105FBD39299D867C00A85D4A /* SepetYemekler.swift in Sources */,
+				104CA43D29A4D70B0025BD01 /* FoodDetailInteractor.swift in Sources */,
 				105FBD2F299D516600A85D4A /* YemeklerCevap.swift in Sources */,
 				10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */,
 				105FBD3B299D8BA600A85D4A /* Yemekler.swift in Sources */,
@@ -573,6 +638,8 @@
 				10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */,
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
+				104CA43F29A4D7190025BD01 /* FoodDetailRouter.swift in Sources */,
+				104CA44529A4D7AD0025BD01 /* FoodDetailViewController.swift in Sources */,
 				104CAB892997B406000C5C8B /* LoginRouter.swift in Sources */,
 				104CAB802997B376000C5C8B /* LoginViewController.swift in Sources */,
 				105FBD33299D81DB00A85D4A /* CrudCevap.swift in Sources */,
@@ -580,6 +647,7 @@
 				105FBD35299D85F700A85D4A /* sepetCevap.swift in Sources */,
 				10D04DC52996659800DF75BA /* WelcomeProtocols.swift in Sources */,
 				10D04DC72996666D00DF75BA /* WelcomeViewController.swift in Sources */,
+				104CA43B29A4D6F80025BD01 /* FoodDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

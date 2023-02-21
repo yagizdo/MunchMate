@@ -38,11 +38,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /// Hide Navigation Controller
-        self.navigationController?.isNavigationBarHidden = true
-        // disable pop gesture
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        
         // We turn the profile picture into a circle.
         navbarProfileImage.layer.borderWidth = 1
         navbarProfileImage.layer.masksToBounds = false
@@ -83,6 +78,13 @@ class HomeViewController: UIViewController {
         homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+128)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        /// Hide Navigation Controller
+        self.navigationController?.isNavigationBarHidden = true
+        // disable pop gesture
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
+    
     func tabbarSettings() {
         if #available(iOS 13, *) {
                    // iOS 13:
@@ -97,6 +99,12 @@ class HomeViewController: UIViewController {
                    self.tabBarController?.tabBar.shadowImage = UIImage()
                    self.tabBarController?.tabBar.backgroundImage = UIImage()
                }
+    }
+}
+
+extension HomeViewController : FoodsViewtoFoodDetailProtocol {
+    func goFoodDetail() {
+        performSegue(withIdentifier: "foodViewtoFoodDetail", sender: nil)
     }
 }
 
@@ -180,6 +188,9 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             cell.contentView.layer.borderWidth = 2
             cell.foodImageLoadingIndicator.hidesWhenStopped = true
             cell.foodImageLoadingIndicator.startAnimating()
+            
+            // Delegate
+            cell.foodsViewtoFoodDetailProtocolDelegate = self
             
             // Get food image
             if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
