@@ -705,7 +705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iy3-pn-V0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3794.202898550725" y="24.776785714285712"/>
+            <point key="canvasLocation" x="3707" y="-287"/>
         </scene>
         <!--Food Detail-->
         <scene sceneID="ruS-pN-hyw">
@@ -920,7 +920,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="262-5i-NfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4539.130434782609" y="24.776785714285712"/>
+            <point key="canvasLocation" x="4501" y="-287"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="UF1-og-ave">
+            <objects>
+                <viewController id="uR3-Q0-WD8" customClass="CartViewController" customModule="FoodDeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vwJ-V5-mKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DLV-SV-D4F"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" selectedImage="cartIcon" id="1eb-Kr-dOe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev5-ta-pEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3706" y="413"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
@@ -1120,6 +1136,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="QTo-hp-T4W" kind="relationship" relationship="viewControllers" id="flo-3j-lyS"/>
+                        <segue destination="uR3-Q0-WD8" kind="relationship" relationship="viewControllers" id="IDE-I2-2ht"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orp-VE-Upr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1156,6 +1173,7 @@
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="ayran" width="256" height="256"/>
+        <image name="cartIcon" width="24" height="24"/>
         <image name="chickenIcon" width="16" height="16"/>
         <image name="clockIcon" width="24" height="24"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
