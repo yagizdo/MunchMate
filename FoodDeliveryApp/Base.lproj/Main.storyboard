@@ -14,6 +14,9 @@
         <array key="Sauce Grotesk Bold.ttf">
             <string>Sauce-Grotesk-Bold</string>
         </array>
+        <array key="Sauce Grotesk Light.ttf">
+            <string>Sauce-Grotesk-Light</string>
+        </array>
         <array key="Sauce Grotesk Medium.ttf">
             <string>Sauce-Grotesk-Medium</string>
         </array>
@@ -929,14 +932,192 @@
                     <view key="view" contentMode="scaleToFill" id="vwJ-V5-mKZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISH-8k-XMA">
+                                <rect key="frame" x="24" y="116" width="116" height="36.5"/>
+                                <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="30"/>
+                                <color key="textColor" name="blackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvd-Y0-frr" customClass="StepProgressBar" customModule="FoodDeliveryApp" customModuleProvider="target">
+                                <rect key="frame" x="24" y="168.5" width="366" height="15"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="uhc-df-4GO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" name="activeOrangeColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" name="containerBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepsOffset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eby-TN-ZHf">
+                                <rect key="frame" x="24" y="199.5" width="87" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="24"/>
+                                <color key="textColor" name="blackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-VR-BqR">
+                                <rect key="frame" x="24" y="245" width="366" height="400"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="o94-tj-DtB"/>
+                                </constraints>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6i-BF-hYn">
+                                <rect key="frame" x="24" y="661" width="366" height="144"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="uiT-9b-r6E">
+                                        <rect key="frame" x="24" y="24" width="318" height="16"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guj-15-7Dm">
+                                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="16"/>
+                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Light" family="Sauce Grotesk" pointSize="17"/>
+                                                <color key="textColor" name="blackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-yz-0xF">
+                                                <rect key="frame" x="266.5" y="0.0" width="51.5" height="16"/>
+                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
+                                                <color key="textColor" name="blackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="o78-Cg-V7G"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-w9-cfr">
+                                        <rect key="frame" x="24" y="52" width="318" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-FI-Sqj">
+                                                <rect key="frame" x="0.0" y="0.0" width="100.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Light" family="Sauce Grotesk" pointSize="17"/>
+                                                <color key="textColor" name="blackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuH-27-aGf">
+                                                <rect key="frame" x="285.5" y="0.0" width="32.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="blackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="DuH-27-aGf" secondAttribute="trailing" id="T6y-ID-aiz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-gw-EKi">
+                                        <rect key="frame" x="24" y="88" width="318" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3Mg-t3-KVS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Checkout">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="activeOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCi-gN-wWN">
+                                        <rect key="frame" x="24" y="97" width="318" height="24.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z8-8F-RxC">
+                                                <rect key="frame" x="0.0" y="0.0" width="254" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Light" family="Sauce Grotesk" pointSize="17"/>
+                                                <color key="textColor" name="blackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC1-gZ-UeY">
+                                                <rect key="frame" x="254" y="0.0" width="64" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="20"/>
+                                                <color key="textColor" name="blackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-2j-Ueq">
+                                        <rect key="frame" x="24" y="81" width="318" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="bM8-p6-TJ0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mAi-gw-EKi" secondAttribute="bottom" constant="16" id="1tW-Wd-kJf"/>
+                                    <constraint firstItem="bCi-gN-wWN" firstAttribute="leading" secondItem="F6i-BF-hYn" secondAttribute="leading" constant="24" id="3k8-VH-Fz6"/>
+                                    <constraint firstItem="uiT-9b-r6E" firstAttribute="leading" secondItem="F6i-BF-hYn" secondAttribute="leading" constant="24" id="Bzb-Xz-JTp"/>
+                                    <constraint firstItem="bCi-gN-wWN" firstAttribute="top" secondItem="YyE-w9-cfr" secondAttribute="bottom" constant="24" id="G1y-cZ-gM6"/>
+                                    <constraint firstAttribute="trailing" secondItem="uiT-9b-r6E" secondAttribute="trailing" constant="24" id="HeF-VO-v9I"/>
+                                    <constraint firstItem="RH9-2j-Ueq" firstAttribute="leading" secondItem="F6i-BF-hYn" secondAttribute="leading" constant="24" id="Qxg-4a-kb8"/>
+                                    <constraint firstItem="uiT-9b-r6E" firstAttribute="top" secondItem="F6i-BF-hYn" secondAttribute="top" constant="24" id="RVB-6g-kpa"/>
+                                    <constraint firstAttribute="trailing" secondItem="mAi-gw-EKi" secondAttribute="trailing" constant="24" id="T8A-op-YVr"/>
+                                    <constraint firstItem="RH9-2j-Ueq" firstAttribute="top" secondItem="YyE-w9-cfr" secondAttribute="bottom" constant="8" id="X45-te-Amv"/>
+                                    <constraint firstItem="mAi-gw-EKi" firstAttribute="leading" secondItem="F6i-BF-hYn" secondAttribute="leading" constant="24" id="gTf-Un-ntd"/>
+                                    <constraint firstAttribute="trailing" secondItem="RH9-2j-Ueq" secondAttribute="trailing" constant="24" id="hfY-kR-knM"/>
+                                    <constraint firstItem="YyE-w9-cfr" firstAttribute="top" secondItem="uiT-9b-r6E" secondAttribute="bottom" constant="12" id="j1n-sr-CaU"/>
+                                    <constraint firstAttribute="trailing" secondItem="YyE-w9-cfr" secondAttribute="trailing" constant="24" id="ode-JJ-v9X"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCi-gN-wWN" secondAttribute="trailing" constant="24" id="qEn-6Y-NTF"/>
+                                    <constraint firstItem="YyE-w9-cfr" firstAttribute="leading" secondItem="F6i-BF-hYn" secondAttribute="leading" constant="24" id="wLD-Df-eS3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DLV-SV-D4F"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DLV-SV-D4F" firstAttribute="trailing" secondItem="F6i-BF-hYn" secondAttribute="trailing" constant="24" id="5DF-1h-aTf"/>
+                            <constraint firstItem="F6i-BF-hYn" firstAttribute="bottom" secondItem="DLV-SV-D4F" secondAttribute="bottom" constant="-8" id="6bb-PJ-BIb"/>
+                            <constraint firstItem="ISH-8k-XMA" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="BA0-yY-Dyy"/>
+                            <constraint firstItem="IFN-VR-BqR" firstAttribute="top" secondItem="eby-TN-ZHf" secondAttribute="bottom" constant="16" id="Bqc-UB-cDE"/>
+                            <constraint firstItem="yvd-Y0-frr" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="F7f-V6-yFP"/>
+                            <constraint firstItem="F6i-BF-hYn" firstAttribute="top" secondItem="IFN-VR-BqR" secondAttribute="bottom" constant="16" id="InZ-CW-qO4"/>
+                            <constraint firstItem="eby-TN-ZHf" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="Iok-5b-tqc"/>
+                            <constraint firstItem="ISH-8k-XMA" firstAttribute="top" secondItem="DLV-SV-D4F" secondAttribute="top" constant="24" id="LJg-uE-Pbo"/>
+                            <constraint firstItem="yvd-Y0-frr" firstAttribute="top" secondItem="ISH-8k-XMA" secondAttribute="bottom" constant="16" id="TLN-T8-ao5"/>
+                            <constraint firstItem="IFN-VR-BqR" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="TNt-fx-d9F"/>
+                            <constraint firstItem="F6i-BF-hYn" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="YIR-a7-XKv"/>
+                            <constraint firstItem="DLV-SV-D4F" firstAttribute="trailing" secondItem="IFN-VR-BqR" secondAttribute="trailing" constant="24" id="liR-cZ-b50"/>
+                            <constraint firstItem="DLV-SV-D4F" firstAttribute="trailing" secondItem="yvd-Y0-frr" secondAttribute="trailing" constant="24" id="r52-nD-ffX"/>
+                            <constraint firstItem="eby-TN-ZHf" firstAttribute="top" secondItem="yvd-Y0-frr" secondAttribute="bottom" constant="16" id="yY2-pz-C3I"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cart" selectedImage="cartIcon" id="1eb-Kr-dOe"/>
+                    <tabBarItem key="tabBarItem" title="Cart" badgeValue="2" id="1eb-Kr-dOe">
+                        <imageReference key="image" image="cart.fill" catalog="system" symbolScale="medium"/>
+                        <imageReference key="selectedImage" image="cart.fill" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="checkoutDividerView" destination="RH9-2j-Ueq" id="JgY-Nk-NAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ev5-ta-pEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3706" y="413"/>
+            <point key="canvasLocation" x="3705.7971014492755" y="412.5"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="5b6-Qj-GXB">
@@ -1131,7 +1312,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="backgroundColor"/>
+                        <color key="tintColor" name="blackColor"/>
+                        <color key="barTintColor" name="blackColor"/>
                         <color key="selectedImageTintColor" name="activeOrangeColor"/>
                     </tabBar>
                     <connections>
@@ -1173,7 +1355,7 @@
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="ayran" width="256" height="256"/>
-        <image name="cartIcon" width="24" height="24"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="chickenIcon" width="16" height="16"/>
         <image name="clockIcon" width="24" height="24"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
@@ -1200,6 +1382,9 @@
         <namedColor name="whiteColor">
             <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

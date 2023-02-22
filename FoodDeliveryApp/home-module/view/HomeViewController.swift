@@ -30,12 +30,14 @@ class HomeViewController: UIViewController {
     
     var selectedCategoryIndex = 0
     
-    var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Desserts", categoryIcon: "dessertsIcon"),Category(categoryName: "Others", categoryIcon: "othersIcon"),]
+    var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Desserts", categoryIcon: "dessertsIcon")]
     
     var foods = [Yemekler]()
     
     var homePresenterDelegate : ViewToPresenterHomeProtocol?
     
+    var heightMap = [0:1840,1:1100,2:900,3:900] // 0-1-2-3 is categoryIndex number and 1840, 1100 etc is height values
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // We turn the profile picture into a circle.
@@ -88,16 +90,15 @@ class HomeViewController: UIViewController {
             self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         // Set content size of homeScrollView
-        let homeScrollViewContentHeight = UIScreen.main.bounds.height + 128
-        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: homeScrollViewContentHeight)
+        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
+       
         
-        // Set initial height of foodsCollectionView_constraint
-        self.foodsCollectionView_constraint.constant = self.view.bounds.height
+//        // Set initial height of foodsCollectionView_constraint
+//        self.foodsCollectionView_constraint.constant = self.view.bounds.height
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         // Set final height of foodsCollectionView_constraint
         let newHeight = self.foodsCollectionView.contentSize.height
         if self.foodsCollectionView_constraint.constant != newHeight {
@@ -236,6 +237,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             selectedCategoryIndex = indexPath.row
             homePresenterDelegate?.getFoodsByCategory(categoryName: selectedCategory.categoryName ?? "All")
             categoriesCollectionView.reloadData()
+            homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
         } else if collectionView == foodsCollectionView  {
             
         }

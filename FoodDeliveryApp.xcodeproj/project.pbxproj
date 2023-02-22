@@ -70,6 +70,7 @@
 		10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D04DC929966C0100DF75BA /* GoogleSignIn */; };
 		10D04DCD2996E9DA00DF75BA /* ui_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */; };
 		10D15DFA299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D15DF9299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift */; };
+		10DBEBCC29A652D800C5A6A2 /* StepProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DBEBCB29A652D800C5A6A2 /* StepProgressBar.swift */; };
 		10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */; };
 		10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */ = {isa = PBXBuildFile; productRef = 10DE35AE299ACE4100AEF2D6 /* SnackBar */; };
 		10DE35B1299AF47100AEF2D6 /* SnackbarStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */; };
@@ -136,6 +137,7 @@
 		10D04DC62996666D00DF75BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		10D04DCC2996E9DA00DF75BA /* ui_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_extensions.swift; sourceTree = "<group>"; };
 		10D15DF9299FAF7800EF5F7C /* HomeSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		10DBEBCB29A652D800C5A6A2 /* StepProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressBar.swift; sourceTree = "<group>"; };
 		10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -326,6 +328,7 @@
 			children = (
 				10DE35AB299ACA0C00AEF2D6 /* AlertManager.swift */,
 				10DE35B0299AF47100AEF2D6 /* SnackbarStyles.swift */,
+				10DBEBCB29A652D800C5A6A2 /* StepProgressBar.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				104CAB832997B3CE000C5C8B /* LoginPresenter.swift in Sources */,
 				1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */,
 				10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */,
+				10DBEBCC29A652D800C5A6A2 /* StepProgressBar.swift in Sources */,
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
 				104CA43F29A4D7190025BD01 /* FoodDetailRouter.swift in Sources */,

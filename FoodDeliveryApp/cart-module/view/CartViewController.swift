@@ -9,9 +9,14 @@ import UIKit
 
 class CartViewController: UIViewController {
 
+    
+    @IBOutlet weak var checkoutDividerView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set checkout divider alpha
+        checkoutDividerView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
     }
 }
