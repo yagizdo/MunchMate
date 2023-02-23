@@ -19,7 +19,9 @@ class FoodCollectionViewCell: UICollectionViewCell {
     
     var foodsViewtoFoodDetailProtocolDelegate: FoodsViewtoFoodDetailProtocol?
     
+    var indexPath : IndexPath?
+    
     @IBAction func addToCartButton(_ sender: Any) {
-        foodsViewtoFoodDetailProtocolDelegate?.goFoodDetail()
+        foodsViewtoFoodDetailProtocolDelegate?.goFoodDetail(indexPath: indexPath!)
     }
 }

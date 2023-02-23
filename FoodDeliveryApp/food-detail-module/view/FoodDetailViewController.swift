@@ -26,7 +26,8 @@ class FoodDetailViewController: UIViewController {
     
     @IBOutlet weak var foodDescriptionLabel: UILabel!
     
-    
+    var incomingFood : Yemekler?
+
     override func viewDidLoad() {
         super.viewDidLoad()
                 // Add custom swipe gesture recognizer
@@ -82,6 +83,20 @@ class FoodDetailViewController: UIViewController {
         foodStepper.layer.shadowRadius = 0
         
         foodDescriptionLabel.spacing = 6
+        
+        
+        // Set food
+        if let food = incomingFood {
+            self.foodTitleLabel.text = food.yemek_adi!
+            self.foodPriceLabel.text = ("\(food.yemek_fiyat!) ₺")
+            // Get food image
+            if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
+                DispatchQueue.main.async {
+                    self.foodImage.kf.setImage(with: url)
+                }
+                //foodImageLoadingIndicator.stopAnimating()
+            }
+        }
     }
     
     private func setupNavController() {

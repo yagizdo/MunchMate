@@ -35,7 +35,7 @@ protocol PresenterToViewHomeProtocol {
 
 // Food Detail Protocol for segue
 protocol FoodsViewtoFoodDetailProtocol {
-    func goFoodDetail()
+    func goFoodDetail(indexPath:IndexPath)
 }
 
 

@@ -130,11 +130,24 @@ class HomeViewController: UIViewController {
                    self.tabBarController?.tabBar.backgroundImage = UIImage()
                }
     }
+    
+    // Segue prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "foodViewtoFoodDetail" {
+            if let food = sender as? Yemekler {
+                let vc = segue.destination as! FoodDetailViewController
+                vc.incomingFood = food
+            }
+        }
+    }
 }
 
+
+// Food Detail
 extension HomeViewController : FoodsViewtoFoodDetailProtocol {
-    func goFoodDetail() {
-        performSegue(withIdentifier: "foodViewtoFoodDetail", sender: nil)
+    func goFoodDetail(indexPath: IndexPath) {
+        let food = foods[indexPath.row]
+        performSegue(withIdentifier: "foodViewtoFoodDetail", sender: food)
     }
 }
 
@@ -229,8 +242,12 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
                 }
                 cell.foodImageLoadingIndicator.stopAnimating()
             }
-            // Set food title
+            // Set food title and price
             cell.foodTitle.text = food.yemek_adi
+            cell.foodPrice.text = "\(food.yemek_fiyat!) ₺"
+            
+            // Set index path
+            cell.indexPath = indexPath
             return cell
         }
         
@@ -247,7 +264,8 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             categoriesCollectionView.reloadData()
             homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
         } else if collectionView == foodsCollectionView  {
-            
+            // Detail segue
+            goFoodDetail(indexPath: indexPath)
         }
     }
     
