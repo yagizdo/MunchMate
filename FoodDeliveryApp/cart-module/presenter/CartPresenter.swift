@@ -7,6 +7,21 @@
 
 import Foundation
 
-class CartPresenter {
+class CartPresenter : ViewToPresenterCartProtocol {
+    var cartView: PresenterToViewCartProtocol?
+    var cartInteractor: PresenterToInteractorCartProtocol?
     
+    func getAllCartItems() {
+        cartInteractor?.getAllCartItems()
+    }
+}
+
+extension CartPresenter : InteractorToPresenterCartProtocol {
+    func sendDataToView(cartFoods: [SepetYemekler]) {
+        cartView?.sendDataToView(cartFoods: cartFoods)
+    }
+    
+    func showError(error: Error) {
+        cartView?.showError(error: error)
+    }
 }

@@ -70,6 +70,12 @@ class HomeViewController: UIViewController {
         
         // Get all foods
         homePresenterDelegate?.getAllFoods()
+        
+        // Set carts badge
+        if let userEmail = AuthService.shared.currentUser?.email {
+            NetworkService.shared.calculateCartItemsBadge(userMail: userEmail, vc: self)
+        }
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -115,7 +121,9 @@ class HomeViewController: UIViewController {
                     appearance?.shadowImage = nil
                     appearance?.shadowColor = nil
                     appearance?.backgroundColor = UIColor.white
+                    appearance?.stackedLayoutAppearance.normal.badgeBackgroundColor = UIColor(named: "activeOrangeColor")
                 self.tabBarController?.tabBar.standardAppearance = appearance!
+                self.tabBarController?.tabBar.scrollEdgeAppearance = appearance
                } else {
                    // iOS 12 and below:
                    self.tabBarController?.tabBar.shadowImage = UIImage()

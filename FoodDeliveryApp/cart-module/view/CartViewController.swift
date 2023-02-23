@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CartViewController: UIViewController {
 
@@ -13,6 +14,19 @@ class CartViewController: UIViewController {
     @IBOutlet weak var checkoutDividerView: UIView!
     
     @IBOutlet weak var cartFoodsTableView: UITableView!
+    
+    @IBOutlet weak var cartItemsCountLabel: UILabel!
+    
+    @IBOutlet weak var totalCartPriceLabel: UILabel!
+    
+    @IBOutlet weak var checkoutCartTotalPriceLabel: UILabel!
+
+    var cartFoods = [SepetYemekler]()
+
+    var totalPrice = 0
+    
+    // Cart presenter delegate
+    var cartPresenterDelegate : ViewToPresenterCartProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +38,45 @@ class CartViewController: UIViewController {
         cartFoodsTableView.delegate = self
         cartFoodsTableView.dataSource = self
         cartFoodsTableView.separatorStyle = .none
+        
+        // Create Module
+        CartRouter.createModule(ref: self)
+        
+        // Get all cart items
+        cartPresenterDelegate?.getAllCartItems()
+    }
+    
+    func calculateTotalPrice() {
+        for food in cartFoods {
+            totalPrice += Int(food.yemek_fiyat!)!
+        }
+        totalCartPriceLabel.text = "\(totalPrice) ₺"
+        checkoutCartTotalPriceLabel.text = "\(totalPrice) ₺"
+    }
+}
+
+extension CartViewController : PresenterToViewCartProtocol {
+    func sendDataToView(cartFoods: [SepetYemekler]) {
+        self.cartFoods = cartFoods
+        self.tabBarItem.badgeValue = "\(cartFoods.count)"
+        calculateTotalPrice()
+        cartFoodsTableView.reloadData()
+    }
+    
+    func showError(error: Error) {
+        AlertManager.showErrorSnackBar(vc: self, message: "Something went wrong!")
     }
 }
 
 extension CartViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        cartItemsCountLabel.text = "\(cartFoods.count) Items"
+        return cartFoods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cartFoodsTableView.dequeueReusableCell(withIdentifier: "cartFoodCell", for: indexPath) as! CartFoodTableViewCell
+        let cartFood = cartFoods[indexPath.row]
         
         cell.background.cornerRadius = 10
         cell.backgroundColor = UIColor(named: "backgroundColor")!
@@ -41,11 +84,15 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.selectionStyle = .none
         
-        cell.foodTitleLabel.text = "Ayran"
-        cell.foodImageView.image = UIImage(named: "ayran")
+        cell.foodTitleLabel.text = cartFood.yemek_adi
+        cell.foodPriceLabel.text = "\(cartFood.yemek_fiyat!) ₺"
+        // Get food image
+        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.yemek_resim_adi!)") {
+            DispatchQueue.main.async {
+                cell.foodImageView.kf.setImage(with: url)
+            }
+        }
         
         return cell
     }
-    
-    
 }

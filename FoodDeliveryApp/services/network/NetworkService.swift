@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 class NetworkService : INetworkService {
     static let shared = NetworkService()
@@ -121,7 +122,7 @@ class NetworkService : INetworkService {
     }
     
     // Get Cart Items
-    func getCartItems(userMail: String) {
+    func getCartItems(userMail: String, onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
         let params = ["kullanici_adi":userMail]
         
         AF.request("\(baseURL)/sepettekiYemekleriGetir.php",method: .post,parameters: params).response {
@@ -131,14 +132,25 @@ class NetworkService : INetworkService {
                     let cartAnswer = try JSONDecoder().decode(SepetCevap.self, from: data)
                     if let incomingFoods = cartAnswer.sepet_yemekler {
                         self.cartFoods = incomingFoods
+                        onSuccess(incomingFoods)
                     }
                     for food in self.cartFoods {
                         print("D : \(food.yemek_adi!) - \(food.sepet_yemek_id!)")
                     }
                 }
             } catch {
+                onFailure(error)
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func calculateCartItemsBadge(userMail: String, vc: UIViewController) {
+        getCartItems(userMail: userMail) { cartFoods in
+            let cartTabbarItem = vc.tabBarController?.tabBar.items![1]
+            cartTabbarItem?.badgeValue = "\(cartFoods.count)"
+        } onFailure: { error in
+            print("error: \(error.localizedDescription)")
         }
     }
     
