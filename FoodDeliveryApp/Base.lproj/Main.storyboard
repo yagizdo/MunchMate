@@ -893,6 +893,14 @@
                                     <constraint firstAttribute="width" constant="250" id="g6m-JZ-jU7"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bsD-Ej-RFO">
+                                <rect key="frame" x="82" y="172" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="CPl-jX-PMd"/>
+                                    <constraint firstAttribute="width" constant="250" id="rbD-2J-8yS"/>
+                                </constraints>
+                                <color key="color" name="blackColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ANX-yf-xR7"/>
                         <color key="backgroundColor" name="backgroundColor"/>
@@ -902,10 +910,12 @@
                             <constraint firstItem="RRs-5T-Ufg" firstAttribute="top" secondItem="ANX-yf-xR7" secondAttribute="top" constant="80" id="G1t-gd-i0Y"/>
                             <constraint firstItem="ANX-yf-xR7" firstAttribute="trailing" secondItem="Llg-gw-kc2" secondAttribute="trailing" id="Pc5-M1-Pef"/>
                             <constraint firstItem="Ubc-Zf-ULD" firstAttribute="top" secondItem="ANX-yf-xR7" secondAttribute="top" constant="16" id="RW4-vc-VgU"/>
+                            <constraint firstItem="bsD-Ej-RFO" firstAttribute="centerX" secondItem="tJK-fb-XjU" secondAttribute="centerX" id="bHb-tU-TVs"/>
                             <constraint firstItem="ANX-yf-xR7" firstAttribute="trailing" secondItem="Ubc-Zf-ULD" secondAttribute="trailing" constant="16" id="e6o-Ou-KiG"/>
                             <constraint firstItem="wYi-WZ-FVF" firstAttribute="leading" secondItem="ANX-yf-xR7" secondAttribute="leading" constant="16" id="fXn-D0-3Pp"/>
                             <constraint firstAttribute="bottom" secondItem="Llg-gw-kc2" secondAttribute="bottom" id="lfO-uN-6wh"/>
                             <constraint firstItem="wYi-WZ-FVF" firstAttribute="top" secondItem="ANX-yf-xR7" secondAttribute="top" constant="16" id="qzu-q4-xu6"/>
+                            <constraint firstItem="bsD-Ej-RFO" firstAttribute="top" secondItem="ANX-yf-xR7" secondAttribute="top" constant="80" id="yQM-PN-KwK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food Detail" id="eOc-R9-vA2"/>
@@ -915,6 +925,7 @@
                         <outlet property="favButton" destination="Ubc-Zf-ULD" id="KcI-29-pXZ"/>
                         <outlet property="foodDescriptionLabel" destination="CKM-Os-Iq4" id="1MN-O1-b0k"/>
                         <outlet property="foodImage" destination="RRs-5T-Ufg" id="v4d-Fd-n3C"/>
+                        <outlet property="foodImageLoadingIndicator" destination="bsD-Ej-RFO" id="hT9-Ft-Hsj"/>
                         <outlet property="foodPriceLabel" destination="SLp-Zn-dbw" id="q7x-5Y-fu7"/>
                         <outlet property="foodStarLabel" destination="CtV-zJ-tQm" id="wl1-Bj-kBB"/>
                         <outlet property="foodStepper" destination="gAO-uZ-GQq" id="me1-hg-UPa"/>

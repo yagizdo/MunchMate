@@ -26,6 +26,8 @@ class FoodDetailViewController: UIViewController {
     
     @IBOutlet weak var foodDescriptionLabel: UILabel!
     
+    @IBOutlet weak var foodImageLoadingIndicator: UIActivityIndicatorView!
+    
     var incomingFood : Yemekler?
 
     override func viewDidLoad() {
@@ -89,12 +91,16 @@ class FoodDetailViewController: UIViewController {
         if let food = incomingFood {
             self.foodTitleLabel.text = food.yemek_adi!
             self.foodPriceLabel.text = ("\(food.yemek_fiyat!) ₺")
+            foodImage.isHidden = true
+            foodImageLoadingIndicator.hidesWhenStopped = true
+            foodImageLoadingIndicator.startAnimating()
             // Get food image
             if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
                 DispatchQueue.main.async {
                     self.foodImage.kf.setImage(with: url)
                 }
-                //foodImageLoadingIndicator.stopAnimating()
+                foodImageLoadingIndicator.stopAnimating()
+                foodImage.isHidden = false
             }
         }
     }
