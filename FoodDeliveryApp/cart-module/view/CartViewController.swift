@@ -70,7 +70,7 @@ extension CartViewController : PresenterToViewCartProtocol {
         AlertManager.showSuccessSnackBar(vc: self, message: "Successful")
     }
     func showError(error: Error) {
-        AlertManager.showErrorSnackBar(vc: self, message: "Your cart is empty!")
+        AlertManager.showErrorSnackBar(vc: self, message: "Something went wrong!")
     }
 }
 

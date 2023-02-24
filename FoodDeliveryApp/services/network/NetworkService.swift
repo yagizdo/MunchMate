@@ -126,6 +126,10 @@ class NetworkService : INetworkService {
             response in
             do {
                 if let data = response.data {
+                    if data.count <= 5 {
+                        onSuccess([])
+                        return
+                    }
                     let cartAnswer = try JSONDecoder().decode(SepetCevap.self, from: data)
                     if let incomingFoods = cartAnswer.sepet_yemekler {
                         self.cartFoods = incomingFoods
