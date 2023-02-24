@@ -34,8 +34,8 @@ class AuthService : IAuthService {
     
     func changeDefaultView() {
         let board = UIStoryboard(name: "Main", bundle: nil)
-        let home = board.instantiateViewController(withIdentifier: "homeView") as! HomeViewController
-        UIApplication.shared.keyWindow?.rootViewController = home
+        let tabbar = board.instantiateViewController(withIdentifier: "mainTabbar") as! UITabBarController
+        UIApplication.shared.keyWindow?.rootViewController = tabbar
     }
     
     
@@ -96,11 +96,13 @@ class AuthService : IAuthService {
         auth.removeStateDidChangeListener(stateChangeHandler)
     }
     
-    func logout() {
+    func logout(onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void) {
         do {
             try auth.signOut()
+            onSuccess(true)
             dispose()
         } catch {
+            onFailure(error)
             print(error.localizedDescription)
         }
     }

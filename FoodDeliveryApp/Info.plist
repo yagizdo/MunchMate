@@ -9,13 +9,13 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Sauce Grotesk Medium.ttf</string>
-		<string>Sauce Grotesk ExtraBold.ttf</string>
-		<string>Sauce Grotesk SemiBold.ttf</string>
-		<string>Sauce Grotesk Light.ttf</string>
-		<string>Sauce Grotesk Regular.ttf</string>
 		<string>Sauce Grotesk Black.ttf</string>
 		<string>Sauce Grotesk Bold.ttf</string>
+		<string>Sauce Grotesk ExtraBold.ttf</string>
+		<string>Sauce Grotesk Light.ttf</string>
+		<string>Sauce Grotesk Medium.ttf</string>
+		<string>Sauce Grotesk Regular.ttf</string>
+		<string>Sauce Grotesk SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

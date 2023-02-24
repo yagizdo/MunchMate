@@ -13,5 +13,5 @@ protocol IAuthService {
     func login(userEmail:String,userPassword:String,onSuccess: @escaping (Bool) -> Void,onFailure: @escaping (Error) -> Void)
     func getCurrentUser()->User?
     func dispose()
-    func logout()
+    func logout(onSuccess: @escaping (Bool) -> Void,onFailure: @escaping (Error) -> Void)
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 class NetworkService : INetworkService {
     static let shared = NetworkService()
@@ -23,7 +24,7 @@ class NetworkService : INetworkService {
     private init() {}
     
     // All Foods
-    func getAllFoods() {
+    func getAllFoods(onSuccess: @escaping ([Yemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
         AF.request("\(baseURL)/tumYemekleriGetir.php",method: .get).response {
             response in
             do {
@@ -32,21 +33,21 @@ class NetworkService : INetworkService {
                     if let incomingFoods = foodsAnswer.yemekler {
                         for food in incomingFoods {
                             if self.foodsConstants.contains(food.yemek_adi!) {
-                                food.yemek_kategori = "Food"
+                                food.yemek_kategori = "Foods"
                             } else if self.drinksConstants.contains(food.yemek_adi!) {
-                                food.yemek_kategori = "Drink"
+                                food.yemek_kategori = "Drinks"
                             } else if self.desertsConstants.contains(food.yemek_adi!) {
-                                food.yemek_kategori = "Desert"
+                                food.yemek_kategori = "Desserts"
                             } else {
                                 food.yemek_kategori = "Others"
                             }
-                            print("Food : \(food.yemek_adi!) - \(food.yemek_kategori!)")
-                            
                         }
+                        onSuccess(incomingFoods)
                         self.allFoods = incomingFoods
                     }
                 }
             } catch {
+                onFailure(error)
                 print(error.localizedDescription)
             }
         }
@@ -80,17 +81,22 @@ class NetworkService : INetworkService {
     
     
     // Foods by Category
-    func getFoodsByCategory(categoryName: String) {
-        var Categorizedfoods = [Yemekler]()
-        
-        for food in self.allFoods {
-            if  food.yemek_kategori!.lowercased().contains(categoryName.lowercased()) {
-                Categorizedfoods.append(food)
+    func getFoodsByCategory(categoryName: String, onSuccess: @escaping ([Yemekler]) -> Void) {
+        if categoryName.lowercased() == "all" {
+            getAllFoods { foods in
+                onSuccess(foods)
+            } onFailure: { error in
+                print(error.localizedDescription)
             }
-        }
-        
-        for categorizedFood in Categorizedfoods {
-            print("categorizedFood : \(categorizedFood.yemek_adi!) - \(categorizedFood.yemek_kategori!)")
+        } else {
+            var categorizedfoods = [Yemekler]()
+            
+            for food in self.allFoods {
+                if  food.yemek_kategori!.lowercased().contains(categoryName.lowercased()) {
+                    categorizedfoods.append(food)
+                }
+            }
+            onSuccess(categorizedfoods)
         }
     }
     
@@ -116,7 +122,7 @@ class NetworkService : INetworkService {
     }
     
     // Get Cart Items
-    func getCartItems(userMail: String) {
+    func getCartItems(userMail: String, onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
         let params = ["kullanici_adi":userMail]
         
         AF.request("\(baseURL)/sepettekiYemekleriGetir.php",method: .post,parameters: params).response {
@@ -126,14 +132,25 @@ class NetworkService : INetworkService {
                     let cartAnswer = try JSONDecoder().decode(SepetCevap.self, from: data)
                     if let incomingFoods = cartAnswer.sepet_yemekler {
                         self.cartFoods = incomingFoods
+                        onSuccess(incomingFoods)
                     }
                     for food in self.cartFoods {
                         print("D : \(food.yemek_adi!) - \(food.sepet_yemek_id!)")
                     }
                 }
             } catch {
+                onFailure(error)
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func calculateCartItemsBadge(userMail: String, vc: UIViewController) {
+        getCartItems(userMail: userMail) { cartFoods in
+            let cartTabbarItem = vc.tabBarController?.tabBar.items![1]
+            cartTabbarItem?.badgeValue = "\(cartFoods.count)"
+        } onFailure: { error in
+            print("error: \(error.localizedDescription)")
         }
     }
     

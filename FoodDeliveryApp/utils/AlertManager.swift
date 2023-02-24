@@ -26,6 +26,10 @@ class AlertManager {
     static func showAuthErrorSnackBar(vc : UIViewController, message:String) {
         AuthErrorSnackbar.make(in: vc.view, message: message, duration: .lengthShort).show()
     }
+    
+    static func showErrorSnackBar(vc : UIViewController, message:String) {
+        ErrorSnackbar.make(in: vc.view, message: message, duration: .lengthShort).show()
+    }
 }
 
 
