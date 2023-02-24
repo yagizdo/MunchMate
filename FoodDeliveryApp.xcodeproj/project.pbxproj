@@ -56,6 +56,7 @@
 		106D989B29A54A3300FC812E /* Sauce Grotesk Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106D989429A54A3300FC812E /* Sauce Grotesk Medium.ttf */; };
 		106D989C29A54A3300FC812E /* Sauce Grotesk ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106D989529A54A3300FC812E /* Sauce Grotesk ExtraBold.ttf */; };
 		107BBB80299BAEC100568913 /* AuthExceptionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBB7F299BAEC100568913 /* AuthExceptionsHandler.swift */; };
+		109248E829A8CB0800FE4FDB /* DSFStepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 109248E729A8CB0800FE4FDB /* DSFStepperView */; };
 		10A9D13429A22D830022B3E7 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A9D13329A22D830022B3E7 /* FoodCollectionViewCell.swift */; };
 		10B8ADEA29991562001F7811 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADE929991562001F7811 /* HomePresenter.swift */; };
 		10B8ADED29991574001F7811 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADEC29991574001F7811 /* HomeInteractor.swift */; };
@@ -152,6 +153,7 @@
 				105CC15B29A2B18D004C8738 /* Kingfisher in Frameworks */,
 				105FBD25299D4EED00A85D4A /* Alamofire in Frameworks */,
 				1047F99F2993E54D00FCF89D /* FirebaseDatabase in Frameworks */,
+				109248E829A8CB0800FE4FDB /* DSFStepperView in Frameworks */,
 				10DE35AF299ACE4100AEF2D6 /* SnackBar in Frameworks */,
 				1047F99D2993E54D00FCF89D /* FirebaseAuth in Frameworks */,
 				10D04DCA29966C0100DF75BA /* GoogleSignIn in Frameworks */,
@@ -646,6 +648,7 @@
 				10DE35AE299ACE4100AEF2D6 /* SnackBar */,
 				105FBD24299D4EED00A85D4A /* Alamofire */,
 				105CC15A29A2B18D004C8738 /* Kingfisher */,
+				109248E729A8CB0800FE4FDB /* DSFStepperView */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = 1047F9692993DC2000FCF89D /* FoodDeliveryApp.app */;
@@ -681,6 +684,7 @@
 				10DE35AD299ACE4100AEF2D6 /* XCRemoteSwiftPackageReference "SnackBar" */,
 				105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				105CC15929A2B18D004C8738 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				109248E629A8CB0800FE4FDB /* XCRemoteSwiftPackageReference "DSFStepperView" */,
 			);
 			productRefGroup = 1047F96A2993DC2000FCF89D /* Products */;
 			projectDirPath = "";
@@ -1011,6 +1015,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		109248E629A8CB0800FE4FDB /* XCRemoteSwiftPackageReference "DSFStepperView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dagronf/DSFStepperView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		10D04DC829966C0100DF75BA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -1049,6 +1061,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 105FBD23299D4EEC00A85D4A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		109248E729A8CB0800FE4FDB /* DSFStepperView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 109248E629A8CB0800FE4FDB /* XCRemoteSwiftPackageReference "DSFStepperView" */;
+			productName = DSFStepperView;
 		};
 		10D04DC929966C0100DF75BA /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

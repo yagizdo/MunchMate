@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DSFStepperView
 
 class FoodDetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
@@ -16,7 +17,7 @@ class FoodDetailViewController: UIViewController {
     
     @IBOutlet weak var foodImage: UIImageView!
     
-    @IBOutlet weak var foodStepper: UIStepper!
+    @IBOutlet weak var foodStepperView: DSFStepperView!
     
     @IBOutlet weak var foodTitleLabel: UILabel!
     
@@ -49,10 +50,6 @@ class FoodDetailViewController: UIViewController {
     @IBAction func favButtonOnclick(_ sender: Any) {
     }
     
-    
-    @IBAction func foodStepperOnClick(_ sender: Any) {
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavController()
@@ -75,14 +72,6 @@ class FoodDetailViewController: UIViewController {
         foodImage.layer.borderColor = UIColor.white.cgColor
         foodImage.layer.cornerRadius = foodImage.frame.height/2
         foodImage.clipsToBounds = true
-        
-        // Stepper
-        foodStepper.backgroundColor = UIColor.orange
-        foodStepper.tintColor = UIColor.white
-        foodStepper.layer.shadowColor = UIColor.clear.cgColor
-        foodStepper.layer.shadowOffset = CGSize(width: 0, height: 0)
-        foodStepper.layer.shadowOpacity = 0
-        foodStepper.layer.shadowRadius = 0
         
         foodDescriptionLabel.spacing = 6
         

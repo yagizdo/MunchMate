@@ -751,19 +751,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-gw-kc2">
                                 <rect key="frame" x="0.0" y="246" width="414" height="650"/>
                                 <subviews>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-uZ-GQq">
-                                        <rect key="frame" x="160" y="150" width="94" height="32"/>
-                                        <color key="backgroundColor" name="activeOrangeColor"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="foodStepperOnClick:" destination="Fdi-pV-7hY" eventType="valueChanged" id="VEV-lS-TIY"/>
-                                        </connections>
-                                    </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a76-ZZ-SKQ">
                                         <rect key="frame" x="24" y="200" width="256" height="24"/>
                                         <constraints>
@@ -843,7 +830,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-c3-JbL">
-                                        <rect key="frame" x="152.5" y="248" width="24" height="24"/>
+                                        <rect key="frame" x="152.5" y="249" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Ppb-PD-Xko"/>
                                             <constraint firstAttribute="width" constant="24" id="lwA-8r-UvK"/>
@@ -855,27 +842,53 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKM-F8-SDt" customClass="DSFStepperView" customModule="DSFStepperView">
+                                        <rect key="frame" x="143" y="150" width="128" height="36"/>
+                                        <color key="backgroundColor" name="activeOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="bMf-ss-NAg"/>
+                                            <constraint firstAttribute="height" constant="36" id="fvL-OD-Njz"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="activeOrangeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderBackground">
+                                                <color key="value" name="activeOrangeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="0"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimum">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="SLp-Zn-dbw" secondAttribute="trailing" constant="24" id="97e-ed-Huf"/>
+                                    <constraint firstItem="39M-MD-NiF" firstAttribute="baseline" secondItem="CtV-zJ-tQm" secondAttribute="baseline" id="Abb-Rb-yPX"/>
                                     <constraint firstItem="39M-MD-NiF" firstAttribute="leading" secondItem="Pdu-c3-JbL" secondAttribute="trailing" constant="4" id="BVy-IC-kdZ"/>
                                     <constraint firstAttribute="height" constant="650" id="CtT-8z-EV6"/>
                                     <constraint firstItem="jhD-VC-9av" firstAttribute="top" secondItem="a76-ZZ-SKQ" secondAttribute="bottom" constant="24" id="EHh-xD-B04"/>
                                     <constraint firstAttribute="trailing" secondItem="euT-tw-acE" secondAttribute="trailing" constant="24" id="EUs-JY-fQI"/>
-                                    <constraint firstItem="Pdu-c3-JbL" firstAttribute="top" secondItem="gAO-uZ-GQq" secondAttribute="bottom" constant="66" id="G6A-4H-Ek8"/>
                                     <constraint firstItem="CtV-zJ-tQm" firstAttribute="top" secondItem="a76-ZZ-SKQ" secondAttribute="bottom" constant="27" id="GXs-Fn-nP8"/>
+                                    <constraint firstItem="IKM-F8-SDt" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="150" id="H7y-bq-0cN"/>
                                     <constraint firstItem="a76-ZZ-SKQ" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="JBP-7Z-hEf"/>
                                     <constraint firstItem="a76-ZZ-SKQ" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="200" id="MD3-wx-MHV"/>
-                                    <constraint firstItem="39M-MD-NiF" firstAttribute="top" secondItem="gAO-uZ-GQq" secondAttribute="bottom" constant="69" id="NAt-Dh-xw2"/>
-                                    <constraint firstItem="gAO-uZ-GQq" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="150" id="NtM-1g-lXb"/>
                                     <constraint firstAttribute="trailing" secondItem="CKM-Os-Iq4" secondAttribute="trailing" constant="24" id="PTy-kc-Fg1"/>
+                                    <constraint firstItem="IKM-F8-SDt" firstAttribute="centerX" secondItem="Llg-gw-kc2" secondAttribute="centerX" id="Pb9-q0-WqC"/>
                                     <constraint firstItem="CKM-Os-Iq4" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="Py6-uf-UFI"/>
                                     <constraint firstItem="euT-tw-acE" firstAttribute="top" secondItem="SLp-Zn-dbw" secondAttribute="bottom" constant="24" id="QTF-xl-CdN"/>
+                                    <constraint firstItem="39M-MD-NiF" firstAttribute="centerY" secondItem="Pdu-c3-JbL" secondAttribute="centerY" id="RLm-Zv-CHW"/>
                                     <constraint firstItem="SLp-Zn-dbw" firstAttribute="top" secondItem="Llg-gw-kc2" secondAttribute="top" constant="200" id="Xwx-sk-MtX"/>
                                     <constraint firstItem="QcG-WQ-db1" firstAttribute="leading" secondItem="Llg-gw-kc2" secondAttribute="leading" constant="24" id="gdq-MT-SbX"/>
                                     <constraint firstItem="39M-MD-NiF" firstAttribute="centerX" secondItem="Llg-gw-kc2" secondAttribute="centerX" id="gwS-fv-GOb"/>
-                                    <constraint firstItem="gAO-uZ-GQq" firstAttribute="centerX" secondItem="Llg-gw-kc2" secondAttribute="centerX" id="i0R-Av-ZBh"/>
                                     <constraint firstItem="CtV-zJ-tQm" firstAttribute="leading" secondItem="cOc-ya-HVf" secondAttribute="trailing" constant="4" id="k4r-UO-uHb"/>
                                     <constraint firstItem="QcG-WQ-db1" firstAttribute="top" secondItem="CKM-Os-Iq4" secondAttribute="bottom" constant="80" id="mhv-wE-sRl"/>
                                     <constraint firstAttribute="trailing" secondItem="QcG-WQ-db1" secondAttribute="trailing" constant="24" id="mwh-XW-35d"/>
@@ -928,7 +941,7 @@
                         <outlet property="foodImageLoadingIndicator" destination="bsD-Ej-RFO" id="hT9-Ft-Hsj"/>
                         <outlet property="foodPriceLabel" destination="SLp-Zn-dbw" id="q7x-5Y-fu7"/>
                         <outlet property="foodStarLabel" destination="CtV-zJ-tQm" id="wl1-Bj-kBB"/>
-                        <outlet property="foodStepper" destination="gAO-uZ-GQq" id="me1-hg-UPa"/>
+                        <outlet property="foodStepperView" destination="IKM-F8-SDt" id="cE1-zp-PcI"/>
                         <outlet property="foodTitleLabel" destination="a76-ZZ-SKQ" id="p1W-pV-M2V"/>
                     </connections>
                 </viewController>

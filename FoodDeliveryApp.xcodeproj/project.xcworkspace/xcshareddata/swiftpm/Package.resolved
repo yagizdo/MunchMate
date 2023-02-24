@@ -37,6 +37,24 @@
       }
     },
     {
+      "identity" : "dsfappearancemanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dagronf/DSFAppearanceManager",
+      "state" : {
+        "revision" : "676cfd4e6aaa3cf6422990734c22544373db5c1a",
+        "version" : "3.3.0"
+      }
+    },
+    {
+      "identity" : "dsfstepperview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dagronf/DSFStepperView.git",
+      "state" : {
+        "revision" : "d81b22a217b1ae0a1acb6c025fcbfdbf7bd6ad2e",
+        "version" : "4.0.0"
+      }
+    },
+    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
