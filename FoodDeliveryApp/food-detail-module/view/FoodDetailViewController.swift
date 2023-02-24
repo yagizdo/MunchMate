@@ -30,6 +30,10 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var foodImageLoadingIndicator: UIActivityIndicatorView!
     
     var incomingFood : Yemekler?
+    
+    var foodAmountValue = 0
+    
+    var foodDetailPresenterDelegate : ViewToPresenterFoodDetailProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +41,6 @@ class FoodDetailViewController: UIViewController {
                 let swipeBackGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeBack(_:)))
                 swipeBackGesture.direction = .right
                 self.view.addGestureRecognizer(swipeBackGesture)
-    }
-    
-    @objc func swipeBack(_ gesture: UISwipeGestureRecognizer) {
-          self.navigationController?.popViewController(animated: true)
-      }
-    
-    @IBAction func backButtonOnclick(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func favButtonOnclick(_ sender: Any) {
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +68,9 @@ class FoodDetailViewController: UIViewController {
         
         foodDescriptionLabel.spacing = 6
         
+        // Stepper
+        foodStepperView.delegate = self
+        foodStepperView.initialValue = CGFloat(foodAmountValue)
         
         // Set food
         if let food = incomingFood {
@@ -92,6 +88,33 @@ class FoodDetailViewController: UIViewController {
                 foodImage.isHidden = false
             }
         }
+        
+        // Create a module
+        FoodDetailRouter.createModule(ref: self)
+    }
+    
+    @IBAction func addToCartButtonOnClick(_ sender: Any) {
+        if let userEmail = AuthService.shared.currentUser?.email {
+            if let food = incomingFood {
+                foodDetailPresenterDelegate?.addFoodToCart(userMail: userEmail, food: food, piece: foodAmountValue)
+            }
+        }
+            // Set carts badge
+            if let userEmail = AuthService.shared.currentUser?.email {
+                NetworkService.shared.calculateCartItemsBadge(userMail: userEmail, vc: self)
+            }
+        
+    }
+    
+    @objc func swipeBack(_ gesture: UISwipeGestureRecognizer) {
+          self.navigationController?.popViewController(animated: true)
+      }
+    
+    @IBAction func backButtonOnclick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func favButtonOnclick(_ sender: Any) {
     }
     
     private func setupNavController() {
@@ -100,6 +123,27 @@ class FoodDetailViewController: UIViewController {
     }
 }
 
+// Stepper Extension
+extension FoodDetailViewController : DSFStepperViewDelegateProtocol {
+    func stepperView(_ view: DSFStepperView, didChangeValueTo value: NSNumber?) {
+        foodAmountValue = Int(truncating: value ?? 0)
+    }
+}
+
+// Get add food response
+extension FoodDetailViewController : PresenterToViewFoodDetailProtocol {
+    func sendDataToView(isSuccess: Bool) {
+        if isSuccess {
+            AlertManager.showSuccessSnackBar(vc: self, message: "\(foodAmountValue) pieces of \(incomingFood?.yemek_adi ?? "No data") added to the cart")
+        } else {
+            AlertManager.showErrorSnackBar(vc: self, message: "The value you want to add must be greater than 0.")
+        }
+    }
+    
+    func showError(error: Error) {
+        AlertManager.showErrorSnackBar(vc: self, message: "Something went wrong!")
+    }
+}
 extension FoodDetailViewController : UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

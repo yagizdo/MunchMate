@@ -813,6 +813,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addToCartButtonOnClick:" destination="Fdi-pV-7hY" eventType="touchUpInside" id="MTd-pc-vYV"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-ya-HVf">
                                         <rect key="frame" x="24" y="248" width="24" height="24"/>
@@ -991,13 +994,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eby-TN-ZHf">
-                                <rect key="frame" x="24" y="215.5" width="87" height="29.5"/>
-                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="24"/>
+                                <rect key="frame" x="24" y="199.5" width="79.5" height="27"/>
+                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="22"/>
                                 <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-VR-BqR">
-                                <rect key="frame" x="24" y="253" width="366" height="400"/>
+                                <rect key="frame" x="24" y="226.5" width="366" height="400"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="o94-tj-DtB"/>
@@ -1074,7 +1077,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6i-BF-hYn">
-                                <rect key="frame" x="24" y="669" width="366" height="136"/>
+                                <rect key="frame" x="24" y="642.5" width="366" height="162.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="uiT-9b-r6E">
                                         <rect key="frame" x="24" y="24" width="318" height="16"/>
@@ -1117,7 +1120,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-gw-EKi">
-                                        <rect key="frame" x="24" y="80" width="318" height="40"/>
+                                        <rect key="frame" x="24" y="106.5" width="318" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3Mg-t3-KVS"/>
                                         </constraints>
@@ -1188,7 +1191,7 @@
                             <constraint firstItem="DLV-SV-D4F" firstAttribute="trailing" secondItem="F6i-BF-hYn" secondAttribute="trailing" constant="24" id="5DF-1h-aTf"/>
                             <constraint firstItem="F6i-BF-hYn" firstAttribute="bottom" secondItem="DLV-SV-D4F" secondAttribute="bottom" constant="-8" id="6bb-PJ-BIb"/>
                             <constraint firstItem="ISH-8k-XMA" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="BA0-yY-Dyy"/>
-                            <constraint firstItem="IFN-VR-BqR" firstAttribute="top" secondItem="eby-TN-ZHf" secondAttribute="bottom" constant="8" id="Bqc-UB-cDE"/>
+                            <constraint firstItem="IFN-VR-BqR" firstAttribute="top" secondItem="eby-TN-ZHf" secondAttribute="bottom" id="Bqc-UB-cDE"/>
                             <constraint firstItem="yvd-Y0-frr" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="F7f-V6-yFP"/>
                             <constraint firstItem="F6i-BF-hYn" firstAttribute="top" secondItem="IFN-VR-BqR" secondAttribute="bottom" constant="16" id="InZ-CW-qO4"/>
                             <constraint firstItem="eby-TN-ZHf" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="Iok-5b-tqc"/>
@@ -1198,7 +1201,7 @@
                             <constraint firstItem="F6i-BF-hYn" firstAttribute="leading" secondItem="DLV-SV-D4F" secondAttribute="leading" constant="24" id="YIR-a7-XKv"/>
                             <constraint firstItem="DLV-SV-D4F" firstAttribute="trailing" secondItem="IFN-VR-BqR" secondAttribute="trailing" constant="24" id="liR-cZ-b50"/>
                             <constraint firstItem="DLV-SV-D4F" firstAttribute="trailing" secondItem="yvd-Y0-frr" secondAttribute="trailing" constant="24" id="r52-nD-ffX"/>
-                            <constraint firstItem="eby-TN-ZHf" firstAttribute="top" secondItem="yvd-Y0-frr" secondAttribute="bottom" constant="32" id="yY2-pz-C3I"/>
+                            <constraint firstItem="eby-TN-ZHf" firstAttribute="top" secondItem="yvd-Y0-frr" secondAttribute="bottom" constant="16" id="yY2-pz-C3I"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" id="1eb-Kr-dOe">

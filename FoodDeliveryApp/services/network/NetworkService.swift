@@ -101,21 +101,18 @@ class NetworkService : INetworkService {
     }
     
   // Add to Cart
-    func addFoodToCart(userMail: String, food: Yemekler, piece: Int?) {
-        
+    func addFoodToCart(userMail: String, food: Yemekler, piece: Int?, onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void) {
         let params = ["yemek_adi":food.yemek_adi!,"yemek_resim_adi":food.yemek_resim_adi!,"yemek_fiyat":Int(food.yemek_fiyat!)!,"yemek_siparis_adet":piece!,"kullanici_adi":userMail] as [String : Any]
         
         AF.request("\(baseURL)/sepeteYemekEkle.php",method: .post,parameters: params).response {
             response in
-            
             do {
                 if let data = response.data {
                     let answer = try JSONDecoder().decode(CrudCevap.self, from: data)
-                    print("------Insert------")
-                    print("Success : \(answer.success!)")
-                    print("Message : \(answer.message!)")
+                    onSuccess(true)
                 }
             } catch {
+                onFailure(error)
                 print(error.localizedDescription)
             }
         }
@@ -134,9 +131,7 @@ class NetworkService : INetworkService {
                         self.cartFoods = incomingFoods
                         onSuccess(incomingFoods)
                     }
-                    for food in self.cartFoods {
-                        print("D : \(food.yemek_adi!) - \(food.sepet_yemek_id!)")
-                    }
+                
                 }
             } catch {
                 onFailure(error)

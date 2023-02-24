@@ -41,12 +41,15 @@ class CartViewController: UIViewController {
         
         // Create Module
         CartRouter.createModule(ref: self)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Get all cart items
         cartPresenterDelegate?.getAllCartItems()
     }
     
     func calculateTotalPrice() {
+        totalPrice =  0
         for food in cartFoods {
             totalPrice += Int(food.yemek_fiyat!)!
         }
