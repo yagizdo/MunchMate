@@ -48,7 +48,7 @@ class NetworkService : INetworkService {
                 }
             } catch {
                 onFailure(error)
-                print(error.localizedDescription)
+                print("Get all foods error : \(error.localizedDescription)")
             }
         }
     }
@@ -74,7 +74,7 @@ class NetworkService : INetworkService {
                     print("Searched Foods : \(searchedFood.yemek_adi!)")
                 }
             } catch {
-                print(error.localizedDescription)
+                print("Search error : \(error.localizedDescription)")
             }
         }
     }
@@ -86,7 +86,7 @@ class NetworkService : INetworkService {
             getAllFoods { foods in
                 onSuccess(foods)
             } onFailure: { error in
-                print(error.localizedDescription)
+                print("Get foods by category error : \(error.localizedDescription)")
             }
         } else {
             var categorizedfoods = [Yemekler]()
@@ -113,7 +113,7 @@ class NetworkService : INetworkService {
                 }
             } catch {
                 onFailure(error)
-                print(error.localizedDescription)
+                print("Add error : \(error.localizedDescription)")
             }
         }
     }
@@ -135,7 +135,7 @@ class NetworkService : INetworkService {
                 }
             } catch {
                 onFailure(error)
-                print(error.localizedDescription)
+                print("Get Cart Items error : \(error.localizedDescription)")
             }
         }
     }
@@ -145,12 +145,12 @@ class NetworkService : INetworkService {
             let cartTabbarItem = vc.tabBarController?.tabBar.items![1]
             cartTabbarItem?.badgeValue = "\(cartFoods.count)"
         } onFailure: { error in
-            print("error: \(error.localizedDescription)")
+            print("Calculate cart badge error : \(error.localizedDescription)")
         }
     }
     
     // Delete food in cart
-    func removeFoodFromCart(food_id: Int, userMail: String) {
+    func removeFoodFromCart(food_id: Int, userMail: String, onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
         let params = ["sepet_yemek_id":food_id,"kullanici_adi":userMail] as [String : Any]
         
         AF.request("\(baseURL)/sepettenYemekSil.php",method: .post,parameters: params).response {
@@ -159,11 +159,21 @@ class NetworkService : INetworkService {
             do {
                 if let data = response.data {
                     let answer = try JSONDecoder().decode(CrudCevap.self, from: data)
-                    print("------Insert------")
-                    print("Success : \(answer.success!)")
-                    print("Message : \(answer.message!)")
+                    if answer.success == 1 {
+                        self.getCartItems(userMail: userMail) { cartFoods in
+                            onSuccess(cartFoods)
+                        } onFailure: { error in
+                            onFailure(error)
+                            print("Remove error : \(error.localizedDescription)")
+                        }
+
+                    } else {
+                        print("Success : \(answer.success!)")
+                        print("Message : \(answer.message!)")
+                    }
                 }
             } catch {
+                onFailure(error)
                 print(error.localizedDescription)
             }
         }

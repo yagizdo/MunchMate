@@ -1034,28 +1034,24 @@
                                                             <color key="textColor" name="blackColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Z9N-6t-WCe">
-                                                            <rect key="frame" x="240" y="24" width="94" height="32"/>
-                                                            <color key="backgroundColor" name="activeOrangeColor"/>
-                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="15"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </stepper>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Adet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0Y-rw-yJx">
+                                                            <rect key="frame" x="283.5" y="26" width="58.5" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="18"/>
+                                                            <color key="textColor" name="activeOrangeColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="Z9N-6t-WCe" secondAttribute="trailing" constant="24" id="0jX-uk-FsT"/>
                                                         <constraint firstItem="AHu-dO-ukV" firstAttribute="leading" secondItem="MHU-kC-aed" secondAttribute="leading" constant="16" id="4GM-zh-yex"/>
                                                         <constraint firstAttribute="bottom" secondItem="AHu-dO-ukV" secondAttribute="bottom" constant="16" id="5s6-e3-Vh6"/>
                                                         <constraint firstItem="uBt-Ol-zPe" firstAttribute="leading" secondItem="AHu-dO-ukV" secondAttribute="trailing" constant="16" id="Fdi-WI-fg5"/>
                                                         <constraint firstItem="E7m-Kt-jAn" firstAttribute="leading" secondItem="AHu-dO-ukV" secondAttribute="trailing" constant="16" id="JCf-So-YV3"/>
-                                                        <constraint firstItem="Z9N-6t-WCe" firstAttribute="top" secondItem="MHU-kC-aed" secondAttribute="top" constant="24" id="Pyh-3p-XKT"/>
+                                                        <constraint firstItem="w0Y-rw-yJx" firstAttribute="centerY" secondItem="MHU-kC-aed" secondAttribute="centerY" id="LGx-xH-wLC"/>
                                                         <constraint firstItem="uBt-Ol-zPe" firstAttribute="top" secondItem="E7m-Kt-jAn" secondAttribute="bottom" constant="8" id="f4p-Qf-wZG"/>
                                                         <constraint firstItem="E7m-Kt-jAn" firstAttribute="top" secondItem="MHU-kC-aed" secondAttribute="top" constant="16" id="hin-1V-xV3"/>
                                                         <constraint firstItem="AHu-dO-ukV" firstAttribute="top" secondItem="MHU-kC-aed" secondAttribute="top" constant="16" id="mPB-RX-1ax"/>
+                                                        <constraint firstAttribute="trailing" secondItem="w0Y-rw-yJx" secondAttribute="trailing" constant="16" id="ynw-c1-Ztc"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1068,9 +1064,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="background" destination="MHU-kC-aed" id="7Wr-cE-fyF"/>
+                                            <outlet property="foodAmountLabel" destination="w0Y-rw-yJx" id="xun-2X-T6c"/>
                                             <outlet property="foodImageView" destination="AHu-dO-ukV" id="KSR-CI-0Ro"/>
                                             <outlet property="foodPriceLabel" destination="uBt-Ol-zPe" id="6Ut-Jj-8lV"/>
-                                            <outlet property="foodStepper" destination="Z9N-6t-WCe" id="ZYy-zt-Vrb"/>
                                             <outlet property="foodTitleLabel" destination="E7m-Kt-jAn" id="jPg-Vt-LnL"/>
                                         </connections>
                                     </tableViewCell>

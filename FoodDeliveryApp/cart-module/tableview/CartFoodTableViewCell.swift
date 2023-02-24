@@ -17,8 +17,8 @@ class CartFoodTableViewCell: UITableViewCell {
     
     @IBOutlet weak var foodPriceLabel: UILabel!
     
+    @IBOutlet weak var foodAmountLabel: UILabel!
     
-    @IBOutlet weak var foodStepper: UIStepper!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

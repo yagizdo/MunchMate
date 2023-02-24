@@ -14,11 +14,19 @@ class CartPresenter : ViewToPresenterCartProtocol {
     func getAllCartItems() {
         cartInteractor?.getAllCartItems()
     }
+    
+    func removeFoodFromCart(food_id: Int, userMail: String) {
+        cartInteractor?.removeFoodFromCart(food_id: food_id, userMail: userMail)
+    }
 }
 
 extension CartPresenter : InteractorToPresenterCartProtocol {
     func sendDataToView(cartFoods: [SepetYemekler]) {
         cartView?.sendDataToView(cartFoods: cartFoods)
+    }
+    
+    func sendDataToView(isSuccess: Bool) {
+        cartView?.sendDataToView(isSuccess: isSuccess)
     }
     
     func showError(error: Error) {

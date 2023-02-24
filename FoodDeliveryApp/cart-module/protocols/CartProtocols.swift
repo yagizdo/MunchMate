@@ -12,21 +12,25 @@ protocol ViewToPresenterCartProtocol {
     var cartInteractor : PresenterToInteractorCartProtocol? {get set}
     
     func getAllCartItems()
+    func removeFoodFromCart(food_id: Int, userMail: String)
 }
 
 protocol PresenterToInteractorCartProtocol {
     var cartPresenter : InteractorToPresenterCartProtocol? {get set}
     
     func getAllCartItems()
+    func removeFoodFromCart(food_id: Int, userMail: String)
 }
 
 protocol InteractorToPresenterCartProtocol {
     func sendDataToView(cartFoods:[SepetYemekler])
+    func sendDataToView(isSuccess:Bool)
     func showError(error:Error)
 }
 
 protocol PresenterToViewCartProtocol {
     func sendDataToView(cartFoods:[SepetYemekler])
+    func sendDataToView(isSuccess:Bool)
     func showError(error:Error)
 }
 

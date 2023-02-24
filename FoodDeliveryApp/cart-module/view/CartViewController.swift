@@ -51,7 +51,7 @@ class CartViewController: UIViewController {
     func calculateTotalPrice() {
         totalPrice =  0
         for food in cartFoods {
-            totalPrice += Int(food.yemek_fiyat!)!
+            totalPrice += (Int(food.yemek_fiyat!)! * Int(food.yemek_siparis_adet!)!)
         }
         totalCartPriceLabel.text = "\(totalPrice) ₺"
         checkoutCartTotalPriceLabel.text = "\(totalPrice) ₺"
@@ -66,8 +66,11 @@ extension CartViewController : PresenterToViewCartProtocol {
         cartFoodsTableView.reloadData()
     }
     
+    func sendDataToView(isSuccess: Bool) {
+        AlertManager.showSuccessSnackBar(vc: self, message: "Successful")
+    }
     func showError(error: Error) {
-        AlertManager.showErrorSnackBar(vc: self, message: "Something went wrong!")
+        AlertManager.showErrorSnackBar(vc: self, message: "Your cart is empty!")
     }
 }
 
@@ -89,6 +92,7 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.foodTitleLabel.text = cartFood.yemek_adi
         cell.foodPriceLabel.text = "\(cartFood.yemek_fiyat!) ₺"
+        cell.foodAmountLabel.text = "\(cartFood.yemek_siparis_adet!) pieces"
         // Get food image
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.yemek_resim_adi!)") {
             DispatchQueue.main.async {
@@ -98,4 +102,26 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            let cartFood = self.cartFoods[indexPath.row]
+            DispatchQueue.main.async {
+                if let userEmail = AuthService.shared.currentUser?.email {
+                    self.cartPresenterDelegate?.removeFoodFromCart(food_id: Int(cartFood.sepet_yemek_id!)! , userMail: userEmail )
+                }
+            }
+            completion(true)
+        }
+            
+        // Silme düğmesinin arka plan rengini ayarla
+        deleteAction.backgroundColor = UIColor.red
+            
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = true // Kaydırma işlemi tamamlandığında, eylemi otomatik olarak gerçekleştir
+            
+        return configuration
+    }
+    
 }

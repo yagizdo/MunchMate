@@ -15,5 +15,5 @@ protocol INetworkService {
     func addFoodToCart(userMail:String, food:Yemekler,piece:Int?,onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void)
     func getCartItems(userMail:String,onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void)
     func calculateCartItemsBadge(userMail:String,vc:UIViewController)
-    func removeFoodFromCart(food_id:Int,userMail:String)
+    func removeFoodFromCart(food_id:Int,userMail:String,onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void)
 }
