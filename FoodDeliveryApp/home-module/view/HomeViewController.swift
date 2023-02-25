@@ -402,7 +402,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
 extension HomeViewController : PresenterToViewHomeProtocol {
     func sendDataToView(foods: [Yemekler]) {
         self.foods = foods
-        foodsCollectionView.reloadData()
+        foodsCollectionView.reloadSections([0])
         homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
         self.foodsCollectionView_constraint.constant = 1400
         foodsLoadingIndicator.stopAnimating()

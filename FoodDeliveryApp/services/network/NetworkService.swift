@@ -72,9 +72,6 @@ class NetworkService : INetworkService {
                     }
                    
                 }
-                for searchedFood in searchedList {
-                    print("Searched Foods : \(searchedFood.yemek_adi!)")
-                }
             } catch {
                 onFailure(error)
                 print("Search error : \(error.localizedDescription)")
