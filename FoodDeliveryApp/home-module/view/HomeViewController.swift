@@ -93,6 +93,8 @@ class HomeViewController: UIViewController {
         foodSearchBar.tintColor = UIColor(named: "activeOrangeColor")!
         foodSearchBar.barTintColor = UIColor(named: "backgroundColor")!
         foodSearchBar.clearsContextBeforeDrawing = true
+        foodSearchBar.searchTextField.text = ""
+        foodSearchBar.searchTextField.placeholder = "Search Foods"
     }
     
     func enableSearching() {
@@ -101,6 +103,8 @@ class HomeViewController: UIViewController {
         hideViewWithAnimation(widget: categoriesTitleLabel, shouldHidden: true, alphaValue: 1)
         hideViewWithAnimation(widget: defaultNavbarView, shouldHidden: true, alphaValue: 1)
         hideViewWithAnimation(widget: searchNavbarView, shouldHidden: false, alphaValue: 1)
+        foodSearchBar.searchTextField.text = ""
+        foodSearchBar.searchTextField.placeholder = "Search Foods"
         foodCollectionViewTopConstrait.constant = 8
         UIView.animate(withDuration: 0.5) {
                 self.view.layoutIfNeeded()
