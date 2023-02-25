@@ -54,7 +54,7 @@ class NetworkService : INetworkService {
     }
     
     // Search Food
-    func searchFood(searchText: String) {
+    func searchFood(searchText: String, onSuccess: @escaping ([Yemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
         var searchedList = [Yemekler]()
         
         AF.request("\(baseURL)/tumYemekleriGetir.php",method: .get).response {
@@ -68,12 +68,15 @@ class NetworkService : INetworkService {
                                 searchedList.append(food)
                             }
                         }
+                        onSuccess(searchedList)
                     }
+                   
                 }
                 for searchedFood in searchedList {
                     print("Searched Foods : \(searchedFood.yemek_adi!)")
                 }
             } catch {
+                onFailure(error)
                 print("Search error : \(error.localizedDescription)")
             }
         }

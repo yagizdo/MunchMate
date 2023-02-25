@@ -89,9 +89,10 @@ class HomeViewController: UIViewController {
         // Searchbar
         foodSearchBar.searchTextField.backgroundColor = UIColor.white
         foodSearchBar.backgroundColor = UIColor(named: "backgroundColor")!
-        //foodSearchBar.delegate = self
+        foodSearchBar.delegate = self
         foodSearchBar.tintColor = UIColor(named: "activeOrangeColor")!
         foodSearchBar.barTintColor = UIColor(named: "backgroundColor")!
+        foodSearchBar.clearsContextBeforeDrawing = true
     }
     
     func enableSearching() {
@@ -122,8 +123,6 @@ class HomeViewController: UIViewController {
         hideViewWithAnimation(widget: categoriesTitleLabel, shouldHidden: false, alphaValue: 1)
         hideViewWithAnimation(widget: defaultNavbarView, shouldHidden: false, alphaValue: 1)
         hideViewWithAnimation(widget: searchNavbarView, shouldHidden: true, alphaValue: 1)
-        // Set content size of homeScrollView
-        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
         UIView.animate(withDuration: 0.5) {
             self.foodCollectionViewTopConstrait.constant = 319
                 self.view.layoutIfNeeded()
@@ -191,6 +190,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func searchNavbarBackButton(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.homePresenterDelegate?.getAllFoods()
+        }
         disableSearching()
     }
     // Segue prepare
@@ -202,6 +204,23 @@ class HomeViewController: UIViewController {
             }
         }
     }
+}
+
+
+// EXTENSIONS
+
+
+// Searchbar
+extension HomeViewController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            homePresenterDelegate?.getAllFoods()
+        } else {
+            homePresenterDelegate?.search(searchText: searchText)
+        }
+    }
+
+    
 }
 
 
@@ -384,6 +403,8 @@ extension HomeViewController : PresenterToViewHomeProtocol {
     func sendDataToView(foods: [Yemekler]) {
         self.foods = foods
         foodsCollectionView.reloadData()
+        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
+        self.foodsCollectionView_constraint.constant = 1400
         foodsLoadingIndicator.stopAnimating()
         
     }

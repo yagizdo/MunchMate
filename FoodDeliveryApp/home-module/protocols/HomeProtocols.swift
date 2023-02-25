@@ -14,6 +14,7 @@ protocol ViewToPresenterHomeProtocol {
     
     func getAllFoods()
     func getFoodsByCategory(categoryName:String)
+    func search(searchText:String)
 }
 
 protocol PresenterToInteractorHomeProtocol {
@@ -21,6 +22,7 @@ protocol PresenterToInteractorHomeProtocol {
     
     func getAllFoods()
     func getFoodsByCategory(categoryName:String)
+    func search(searchText:String)
 }
 
 protocol InteractorToPresenterHomeProtocol {

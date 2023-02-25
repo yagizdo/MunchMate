@@ -29,4 +29,12 @@ class HomeInteractor : PresenterToInteractorHomeProtocol {
             self.homePresenter?.sendDataToPresenter(foods: foods)
         })
     }
+    
+    func search(searchText: String) {
+        networkService?.searchFood(searchText: searchText, onSuccess: { searchedFoods in
+            self.homePresenter?.sendDataToPresenter(foods: searchedFoods)
+        }, onFailure: { error in
+            self.homePresenter?.showError(error: error)
+        })
+    }
 }

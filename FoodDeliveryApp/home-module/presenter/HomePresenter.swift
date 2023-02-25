@@ -18,6 +18,10 @@ class HomePresenter : ViewToPresenterHomeProtocol {
     func getFoodsByCategory(categoryName: String) {
         homeInteractor?.getFoodsByCategory(categoryName: categoryName)
     }
+    
+    func search(searchText: String) {
+        homeInteractor?.search(searchText: searchText)
+    }
 }
 
 extension HomePresenter : InteractorToPresenterHomeProtocol {
