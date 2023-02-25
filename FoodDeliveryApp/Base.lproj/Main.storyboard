@@ -43,16 +43,16 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MunchMate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-da-gg9">
-                                <rect key="frame" x="90.5" y="336" width="233" height="48.5"/>
+                                <rect key="frame" x="100.5" y="336" width="213.5" height="47"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="40"/>
                                 <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-5B-327">
-                                <rect key="frame" x="32" y="424.5" width="350" height="60"/>
+                                <rect key="frame" x="32" y="423" width="350" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-2c-Ppi">
-                                        <rect key="frame" x="61.5" y="18" width="227.5" height="24"/>
+                                        <rect key="frame" x="68.5" y="18" width="213.5" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-hw-lwk">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -63,7 +63,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyn-zl-gLu">
-                                                <rect key="frame" x="39" y="0.0" width="188.5" height="24"/>
+                                                <rect key="frame" x="39" y="0.0" width="174.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="18"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
@@ -86,10 +86,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-de-Eag">
-                                <rect key="frame" x="32" y="509.5" width="350" height="60"/>
+                                <rect key="frame" x="32" y="508" width="350" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-YC-OcM">
-                                        <rect key="frame" x="63" y="18" width="224" height="24"/>
+                                        <rect key="frame" x="69" y="18" width="212" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-MY-fFq">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -100,7 +100,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Apple  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hab-T1-hjB">
-                                                <rect key="frame" x="39" y="0.0" width="185" height="24"/>
+                                                <rect key="frame" x="39" y="0.0" width="173" height="24"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="18"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
@@ -123,25 +123,25 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvW-pa-3IG">
-                                <rect key="frame" x="197" y="605.5" width="20.5" height="24.5"/>
+                                <rect key="frame" x="198" y="604" width="18.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="20"/>
                                 <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="───" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrl-MP-2yi">
-                                <rect key="frame" x="32" y="593.5" width="151" height="60"/>
+                                <rect key="frame" x="32" y="592" width="151" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="───" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TQ-Ih-fhj">
-                                <rect key="frame" x="231" y="593.5" width="151" height="60"/>
+                                <rect key="frame" x="231" y="592" width="151" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-F9-53o">
-                                <rect key="frame" x="32" y="677.5" width="350" height="60"/>
+                                <rect key="frame" x="32" y="676" width="350" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Flh-m0-RoK"/>
                                 </constraints>
@@ -167,16 +167,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-si-XxH">
-                                <rect key="frame" x="77" y="753.5" width="260.5" height="60"/>
+                                <rect key="frame" x="84" y="752" width="246.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-U3-fWf">
-                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="60"/>
                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uok-Nd-9nU">
-                                        <rect key="frame" x="176.5" y="0.0" width="84" height="60"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="79" height="60"/>
                                         <color key="tintColor" name="activeOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up">
@@ -299,16 +299,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="jSz-MI-XPX">
-                                <rect key="frame" x="77" y="744" width="260.5" height="33.5"/>
+                                <rect key="frame" x="84" y="744" width="246.5" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x67-yY-BdJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="33"/>
                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-l5-gdT">
-                                        <rect key="frame" x="176.5" y="0.0" width="84" height="33.5"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="79" height="33"/>
                                         <color key="tintColor" name="activeOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up">
@@ -383,13 +383,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDr-ym-2q3">
-                                                        <rect key="frame" x="82" y="30" width="56.5" height="15"/>
+                                                        <rect key="frame" x="82" y="30" width="50" height="14"/>
                                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yilmaz Yagiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nD6-lK-kVA">
-                                                        <rect key="frame" x="82" y="47" width="104" height="21"/>
+                                                        <rect key="frame" x="82" y="46" width="95" height="20"/>
                                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Medium" family="Sauce Grotesk" pointSize="17"/>
                                                         <color key="textColor" name="blackColor"/>
                                                         <nil key="highlightedColor"/>
@@ -528,13 +528,13 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axB-x9-NdT">
-                                                <rect key="frame" x="24" y="266" width="92.5" height="21"/>
+                                                <rect key="frame" x="24" y="266" width="82.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Medium" family="Sauce Grotesk" pointSize="17"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-yU-0HY">
-                                                <rect key="frame" x="0.0" y="303" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="302" width="414" height="100"/>
                                                 <color key="backgroundColor" name="backgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="r3N-ya-HzS"/>
@@ -614,7 +614,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud6-iR-5ed">
-                                                                    <rect key="frame" x="16" y="110" width="40" height="17"/>
+                                                                    <rect key="frame" x="16" y="110" width="36" height="17"/>
                                                                     <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="14"/>
                                                                     <color key="textColor" name="blackColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -655,7 +655,7 @@
                                                                     </constraints>
                                                                 </activityIndicatorView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-LK-aRf">
-                                                                    <rect key="frame" x="122" y="110" width="41" height="17"/>
+                                                                    <rect key="frame" x="127.5" y="110" width="35.5" height="17"/>
                                                                     <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="14"/>
                                                                     <color key="textColor" name="activeOrangeColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -830,7 +830,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtV-zJ-tQm">
-                                        <rect key="frame" x="52" y="251" width="25.5" height="19.5"/>
+                                        <rect key="frame" x="52" y="251" width="25.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -845,7 +845,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="middleTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-Os-Iq4" customClass="TopAlignedLabel" customModule="FoodDeliveryApp" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="306.5" width="366" height="100"/>
+                                        <rect key="frame" x="24" y="306" width="366" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="LNX-Ws-LzO"/>
                                         </constraints>
@@ -855,7 +855,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcG-WQ-db1">
-                                        <rect key="frame" x="24" y="486.5" width="366" height="56"/>
+                                        <rect key="frame" x="24" y="486" width="366" height="56"/>
                                         <color key="backgroundColor" name="activeOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="7nz-NE-8zp"/>
@@ -891,14 +891,14 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-c3-JbL">
-                                        <rect key="frame" x="152.5" y="249" width="24" height="24"/>
+                                        <rect key="frame" x="152.5" y="248.5" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Ppb-PD-Xko"/>
                                             <constraint firstAttribute="width" constant="24" id="lwA-8r-UvK"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39M-MD-NiF">
-                                        <rect key="frame" x="180.5" y="251" width="53" height="19.5"/>
+                                        <rect key="frame" x="180.5" y="251" width="53" height="19"/>
                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -906,6 +906,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKM-F8-SDt" customClass="DSFStepperView" customModule="DSFStepperView">
                                         <rect key="frame" x="143" y="150" width="128" height="36"/>
                                         <color key="backgroundColor" name="activeOrangeColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="128" id="bMf-ss-NAg"/>
                                             <constraint firstAttribute="height" constant="36" id="fvL-OD-Njz"/>
@@ -926,6 +927,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="increment">
                                                 <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -1019,13 +1023,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISH-8k-XMA">
-                                <rect key="frame" x="24" y="116" width="116" height="36.5"/>
+                                <rect key="frame" x="24" y="116" width="107" height="35"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="30"/>
                                 <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvd-Y0-frr" customClass="StepProgressBar" customModule="FoodDeliveryApp" customModuleProvider="target">
-                                <rect key="frame" x="24" y="168.5" width="366" height="15"/>
+                                <rect key="frame" x="24" y="167" width="366" height="15"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="uhc-df-4GO"/>
@@ -1052,13 +1056,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eby-TN-ZHf">
-                                <rect key="frame" x="24" y="199.5" width="79.5" height="27"/>
+                                <rect key="frame" x="24" y="198" width="73" height="26"/>
                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="22"/>
                                 <color key="textColor" name="blackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-VR-BqR">
-                                <rect key="frame" x="24" y="226.5" width="366" height="400"/>
+                                <rect key="frame" x="24" y="224" width="366" height="400"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="o94-tj-DtB"/>
@@ -1081,19 +1085,19 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7m-Kt-jAn">
-                                                            <rect key="frame" x="92" y="16" width="51.5" height="22"/>
+                                                            <rect key="frame" x="92" y="16" width="46.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="18"/>
                                                             <color key="textColor" name="blackColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 7.59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBt-Ol-zPe">
-                                                            <rect key="frame" x="92" y="46" width="47" height="20.5"/>
+                                                            <rect key="frame" x="92" y="45" width="47" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="blackColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Adet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0Y-rw-yJx">
-                                                            <rect key="frame" x="283.5" y="26" width="58.5" height="22"/>
+                                                            <rect key="frame" x="289" y="26.5" width="53" height="21"/>
                                                             <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="18"/>
                                                             <color key="textColor" name="activeOrangeColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1131,19 +1135,19 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6i-BF-hYn">
-                                <rect key="frame" x="24" y="642.5" width="366" height="162.5"/>
+                                <rect key="frame" x="24" y="640" width="366" height="165"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="uiT-9b-r6E">
                                         <rect key="frame" x="24" y="24" width="318" height="16"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guj-15-7Dm">
-                                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="16"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Light" family="Sauce Grotesk" pointSize="17"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-yz-0xF">
-                                                <rect key="frame" x="266.5" y="0.0" width="51.5" height="16"/>
+                                                <rect key="frame" x="273.5" y="0.0" width="44.5" height="16"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1154,16 +1158,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-w9-cfr">
-                                        <rect key="frame" x="24" y="52" width="318" height="21"/>
+                                        <rect key="frame" x="24" y="52" width="318" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-FI-Sqj">
-                                                <rect key="frame" x="0.0" y="0.0" width="100.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Light" family="Sauce Grotesk" pointSize="17"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuH-27-aGf">
-                                                <rect key="frame" x="285.5" y="0.0" width="32.5" height="21"/>
+                                                <rect key="frame" x="285.5" y="0.0" width="32.5" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1174,7 +1178,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-gw-EKi">
-                                        <rect key="frame" x="24" y="106.5" width="318" height="40"/>
+                                        <rect key="frame" x="24" y="109" width="318" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3Mg-t3-KVS"/>
                                         </constraints>
@@ -1190,16 +1194,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCi-gN-wWN">
-                                        <rect key="frame" x="24" y="93" width="318" height="24.5"/>
+                                        <rect key="frame" x="24" y="92" width="318" height="23.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z8-8F-RxC">
-                                                <rect key="frame" x="0.0" y="0.0" width="254" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="262" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Light" family="Sauce Grotesk" pointSize="17"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC1-gZ-UeY">
-                                                <rect key="frame" x="254" y="0.0" width="64" height="24.5"/>
+                                                <rect key="frame" x="262" y="0.0" width="56" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="20"/>
                                                 <color key="textColor" name="blackColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1207,7 +1211,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-2j-Ueq">
-                                        <rect key="frame" x="24" y="81" width="318" height="1"/>
+                                        <rect key="frame" x="24" y="80" width="318" height="1"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="bM8-p6-TJ0"/>
@@ -1363,16 +1367,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="Otb-KM-M0R">
-                                <rect key="frame" x="77" y="784" width="260.5" height="33.5"/>
+                                <rect key="frame" x="84" y="784" width="246.5" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-Dx-D6Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="33"/>
                                         <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-e3-J5e">
-                                        <rect key="frame" x="176.5" y="0.0" width="84" height="33.5"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="79" height="33"/>
                                         <color key="tintColor" name="activeOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up">

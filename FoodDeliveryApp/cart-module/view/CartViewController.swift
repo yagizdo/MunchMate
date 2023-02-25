@@ -46,6 +46,9 @@ class CartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Get all cart items
         cartPresenterDelegate?.getAllCartItems()
+        
+        let section = 0
+        cartFoodsTableView.reloadSections([section], with: .automatic)
     }
     
     func calculateTotalPrice() {
@@ -60,10 +63,15 @@ class CartViewController: UIViewController {
 
 extension CartViewController : PresenterToViewCartProtocol {
     func sendDataToView(cartFoods: [SepetYemekler]) {
-        self.cartFoods = cartFoods
-        self.tabBarItem.badgeValue = "\(cartFoods.count)"
-        calculateTotalPrice()
-        cartFoodsTableView.reloadData()
+        UIView.animate(withDuration: 0.5) {
+            self.cartFoods = cartFoods
+            self.tabBarItem.badgeValue = "\(cartFoods.count)"
+            self.calculateTotalPrice()
+            let section = 0
+            self.cartFoodsTableView.reloadSections([section], with: .automatic)
+            self.view.layoutIfNeeded()
+        }
+  
     }
     
     func sendDataToView(isSuccess: Bool) {

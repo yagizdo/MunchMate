@@ -134,6 +134,10 @@ extension FoodDetailViewController : DSFStepperViewDelegateProtocol {
 extension FoodDetailViewController : PresenterToViewFoodDetailProtocol {
     func sendDataToView(isSuccess: Bool) {
         if isSuccess {
+            // Set carts badge
+            if let userEmail = AuthService.shared.currentUser?.email {
+                NetworkService.shared.calculateCartItemsBadge(userMail: userEmail, vc: self)
+            }
             AlertManager.showSuccessSnackBar(vc: self, message: "\(foodAmountValue) pieces of \(incomingFood?.yemek_adi ?? "No data") added to the cart")
         } else {
             AlertManager.showErrorSnackBar(vc: self, message: "The value you want to add must be greater than 0.")
