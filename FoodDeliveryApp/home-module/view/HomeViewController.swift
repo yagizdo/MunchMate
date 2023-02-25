@@ -28,6 +28,16 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var foodsLoadingIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var foodCollectionViewTopConstrait: NSLayoutConstraint!
+    
+    @IBOutlet weak var categoriesTitleLabel: UILabel!
+    
+    @IBOutlet weak var defaultNavbarView: UIView!
+    
+    @IBOutlet weak var searchNavbarView: UIView!
+    
+    @IBOutlet weak var foodSearchBar: UISearchBar!
+    
     var selectedCategoryIndex = 0
     
     var categories = [Category(categoryName: "All", categoryIcon: "allIcon"),Category(categoryName: "Foods", categoryIcon: "foodsIcon"),Category(categoryName: "Drinks", categoryIcon: "drinksIcon"),Category(categoryName: "Desserts", categoryIcon: "dessertsIcon")]
@@ -76,6 +86,48 @@ class HomeViewController: UIViewController {
             NetworkService.shared.calculateCartItemsBadge(userMail: userEmail, vc: self)
         }
         
+        // Searchbar
+        foodSearchBar.searchTextField.backgroundColor = UIColor.white
+        foodSearchBar.backgroundColor = UIColor(named: "backgroundColor")!
+        //foodSearchBar.delegate = self
+        foodSearchBar.tintColor = UIColor(named: "activeOrangeColor")!
+        foodSearchBar.barTintColor = UIColor(named: "backgroundColor")!
+    }
+    
+    func enableSearching() {
+        hideViewWithAnimation(widget: homeSliderCollectionView, shouldHidden: true, alphaValue: 1)
+        hideViewWithAnimation(widget: categoriesCollectionView, shouldHidden: true, alphaValue: 1)
+        hideViewWithAnimation(widget: categoriesTitleLabel, shouldHidden: true, alphaValue: 1)
+        hideViewWithAnimation(widget: defaultNavbarView, shouldHidden: true, alphaValue: 1)
+        hideViewWithAnimation(widget: searchNavbarView, shouldHidden: false, alphaValue: 1)
+        foodCollectionViewTopConstrait.constant = 8
+        UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    func hideViewWithAnimation(widget:UIView,shouldHidden:Bool,alphaValue:Int) {
+        UIView.animate(withDuration: 0.5, animations: {
+            widget.alpha = CGFloat(shouldHidden ?  0 : 1)
+        }) { (finished) in
+            if finished {
+                //widget.isHidden = shouldHidden
+                //widget.alpha = CGFloat(shouldHidden ?  0 : 1)
+            }
+        }
+    }
+    func disableSearching() {
+        hideViewWithAnimation(widget: homeSliderCollectionView, shouldHidden: false, alphaValue: 1)
+        hideViewWithAnimation(widget: categoriesCollectionView, shouldHidden: false, alphaValue: 1)
+        hideViewWithAnimation(widget: categoriesTitleLabel, shouldHidden: false, alphaValue: 1)
+        hideViewWithAnimation(widget: defaultNavbarView, shouldHidden: false, alphaValue: 1)
+        hideViewWithAnimation(widget: searchNavbarView, shouldHidden: true, alphaValue: 1)
+        // Set content size of homeScrollView
+        homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
+        UIView.animate(withDuration: 0.5) {
+            self.foodCollectionViewTopConstrait.constant = 319
+                self.view.layoutIfNeeded()
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -101,6 +153,9 @@ class HomeViewController: UIViewController {
         
 //        // Set initial height of foodsCollectionView_constraint
 //        self.foodsCollectionView_constraint.constant = self.view.bounds.height
+
+        // Disable searching
+        disableSearching()
     }
 
     override func viewDidLayoutSubviews() {
@@ -131,6 +186,13 @@ class HomeViewController: UIViewController {
                }
     }
     
+    @IBAction func searchButtonOnClick(_ sender: Any) {
+        enableSearching()
+    }
+    
+    @IBAction func searchNavbarBackButton(_ sender: Any) {
+        disableSearching()
+    }
     // Segue prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "foodViewtoFoodDetail" {
