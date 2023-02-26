@@ -21,7 +21,7 @@ class CartViewController: UIViewController {
     
     @IBOutlet weak var checkoutCartTotalPriceLabel: UILabel!
 
-    var cartFoods = [SepetYemekler]()
+    var cartFoods = [CartFoodItem]()
 
     var totalPrice = 0
     
@@ -54,7 +54,7 @@ class CartViewController: UIViewController {
     func calculateTotalPrice() {
         totalPrice =  0
         for food in cartFoods {
-            totalPrice += (Int(food.yemek_fiyat!)! * Int(food.yemek_siparis_adet!)!)
+            totalPrice += (food.price * food.count)
         }
         totalCartPriceLabel.text = "\(totalPrice) ₺"
         checkoutCartTotalPriceLabel.text = "\(totalPrice) ₺"
@@ -62,7 +62,7 @@ class CartViewController: UIViewController {
 }
 
 extension CartViewController : PresenterToViewCartProtocol {
-    func sendDataToView(cartFoods: [SepetYemekler]) {
+    func sendDataToView(cartFoods: [CartFoodItem]) {
         UIView.animate(withDuration: 0.5) {
             self.cartFoods = cartFoods
             self.tabBarItem.badgeValue = "\(cartFoods.count)"
@@ -98,11 +98,11 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.selectionStyle = .none
         
-        cell.foodTitleLabel.text = cartFood.yemek_adi
-        cell.foodPriceLabel.text = "\(cartFood.yemek_fiyat!) ₺"
-        cell.foodAmountLabel.text = "\(cartFood.yemek_siparis_adet!) pieces"
-        // Get food image
-        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.yemek_resim_adi!)") {
+        cell.foodTitleLabel.text = cartFood.name
+        cell.foodPriceLabel.text = "\(cartFood.price) ₺"
+        cell.foodAmountLabel.text = "\(cartFood.count) pieces"
+        //Get food image
+        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.imageUrl!)") {
             DispatchQueue.main.async {
                 cell.foodImageView.kf.setImage(with: url)
             }
@@ -117,7 +117,7 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource {
             let cartFood = self.cartFoods[indexPath.row]
             DispatchQueue.main.async {
                 if let userEmail = AuthService.shared.currentUser?.email {
-                    self.cartPresenterDelegate?.removeFoodFromCart(food_id: Int(cartFood.sepet_yemek_id!)! , userMail: userEmail )
+                    self.cartPresenterDelegate?.removeFoodFromCart(food_name: cartFood.name, userMail: userEmail)
                 }
             }
             completion(true)

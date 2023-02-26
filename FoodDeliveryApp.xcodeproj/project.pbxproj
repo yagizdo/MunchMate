@@ -63,6 +63,7 @@
 		10B8ADF129991593001F7811 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF029991593001F7811 /* HomeRouter.swift */; };
 		10B8ADF4299915AB001F7811 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF3299915AB001F7811 /* HomeProtocols.swift */; };
 		10B8ADF6299915B5001F7811 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8ADF5299915B5001F7811 /* HomeViewController.swift */; };
+		10BC26D129AB792C00EB4CAD /* CartFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC26D029AB792C00EB4CAD /* CartFoodItem.swift */; };
 		10D04DBC2996653D00DF75BA /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */; };
 		10D04DBF2996655500DF75BA /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */; };
 		10D04DC22996656F00DF75BA /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D04DC12996656F00DF75BA /* WelcomeRouter.swift */; };
@@ -132,6 +133,7 @@
 		10B8ADF029991593001F7811 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		10B8ADF3299915AB001F7811 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		10B8ADF5299915B5001F7811 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		10BC26D029AB792C00EB4CAD /* CartFoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartFoodItem.swift; sourceTree = "<group>"; };
 		10D04DBB2996653D00DF75BA /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		10D04DBE2996655500DF75BA /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		10D04DC12996656F00DF75BA /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 			children = (
 				105FBD34299D85F700A85D4A /* sepetCevap.swift */,
 				105FBD38299D867C00A85D4A /* SepetYemekler.swift */,
+				10BC26D029AB792C00EB4CAD /* CartFoodItem.swift */,
 			);
 			path = sepet;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				1047F9912993DE6700FCF89D /* RegisterProtocols.swift in Sources */,
 				10DE35AC299ACA0C00AEF2D6 /* AlertManager.swift in Sources */,
 				10DBEBCC29A652D800C5A6A2 /* StepProgressBar.swift in Sources */,
+				10BC26D129AB792C00EB4CAD /* CartFoodItem.swift in Sources */,
 				1047F96F2993DC2000FCF89D /* SceneDelegate.swift in Sources */,
 				1047F98F2993DE5800FCF89D /* RegisterRouter.swift in Sources */,
 				104CA43F29A4D7190025BD01 /* FoodDetailRouter.swift in Sources */,

@@ -29,8 +29,8 @@ class CartInteractor : PresenterToInteractorCartProtocol {
         }
     }
     
-    func removeFoodFromCart(food_id: Int, userMail: String) {
-        networkService?.removeFoodFromCart(food_id: food_id, userMail: userMail, onSuccess: { cartFoods in
+    func removeFoodFromCart(food_name: String, userMail: String) {
+        networkService?.removeFoodWithNameFromCart(foodName: food_name, userMail: userMail, onSuccess: { cartFoods in
             self.cartPresenter?.sendDataToView(cartFoods: cartFoods)
         }, onFailure: { error in
             self.cartPresenter?.showError(error: error)

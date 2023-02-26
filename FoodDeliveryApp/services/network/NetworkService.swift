@@ -119,7 +119,7 @@ class NetworkService : INetworkService {
     }
     
     // Get Cart Items
-    func getCartItems(userMail: String, onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
+    func getCartItems(userMail: String, onSuccess: @escaping ([CartFoodItem]) -> Void, onFailure: @escaping (Error) -> Void) {
         let params = ["kullanici_adi":userMail]
         
         AF.request("\(baseURL)/sepettekiYemekleriGetir.php",method: .post,parameters: params).response {
@@ -133,7 +133,8 @@ class NetworkService : INetworkService {
                     let cartAnswer = try JSONDecoder().decode(SepetCevap.self, from: data)
                     if let incomingFoods = cartAnswer.sepet_yemekler {
                         self.cartFoods = incomingFoods
-                        onSuccess(incomingFoods)
+                        
+                        onSuccess(self.groupCartItemsByFoods(items: incomingFoods))
                     }
                 
                 }
@@ -142,6 +143,28 @@ class NetworkService : INetworkService {
                 print("Get Cart Items error : \(error.localizedDescription)")
             }
         }
+    }
+    
+    func groupCartItemsByFoods(items: [SepetYemekler]) -> [CartFoodItem] {
+        var groupedItems = [String: (Int, Int, String?)]()
+        for item in items {
+            if let foodName = item.yemek_adi {
+                if let existingItemCount = groupedItems[foodName] {
+                    let updatedCount = existingItemCount.0 + (Int(item.yemek_siparis_adet ?? "0") ?? 0)
+                    groupedItems[foodName] = (updatedCount, existingItemCount.1, item.yemek_resim_adi)
+                } else {
+                    if let price = Int(item.yemek_fiyat ?? "0") {
+                        groupedItems[foodName] = (Int(item.yemek_siparis_adet ?? "0") ?? 0, price, item.yemek_resim_adi)
+                    }
+                }
+            }
+        }
+        var foods = [CartFoodItem]()
+        for (foodName, countAndPriceAndImageUrl) in groupedItems {
+            let food = CartFoodItem(name: foodName, count: countAndPriceAndImageUrl.0, price: countAndPriceAndImageUrl.1, imageUrl: countAndPriceAndImageUrl.2)
+            foods.append(food)
+        }
+        return foods
     }
     
     func calculateCartItemsBadge(userMail: String, vc: UIViewController) {
@@ -154,31 +177,47 @@ class NetworkService : INetworkService {
     }
     
     // Delete food in cart
-    func removeFoodFromCart(food_id: Int, userMail: String, onSuccess: @escaping ([SepetYemekler]) -> Void, onFailure: @escaping (Error) -> Void) {
-        let params = ["sepet_yemek_id":food_id,"kullanici_adi":userMail] as [String : Any]
+    func removeFoodWithNameFromCart(foodName: String, userMail: String, onSuccess: @escaping ([CartFoodItem]) -> Void, onFailure: @escaping (Error) -> Void) {
+        // find all cart items with matching foodName
+        let cartItems = cartFoods.filter { $0.yemek_adi == foodName }
+        if cartItems.isEmpty {
+            let error = NSError(domain: "Cart Error", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not find any items in cart"])
+            onFailure(error)
+            return
+        }
         
-        AF.request("\(baseURL)/sepettenYemekSil.php",method: .post,parameters: params).response {
-            response in
+        // delete each cart item with matching foodName
+        var deletedCount = 0
+        for cartItem in cartItems {
+            let params = ["sepet_yemek_id": cartItem.sepet_yemek_id, "kullanici_adi": userMail]
             
-            do {
-                if let data = response.data {
-                    let answer = try JSONDecoder().decode(CrudCevap.self, from: data)
-                    if answer.success == 1 {
-                        self.getCartItems(userMail: userMail) { cartFoods in
-                            onSuccess(cartFoods)
-                        } onFailure: { error in
-                            onFailure(error)
-                            print("Remove error : \(error.localizedDescription)")
+            AF.request("\(baseURL)/sepettenYemekSil.php", method: .post, parameters: params).response { response in
+                do {
+                    if let data = response.data {
+                        let answer = try JSONDecoder().decode(CrudCevap.self, from: data)
+                        if answer.success == 1 {
+                            deletedCount += 1
+                            if deletedCount == cartItems.count {
+                                // get updated cart items and return them
+                                self.getCartItems(userMail: userMail) { cartFoods in
+                                    for f in cartFoods {
+                                        print("Ad : \(f.name) - \(f.count) - \(f.price)")
+                                    }
+                                    onSuccess(cartFoods)
+                                } onFailure: { error in
+                                    onFailure(error)
+                                    print("Remove error : \(error.localizedDescription)")
+                                }
+                            }
+                        } else {
+                            print("Success : \(answer.success!)")
+                            print("Message : \(answer.message!)")
                         }
-
-                    } else {
-                        print("Success : \(answer.success!)")
-                        print("Message : \(answer.message!)")
                     }
+                } catch {
+                    onFailure(error)
+                    print(error.localizedDescription)
                 }
-            } catch {
-                onFailure(error)
-                print(error.localizedDescription)
             }
         }
     }
