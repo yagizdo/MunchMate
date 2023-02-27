@@ -19,12 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
     @IBOutlet weak var foodsCollectionView: UICollectionView!
-    
-    //@IBOutlet weak var categoriesTitleLabel: UILabel!
-    
+
     @IBOutlet weak var foodsCollectionView_constraint: NSLayoutConstraint!
-    
-    //@IBOutlet weak var navbarUsernameLbl: UILabel!
     
     @IBOutlet weak var foodsLoadingIndicator: UIActivityIndicatorView!
     
@@ -50,6 +46,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // We turn the profile picture into a circle.
         navbarProfileImage.layer.borderWidth = 1
         navbarProfileImage.layer.masksToBounds = false
@@ -94,7 +91,10 @@ class HomeViewController: UIViewController {
         foodSearchBar.barTintColor = UIColor(named: "backgroundColor")!
         foodSearchBar.clearsContextBeforeDrawing = true
         foodSearchBar.searchTextField.text = ""
-        foodSearchBar.searchTextField.placeholder = "Search Foods"
+        foodSearchBar.searchTextField.attributedPlaceholder = NSAttributedString(
+            string: "Search Food",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
     }
     
     func enableSearching() {
@@ -198,6 +198,7 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.async {
             self.homePresenterDelegate?.getAllFoods()
         }
+        self.view.endEditing(true)
         disableSearching()
     }
     // Segue prepare

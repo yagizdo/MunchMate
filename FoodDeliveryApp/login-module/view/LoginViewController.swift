@@ -21,6 +21,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        emailTF.delegate = self
+        passwordTF.delegate = self
+        
+        emailTF.attributedPlaceholder = NSAttributedString(
+            string: "Email",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        
+        passwordTF.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
         // Set Textfields Left padding
         setTextfieldsLeftPadding(textfield: emailTF)
         setTextfieldsLeftPadding(textfield: passwordTF)
@@ -131,6 +143,18 @@ extension LoginViewController : PresenterToViewLoginProtocol {
     
     func showSuccess() {
         AlertManager.showSuccessSnackBar(vc: self, message: "Login successful, you are being redirected")
+    }
+}
+
+extension LoginViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      if textField == emailTF {
+         textField.resignFirstResponder()
+      } else if textField == passwordTF {
+         textField.resignFirstResponder()
+      }
+     return true
     }
 }
 

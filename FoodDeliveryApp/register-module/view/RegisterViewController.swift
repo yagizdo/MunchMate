@@ -59,6 +59,30 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        userNameTF.delegate = self
+        userEmailTF.delegate = self
+        userPasswordTF.delegate = self
+        userPasswordConfirmTF.delegate = self
+        
+        userNameTF.attributedPlaceholder = NSAttributedString(
+            string: "Name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        
+        userEmailTF.attributedPlaceholder = NSAttributedString(
+            string: "Email",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        userPasswordTF.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        
+        userPasswordConfirmTF.attributedPlaceholder = NSAttributedString(
+            string: "Password Confirm",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        
         // Profile Image View
         profileImageView.image = profileImages[selectedProfileIndex]
         
@@ -229,6 +253,23 @@ extension RegisterViewController : PresenterToViewRegisterProtocol {
     
     func showSuccess() {
         AlertManager.showSuccessSnackBar(vc: self, message: "Registration successful, you are being directed.")
+    }
+}
+
+extension RegisterViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      if textField == userNameTF {
+         textField.resignFirstResponder()
+      } else if textField == userEmailTF {
+         textField.resignFirstResponder()
+      } else if textField == userPasswordTF {
+          textField.resignFirstResponder()
+       }
+        else if textField == userPasswordConfirmTF {
+            textField.resignFirstResponder()
+         }
+     return true
     }
 }
 
