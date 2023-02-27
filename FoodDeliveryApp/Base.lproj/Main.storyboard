@@ -36,207 +36,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeVec" translatesAutoresizingMaskIntoConstraints="NO" id="G8g-hD-RnQ">
-                                <rect key="frame" x="0.0" y="116" width="414" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="O14-LU-shk"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MunchMate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-da-gg9">
-                                <rect key="frame" x="90.5" y="336" width="233" height="48.5"/>
-                                <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="40"/>
-                                <color key="textColor" name="blackColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-5B-327">
-                                <rect key="frame" x="32" y="424.5" width="350" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdX-kF-f2b">
+                                <rect key="frame" x="0.0" y="223" width="414" height="450"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-2c-Ppi">
-                                        <rect key="frame" x="61.5" y="18" width="227.5" height="24"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-hw-lwk">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="GZA-g4-M7l"/>
-                                                    <constraint firstAttribute="height" constant="24" id="w25-r0-loF"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyn-zl-gLu">
-                                                <rect key="frame" x="39" y="0.0" width="188.5" height="24"/>
-                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="18"/>
-                                                <color key="textColor" name="blackColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="DMg-Bz-vsO"/>
-                                    <constraint firstItem="bOd-2c-Ppi" firstAttribute="centerY" secondItem="Isx-5B-327" secondAttribute="centerY" id="Iwx-52-QHo"/>
-                                    <constraint firstItem="bOd-2c-Ppi" firstAttribute="centerX" secondItem="Isx-5B-327" secondAttribute="centerX" id="Vto-YF-jEs"/>
-                                    <constraint firstAttribute="height" constant="60" id="mZ2-rS-ykT"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DiU-A1-DFo" appends="YES" id="yN8-P1-qdV"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-de-Eag">
-                                <rect key="frame" x="32" y="509.5" width="350" height="60"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-YC-OcM">
-                                        <rect key="frame" x="63" y="18" width="224" height="24"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-MY-fFq">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="QcZ-aA-2dn"/>
-                                                    <constraint firstAttribute="width" constant="24" id="s0M-ft-uSa"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Apple  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hab-T1-hjB">
-                                                <rect key="frame" x="39" y="0.0" width="185" height="24"/>
-                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="18"/>
-                                                <color key="textColor" name="blackColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="CN9-6q-azS"/>
-                                    <constraint firstItem="8pi-YC-OcM" firstAttribute="centerX" secondItem="M1I-de-Eag" secondAttribute="centerX" id="CxU-cS-DuM"/>
-                                    <constraint firstAttribute="width" constant="350" id="ifP-jh-k9h"/>
-                                    <constraint firstItem="8pi-YC-OcM" firstAttribute="centerY" secondItem="M1I-de-Eag" secondAttribute="centerY" id="yoH-aZ-Qbz"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jys-5a-sfq" appends="YES" id="9Fu-2A-Yyi"/>
-                                </connections>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvW-pa-3IG">
-                                <rect key="frame" x="197" y="605.5" width="20.5" height="24.5"/>
-                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="20"/>
-                                <color key="textColor" name="blackColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="───" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrl-MP-2yi">
-                                <rect key="frame" x="32" y="593.5" width="151" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="───" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TQ-Ih-fhj">
-                                <rect key="frame" x="231" y="593.5" width="151" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-F9-53o">
-                                <rect key="frame" x="32" y="677.5" width="350" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Flh-m0-RoK"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign in With Email">
-                                    <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="activeOrangeColor"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="buttonSignInWithEmail:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="XnY-Ph-QqS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-zN-8Rk">
-                                <rect key="frame" x="107" y="764" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-si-XxH">
-                                <rect key="frame" x="77" y="753.5" width="260.5" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-U3-fWf">
-                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="60"/>
-                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeVec" translatesAutoresizingMaskIntoConstraints="NO" id="G8g-hD-RnQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="O14-LU-shk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MunchMate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-da-gg9">
+                                        <rect key="frame" x="90.5" y="224" width="233" height="48.5"/>
+                                        <fontDescription key="fontDescription" name="Sauce-Grotesk-SemiBold" family="Sauce Grotesk" pointSize="40"/>
+                                        <color key="textColor" name="blackColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uok-Nd-9nU">
-                                        <rect key="frame" x="176.5" y="0.0" width="84" height="60"/>
-                                        <color key="tintColor" name="activeOrangeColor"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-F9-53o">
+                                        <rect key="frame" x="32" y="320.5" width="350" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="g5V-qm-fqb"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sign up">
-                                            <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign in With Email">
+                                            <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="activeOrangeColor"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="buttonSignUp:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="GFU-k2-zQ3"/>
+                                            <action selector="buttonSignInWithEmail:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="XnY-Ph-QqS"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-si-XxH">
+                                        <rect key="frame" x="77" y="396.5" width="260.5" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezk-U3-fWf">
+                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="Sauce-Grotesk-Regular" family="Sauce Grotesk" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uok-Nd-9nU">
+                                                <rect key="frame" x="176.5" y="0.0" width="84" height="33.5"/>
+                                                <color key="tintColor" name="activeOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Sign up">
+                                                    <fontDescription key="titleFontDescription" name="Sauce-Grotesk-Bold" family="Sauce Grotesk" pointSize="16"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonSignUp:" destination="Uuc-s4-w2C" eventType="touchUpInside" id="GFU-k2-zQ3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="f7p-tE-45x"/>
+                                    <constraint firstItem="gnS-F9-53o" firstAttribute="top" secondItem="ZVb-da-gg9" secondAttribute="bottom" constant="48" id="9Xv-m3-xoG"/>
+                                    <constraint firstItem="G8g-hD-RnQ" firstAttribute="top" secondItem="EdX-kF-f2b" secondAttribute="top" id="A7K-yR-M3C"/>
+                                    <constraint firstItem="ZVb-da-gg9" firstAttribute="top" secondItem="G8g-hD-RnQ" secondAttribute="bottom" constant="24" id="ENe-L5-lHz"/>
+                                    <constraint firstAttribute="height" constant="450" id="IJ3-xg-X1a"/>
+                                    <constraint firstItem="h6q-si-XxH" firstAttribute="top" secondItem="gnS-F9-53o" secondAttribute="bottom" constant="16" id="MGS-iJ-Pc9"/>
+                                    <constraint firstItem="ZVb-da-gg9" firstAttribute="centerX" secondItem="EdX-kF-f2b" secondAttribute="centerX" id="NnC-hs-fDW"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8g-hD-RnQ" secondAttribute="trailing" id="Svw-IQ-kwF"/>
+                                    <constraint firstItem="gnS-F9-53o" firstAttribute="leading" secondItem="EdX-kF-f2b" secondAttribute="leading" constant="32" id="cpW-co-pMk"/>
+                                    <constraint firstItem="G8g-hD-RnQ" firstAttribute="leading" secondItem="EdX-kF-f2b" secondAttribute="leading" id="l61-i1-KHc"/>
+                                    <constraint firstItem="h6q-si-XxH" firstAttribute="centerX" secondItem="EdX-kF-f2b" secondAttribute="centerX" id="ubP-6t-9O5"/>
+                                    <constraint firstAttribute="trailing" secondItem="gnS-F9-53o" secondAttribute="trailing" constant="32" id="vxk-ea-3OC"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="osA-qm-PcM"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qrl-MP-2yi" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="24" id="11D-bK-FTg"/>
-                            <constraint firstItem="Isx-5B-327" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="7gb-J1-ssQ"/>
-                            <constraint firstItem="h6q-si-XxH" firstAttribute="top" secondItem="gnS-F9-53o" secondAttribute="bottom" constant="16" id="AX3-35-hwx"/>
-                            <constraint firstAttribute="trailing" secondItem="0TQ-Ih-fhj" secondAttribute="trailing" constant="32" id="ESF-Vw-CRL"/>
-                            <constraint firstItem="gnS-F9-53o" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="32" id="RtV-wg-lsL"/>
-                            <constraint firstItem="gnS-F9-53o" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="SII-KZ-EVF"/>
-                            <constraint firstItem="Isx-5B-327" firstAttribute="top" secondItem="ZVb-da-gg9" secondAttribute="bottom" constant="40" id="SWe-3s-2ZB"/>
-                            <constraint firstItem="PvW-pa-3IG" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="Sq6-13-sLW"/>
-                            <constraint firstItem="G8g-hD-RnQ" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" id="TKJ-OF-KLn"/>
-                            <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="G8g-hD-RnQ" secondAttribute="trailing" id="WxO-Nm-ggy"/>
-                            <constraint firstItem="M1I-de-Eag" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="32" id="aJ6-HE-AVP"/>
-                            <constraint firstItem="h6q-si-XxH" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="ash-vp-2u2"/>
-                            <constraint firstItem="gnS-F9-53o" firstAttribute="top" secondItem="qrl-MP-2yi" secondAttribute="bottom" constant="24" id="dNc-r8-9B6"/>
-                            <constraint firstItem="0TQ-Ih-fhj" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="24" id="ds2-zX-rsz"/>
-                            <constraint firstItem="qrl-MP-2yi" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" constant="32" id="iEr-JI-JfE"/>
-                            <constraint firstItem="ZVb-da-gg9" firstAttribute="centerX" secondItem="0KY-nw-5AT" secondAttribute="centerX" id="max-Bt-38p"/>
-                            <constraint firstItem="PvW-pa-3IG" firstAttribute="top" secondItem="M1I-de-Eag" secondAttribute="bottom" constant="36" id="nCU-bp-Bb7"/>
-                            <constraint firstItem="M1I-de-Eag" firstAttribute="top" secondItem="Isx-5B-327" secondAttribute="bottom" constant="25" id="o4m-0o-nGy"/>
-                            <constraint firstItem="G8g-hD-RnQ" firstAttribute="top" secondItem="osA-qm-PcM" secondAttribute="top" constant="24" id="pgg-9O-ih4"/>
-                            <constraint firstItem="ZVb-da-gg9" firstAttribute="top" secondItem="G8g-hD-RnQ" secondAttribute="bottom" constant="20" id="rjI-JN-sov"/>
-                            <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="M1I-de-Eag" secondAttribute="trailing" constant="32" id="tlf-dt-Z2z"/>
+                            <constraint firstItem="EdX-kF-f2b" firstAttribute="centerY" secondItem="0KY-nw-5AT" secondAttribute="centerY" id="4iD-rY-ZFC"/>
+                            <constraint firstItem="osA-qm-PcM" firstAttribute="trailing" secondItem="EdX-kF-f2b" secondAttribute="trailing" id="JFn-Wr-bEJ"/>
+                            <constraint firstItem="EdX-kF-f2b" firstAttribute="leading" secondItem="osA-qm-PcM" secondAttribute="leading" id="gte-ta-IW5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dck-EV-TLF"/>
                     <connections>
-                        <outlet property="appleLogoImageView" destination="kAh-MY-fFq" id="gqn-IM-xVc"/>
                         <outlet property="btnSignWithEmail" destination="gnS-F9-53o" id="XS4-UY-pUG"/>
-                        <outlet property="googleLogoImageView" destination="YWh-hw-lwk" id="Hzr-QZ-eE9"/>
                         <outlet property="welcomeImageView" destination="G8g-hD-RnQ" id="DBE-DX-lga"/>
                         <segue destination="dV6-vM-cwh" kind="show" identifier="toRegister" id="lf0-cJ-A18"/>
                         <segue destination="GaJ-Uo-eGZ" kind="show" identifier="toLogin" id="fmq-2a-shE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG7-j6-Hc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="jys-5a-sfq">
-                    <connections>
-                        <action selector="buttonSignInWithApple:" destination="Uuc-s4-w2C" id="Zf7-dl-KFE"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="DiU-A1-DFo">
                     <connections>
                         <action selector="buttonSignInWithGoogle:" destination="Uuc-s4-w2C" id="WGo-wu-ftz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jys-5a-sfq">
+                    <connections>
+                        <action selector="buttonSignInWithApple:" destination="Uuc-s4-w2C" id="Zf7-dl-KFE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1507,10 +1404,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DTS-Se-SAx"/>
+        <segue reference="pd2-c5-Xxb"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="appleLogo" width="2000" height="2000"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="ayran" width="256" height="256"/>
@@ -1519,7 +1415,6 @@
         <image name="clockIcon" width="24" height="24"/>
         <image name="deliverVec" width="829" height="364.82907104492188"/>
         <image name="fireIcon" width="24" height="24"/>
-        <image name="googleLogo" width="2048" height="2048"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="lazybonesAvatar" width="800" height="800"/>
         <image name="loginVector" width="500" height="500"/>

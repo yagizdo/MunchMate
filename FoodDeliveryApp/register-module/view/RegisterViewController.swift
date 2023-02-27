@@ -228,7 +228,7 @@ extension RegisterViewController : PresenterToViewRegisterProtocol {
     }
     
     func showSuccess() {
-        AlertManager.showSuccessSnackBar(vc: self, message: "Login successful, you are being redirected")
+        AlertManager.showSuccessSnackBar(vc: self, message: "Registration successful, you are being directed.")
     }
 }
 
