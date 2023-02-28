@@ -1,4 +1,6 @@
-![MunchMate Logo](https://user-images.githubusercontent.com/31064552/221853125-1ca568d1-1752-42f0-8e76-be7c866ec2a4.png)
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/31064552/221853125-1ca568d1-1752-42f0-8e76-be7c866ec2a4.png" height=200/>
+</div>
 
 <div id="user-content-toc">
   <ul>
@@ -18,6 +20,26 @@
 - Alamofire
 - Kingfisher
 - Firebase Auth
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/yagizdo/FoodDeliveryApp
+```
+
+open the project file
+
+```bash
+  open FoodDeliveryApp.xcodeproj
+```
+
+Run App
+
+```bash
+  run in XCode
+```
 
 ### App Video
 
