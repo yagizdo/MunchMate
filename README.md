@@ -21,6 +21,8 @@
 - Kingfisher
 - Firebase Auth
 
+<br/>
+
 ## Run Locally
 
 Clone the project
@@ -29,7 +31,7 @@ Clone the project
   git clone https://github.com/yagizdo/FoodDeliveryApp
 ```
 
-open the project file
+Open the project file
 
 ```bash
   open FoodDeliveryApp.xcodeproj
@@ -40,6 +42,8 @@ Run App
 ```bash
   run in XCode
 ```
+
+<br/>
 
 ### App Video
 
