@@ -200,9 +200,6 @@ class NetworkService : INetworkService {
                             if deletedCount == cartItems.count {
                                 // get updated cart items and return them
                                 self.getCartItems(userMail: userMail) { cartFoods in
-                                    for f in cartFoods {
-                                        print("Ad : \(f.name) - \(f.count) - \(f.price)")
-                                    }
                                     onSuccess(cartFoods)
                                 } onFailure: { error in
                                     onFailure(error)

@@ -154,10 +154,14 @@ class HomeViewController: UIViewController {
         homeScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(heightMap[selectedCategoryIndex]!))
         // Get All Foods
         homePresenterDelegate?.getAllFoods()
+        // selected category
+        selectedCategoryIndex = 0
+        categoriesCollectionView.reloadData()
         
 //        // Set initial height of foodsCollectionView_constraint
 //        self.foodsCollectionView_constraint.constant = self.view.bounds.height
 
+        self.view.endEditing(true)
         // Disable searching
         disableSearching()
     }
